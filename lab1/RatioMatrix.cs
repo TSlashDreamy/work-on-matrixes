@@ -11,7 +11,10 @@ namespace lab1
         private TextBox[,] matrix;
         public TextBox[,] Matrix { get { return matrix; } set { matrix = value; } }
 
-        public RatioMatrix() { }
+        private bool isChecked = false;
+        public bool IsChecked { get { return isChecked; } set { isChecked = value; } }
+
+        public RatioMatrix(int sizeX, int sizeY) { matrix = new TextBox[sizeX, sizeY]; }
 
         public RatioMatrix(TextBox[,] elements)
         {
@@ -26,7 +29,7 @@ namespace lab1
         /// <param name="matrixToFill"></param>
         /// <param name="operation">Available: "full", "empty", "diagonal", "anti-diagonal"</param>
         /// <exception cref="Exception">If operation does not exist</exception>
-        private void FillMatrix(TextBox[,] matrixToFill, string operation)
+        public void FillMatrix(string operation)
         {
             switch (operation)
             {
@@ -48,12 +51,34 @@ namespace lab1
 
             if (DiagonalOperation)
             {
-                DiagonalFill(matrixToFill, operation);
+                DiagonalFill(Matrix, operation);
             }
             else
             {
-                SimpleFill(matrixToFill, operation);
+                SimpleFill(Matrix, operation);
             }
+        }
+
+        /// <summary>
+        /// Checks if all required data is filled
+        /// </summary>
+        public bool SafeCheck(int operation, int cutMode, List<int> selectedMatrixes)
+        {
+            // checking if operation and cut mode selected
+            if (operation == -1 || cutMode == -1)
+            {
+                MessageBox.Show("Please, select operation and cut mode to continue", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // check if needed amount of matrixes selected
+            if (selectedMatrixes.Count != this.MatrixesPerOperation[operation])
+            {
+                MessageBox.Show($"For this operation select {this.MatrixesPerOperation[operation]} matrixes.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         /// <summary>
