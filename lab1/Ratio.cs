@@ -16,6 +16,10 @@ namespace lab1
         private bool diagonalOperation = false;
         public bool DiagonalOperation { get { return diagonalOperation; } set { diagonalOperation = value; } }
 
+        // matrix per operation
+        private static int[] matrixesPerOperation = { 2, 2, 1, 1, 2, 2, 2 };
+        public int[] MatrixesPerOperation { get { return matrixesPerOperation; } }
+
         // ---- Functions ----
 
         /// <summary>
@@ -33,7 +37,7 @@ namespace lab1
         /// </summary>
         /// <param name="value"></param>
         /// <returns><b>string</b></returns>
-        protected bool StringToBool(string value)
+        public bool StringToBool(string value)
         {
             return Convert.ToBoolean(Convert.ToInt32(value));
         }
@@ -43,22 +47,47 @@ namespace lab1
         /// </summary>
         /// <param name="valueToChange">For matrix it would be like "0"(false) and "1"(true)</param>
         /// <param name="operationToChange">Simple(false) or diagonal(true) operation</param>
-        protected void ChangeState(bool valueToChange, bool operationToChange)
+        public void ChangeState(bool valueToChange, bool operationToChange)
         {
             MatrixValue = valueToChange;
             DiagonalOperation = operationToChange;
         }
 
         /// <summary>
+        /// Checks if matrix is fully filled 
+        /// </summary>
+        private bool FillCheck(TextBox[][,] allMatrixes, List<int> selectedMatrixes, ref bool firstMatrixValue, ref bool secondMatrixValue, int i, int y)
+        {
+            try
+            {
+                if (selectedMatrixes.Count == 2)
+                {
+                    firstMatrixValue = StringToBool(allMatrixes[selectedMatrixes[0]][i, y].Text);
+                    secondMatrixValue = StringToBool(allMatrixes[selectedMatrixes[1]][i, y].Text);
+                }
+                else
+                {
+                    firstMatrixValue = StringToBool(allMatrixes[selectedMatrixes[0]][i, y].Text);
+                }
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Please, fill selected matrixes", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Calculates matrixes via selected operation
         /// </summary>
-        protected void DoOperation(
-            TextBox[][,] allMatrixes, List<int> selectedMatrixes, 
-            bool firstMatrixValue, bool secondMatrixValue, 
-            int selectedOperation, int i, int y,
-            TextBox[,] resultMatrix
-            )
+        public bool DoOperation(TextBox[][,] allMatrixes, List<int> selectedMatrixes, int selectedOperation, int i, int y, TextBox[,] resultMatrix)
         {
+            bool firstMatrixValue = false;
+            bool secondMatrixValue = false;
+
+            if (!FillCheck(allMatrixes, selectedMatrixes, ref firstMatrixValue, ref secondMatrixValue, i, y)) return false;
+
             TextBox[,] operatedMatrix = allMatrixes[selectedMatrixes[0]];
 
             switch (selectedOperation)
@@ -99,6 +128,7 @@ namespace lab1
                     resultMatrix[i, y].Text = founded ? "1" : "0";
                     break;
             }
+            return true;
         }
 
 
