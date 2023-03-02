@@ -101,9 +101,6 @@ namespace lab1
             TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
             List<int> selectedMatrixes = new List<int>();
 
-            // clearing previoud matrixes !!!!DELETE!!!!
-            selectedMatrixes.Clear();
-
             // adding selected matrixes
             for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
             if(!resultMatrix.SafeCheck(selectedOperation, selectedCutMode, selectedMatrixes)) return;
