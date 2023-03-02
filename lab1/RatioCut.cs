@@ -8,21 +8,36 @@ namespace lab1
 {
     internal class RatioCut
     {
+        private List<string> cutList;
+        public List<string> CutList { get { return cutList; } set { cutList = value; } }
+
+        public RatioCut()
+        {
+            cutList = new List<string>();
+        }
+
+        public RatioCut(List<string> cuts)
+        {
+            cutList = cuts;
+        }
 
         // ---- Functions ----
 
         /// <summary>
-        /// Shows result matrix cuts
+        /// Return matrix cuts
         /// </summary>
         /// <param name="cutMatrix">result matrix</param>
         /// <param name="mode">0 - vertical, 1 - horizontal</param>
-        private void ShowCut(TextBox[,] cutMatrix, int mode)
+        public string GetCuts(TextBox[,] cutMatrix, int mode)
         {
             string message;
+            string sCuts;
             List<string> result = CalculateCuts(cutMatrix, mode);
 
-            message = !result.Any() ? $"No {(mode == 0 ? "vertical" : "horizontal")} cuts founded!" : String.Join("\n", result.ToArray());
-            MessageBox.Show(message, $"{(mode == 0 ? "Vertical" : "Horizontal")} cuts");
+            sCuts = !result.Any() ? $"No {(mode == 0 ? "vertical" : "horizontal")} cuts founded!" : String.Join("\n", result.ToArray());
+            message = sCuts + $"{(mode == 0 ? "Vertical" : "Horizontal")} cuts";
+
+            return message;
         }
 
         /// <summary>
@@ -30,7 +45,7 @@ namespace lab1
         /// </summary>
         /// <param name="cutMatrix">result matrix</param>
         /// <param name="mode">0 - vertical, 1 - horizontal</param>
-        private List<string> CalculateCuts(TextBox[,] cutMatrix, int mode)
+        public List<string> CalculateCuts(TextBox[,] cutMatrix, int mode)
         {
             int step = 0;
             bool hasOne = false; // if cut founded
@@ -57,6 +72,7 @@ namespace lab1
 
             } while (step != cutMatrix.GetLength(0));
 
+            cutList = result;
             return result;
         }
 
