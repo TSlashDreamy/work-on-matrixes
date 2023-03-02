@@ -6,12 +6,16 @@ namespace lab1
     {
         Right right = new Right();
 
-        // states
+        // states + (- 1)
         bool value = false; // for matrix it would be like "0" and "1"
         bool diagonalOperation = false;
         bool safe_to_launch = false;
 
-        // matrix's
+        // matrix's +
+        RatioMatrix matrixP = new RatioMatrix();
+        RatioMatrix matrixQ = new RatioMatrix();
+        RatioMatrix matrixR = new RatioMatrix();
+        RatioMatrix resultMatrix = new RatioMatrix();
         TextBox[,] matrixP_elements;
         TextBox[,] matrixQ_elements;
         TextBox[,] matrixR_elements;
@@ -71,7 +75,7 @@ namespace lab1
 
         // ------- Functions -------
 
-        /// <summary>
+        /// <summary> +
         /// Fills selected matrix with 0 and 1 by selected operation
         /// </summary>
         /// <param name="matrixToFill"></param>
@@ -107,7 +111,7 @@ namespace lab1
 
         }
 
-        /// <summary>
+        /// <summary> +
         /// Changes global states to fill matrix
         /// </summary>
         /// <param name="valueToChange">For matrix it would be like "0"(false) and "1"(true)</param>
@@ -118,7 +122,7 @@ namespace lab1
             diagonalOperation = operationToChange;
         }
 
-        /// <summary>
+        /// <summary> +
         /// Fills matrix diagonally
         /// </summary>
         /// <param name="matrixToFill"></param>
@@ -144,7 +148,7 @@ namespace lab1
             }
         }
 
-        /// <summary>
+        /// <summary> +
         /// Converts boolean to string
         /// </summary>
         /// <param name="value">convertable string</param>
@@ -154,7 +158,7 @@ namespace lab1
             return Convert.ToInt32(value).ToString();
         }
 
-        /// <summary>
+        /// <summary> +
         /// Fully fills matrix just with one value "0" or "1"
         /// </summary>
         /// <param name="matrixToFill"></param>
@@ -167,7 +171,7 @@ namespace lab1
             }
         }
 
-        /// <summary>
+        /// <summary> +
         /// Shows result matrix cuts
         /// </summary>
         /// <param name="cutMatrix">result matrix</param>
@@ -181,7 +185,7 @@ namespace lab1
             MessageBox.Show(message, $"{(mode == 0 ? "Vertical" : "Horizontal")} cuts");
         }
 
-        /// <summary>
+        /// <summary> +
         /// Calculates cuts
         /// </summary>
         /// <param name="cutMatrix">result matrix</param>
@@ -216,7 +220,7 @@ namespace lab1
             return result;
         }
 
-        /// <summary>
+        /// <summary> +
         /// Converts boolean to string
         /// </summary>
         /// <param name="value"></param>
@@ -251,7 +255,7 @@ namespace lab1
             }
         }
 
-        /// <summary>
+        /// <summary> +
         /// Calculates matrixes via selected operation
         /// </summary>
         private void DoOperation(TextBox[][,] matrixes, List<int> selectedMatrixes, int selectedOperation, int i, int y, bool firstMatrix, bool secondMatrix)
