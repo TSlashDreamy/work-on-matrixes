@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace lab1
 {
-    internal class RatioMatrix
+    internal class RatioMatrix : Ratio
     {
-        // matrix states
-        bool value = false; // for matrix it would be like "0" and "1"
-        bool diagonalOperation = false;
-
         private TextBox[,] matrix;
-        public TextBox[,] Matrix { get { return matrix; } }
+        public TextBox[,] Matrix { get { return matrix; } set { matrix = value; } }
+
+        public RatioMatrix() { }
 
         public RatioMatrix(TextBox[,] elements)
         {
@@ -48,7 +46,7 @@ namespace lab1
                     throw new Exception("'" + operation + "' operation is not exist.");
             }
 
-            if (diagonalOperation)
+            if (DiagonalOperation)
             {
                 DiagonalFill(matrixToFill, operation);
             }
@@ -59,17 +57,43 @@ namespace lab1
         }
 
         /// <summary>
-        /// Changes global states to fill matrix
+        /// Fills matrix diagonally
         /// </summary>
-        /// <param name="valueToChange">For matrix it would be like "0"(false) and "1"(true)</param>
-        /// <param name="operationToChange">Simple(false) or diagonal(true) operation</param>
-        private void ChangeState(bool valueToChange, bool operationToChange)
+        /// <param name="matrixToFill"></param>
+        /// <param name="operation">Diagonal or antidiagonal</param>
+        private void DiagonalFill(TextBox[,] matrixToFill, string operation)
         {
-            value = valueToChange;
-            diagonalOperation = operationToChange;
+            int step = 0;
+
+            for (int i = 0; i < matrixToFill.GetLength(0); i++)
+            {
+                for (int y = 0; y < matrixToFill.GetLength(1); y++)
+                {
+                    if (step == y)
+                    {
+                        matrixToFill[i, y].Text = BoolToString(MatrixValue);
+                    }
+                    else
+                    {
+                        matrixToFill[i, y].Text = BoolToString(!MatrixValue);
+                    }
+                }
+                step++;
+            }
         }
 
-
+        /// <summary>
+        /// Fully fills matrix just with one value "0" or "1"
+        /// </summary>
+        /// <param name="matrixToFill"></param>
+        /// <param name="operation">"full" or "empty"</param>
+        private void SimpleFill(TextBox[,] matrixToFill, string operation)
+        {
+            foreach (TextBox matrix_value in matrixToFill)
+            {
+                matrix_value.Text = BoolToString(MatrixValue);
+            }
+        }
 
     }
 }
