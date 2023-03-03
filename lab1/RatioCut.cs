@@ -31,12 +31,10 @@ namespace lab1
         public string GetCuts(TextBox[,] cutMatrix, int mode)
         {
             string message;
-            string sCuts;
             List<string> result = CalculateCuts(cutMatrix, mode);
-
-            sCuts = !result.Any() ? $"No {(mode == 0 ? "vertical" : "horizontal")} cuts founded!" : String.Join("\n", result.ToArray());
-            message = sCuts + $"{(mode == 0 ? "Vertical" : "Horizontal")} cuts";
-
+            
+            message = !result.Any() ? $"No {(mode == 0 ? "vertical" : "horizontal")} cuts founded!" : String.Join("\n", result.ToArray());
+            
             return message;
         }
 
@@ -48,30 +46,34 @@ namespace lab1
         public List<string> CalculateCuts(TextBox[,] cutMatrix, int mode)
         {
             int step = 0;
-            bool hasOne = false; // if cut founded
+            List<int> temp = new List<int>();
+            List<string> empty = new List<string>();
+            List<string> cuts = new List<string>();
             List<string> result = new List<string>();
-
+            
             do
             {
                 for (int i = 0; i < cutMatrix.GetLength(0); i++)
                 {
                     int num = Convert.ToInt32(mode == 0 ? cutMatrix[i, step].Text : cutMatrix[step, i].Text);
 
-                    if (num == 1) hasOne = true;
-                    // if 1 add to results
-                    if (hasOne)
-                    {
-                        result.Add($"R({step}) = ({i})");
-                        break;
-                    }
-
+                    if (num == 1) temp.Add(i);
+                }
+                
+                if (!temp.Any())
+                {
+                    empty.Add($"R({step})");
+                } else
+                {
+                    cuts.Add($"R({step}) = ({String.Join(", ", temp.ToArray())})");
                 }
 
                 step++;
-                hasOne = false;
-
+                temp.Clear();
+                
             } while (step != cutMatrix.GetLength(0));
 
+            result.Add($"{String.Join(", ", empty.ToArray())} = (Empty)\n{String.Join("\n", cuts.ToArray())}");
             cutList = result;
             return result;
         }

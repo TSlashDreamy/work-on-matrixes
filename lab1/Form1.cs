@@ -115,7 +115,9 @@ namespace lab1
             }
 
             string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
-            MessageBox.Show(message);
+            string title = $"{(selectedCutMode == 0 ? "Vertical" : "Horizontal")} cuts";
+            
+            MessageBox.Show(message, title);
         }
 
 
@@ -132,6 +134,5 @@ namespace lab1
         {
             right.SafeWarning(showResult_btn, rights);
         }
-
     }
 }
