@@ -56,8 +56,7 @@ namespace lab1
         /// </summary>
         public void showNarrowing(TextBox[,] resultMatrix, TextBox narrow1, TextBox narrow2, TextBox narrow3)
         {
-            string message = "";
-            int counter = 0;
+            List<string> values = new List<string>();
             int value1 = 0;
             int value2 = 0;
             int value3 = 0;
@@ -75,22 +74,13 @@ namespace lab1
                 {
                     if (checkNarrows(value1, value2, value3, i, y))
                     {
-                        if (counter != 3)
-                        {
-                            message += resultMatrix[i, y].Text;
-                            counter++;
-                        }
-                        else
-                        {
-                            message += $"\n{resultMatrix[i, y].Text}";
-                            counter = 1;
-                        }
+                        values.Add(resultMatrix[i, y].Text);
                     }
                 }
             }
 
-             
-            MessageBox.Show(message, "Narrowed matrix");
+            NarrowedMatrix newForm = new NarrowedMatrix(values);
+            newForm.ShowDialog();
         }
 
 
