@@ -20,7 +20,7 @@ namespace lab1
         RatioCut cuts = new RatioCut();
 
         // narrowing
-        RatioNarrowing narrowing = new RatioNarrowing(defaultISize - 2, defaultYSize - 2);
+        RatioNarrowing narrowing = new RatioNarrowing();
 
         public Form1()
         {

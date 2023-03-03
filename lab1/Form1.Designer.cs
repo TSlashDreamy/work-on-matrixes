@@ -158,6 +158,12 @@
             this.narrowValue3 = new System.Windows.Forms.TextBox();
             this.narrowValue2 = new System.Windows.Forms.TextBox();
             this.narrowValue1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -1334,7 +1340,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1462, 659);
+            this.label4.Location = new System.Drawing.Point(1462, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 41);
             this.label4.TabIndex = 119;
@@ -1343,11 +1349,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1462, 717);
+            this.label5.Location = new System.Drawing.Point(1462, 565);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(350, 41);
+            this.label5.Size = new System.Drawing.Size(355, 41);
             this.label5.TabIndex = 120;
-            this.label5.Text = "You can choose only 1 or";
+            this.label5.Text = "⚠️You can choose only 1";
             // 
             // showResult_btn
             // 
@@ -1362,11 +1368,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1462, 758);
+            this.label6.Location = new System.Drawing.Point(1462, 606);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(371, 41);
+            this.label6.Size = new System.Drawing.Size(336, 41);
             this.label6.TabIndex = 122;
-            this.label6.Text = "2 matrixes to operate with.";
+            this.label6.Text = "or 2 matrixes to operate";
             // 
             // rights
             // 
@@ -1436,11 +1442,71 @@
             this.narrowValue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.narrowValue1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(1462, 334);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(275, 41);
+            this.label9.TabIndex = 130;
+            this.label9.Text = "🔹Select operation";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1462, 375);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(289, 41);
+            this.label10.TabIndex = 131;
+            this.label10.Text = "🔹Select slice mode";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1462, 416);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(269, 41);
+            this.label11.TabIndex = 132;
+            this.label11.Text = "🔹Fill in narrowing";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1462, 457);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(279, 41);
+            this.label12.TabIndex = 133;
+            this.label12.Text = "🔹Choose matrixes";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1462, 498);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(214, 41);
+            this.label13.TabIndex = 134;
+            this.label13.Text = "🔹Fill matrixes";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1463, 647);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 41);
+            this.label14.TabIndex = 135;
+            this.label14.Text = "with.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1851, 883);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.narrowValue3);
             this.Controls.Add(this.narrowValue2);
             this.Controls.Add(this.narrowValue1);
@@ -1714,5 +1780,11 @@
         private TextBox narrowValue3;
         private TextBox narrowValue2;
         private TextBox narrowValue1;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private Label label14;
     }
 }
