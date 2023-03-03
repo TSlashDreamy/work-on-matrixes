@@ -19,6 +19,9 @@ namespace lab1
             narrowMatrix = elements;
         }
         
+        /// <summary>
+        /// Checks if element from matrix is in narrow operation
+        /// </summary>
         private bool checkNarrows(int narrow1, int narrow2, int narrow3, int i, int y)
         {
             if (i != narrow1 && i != narrow2 && i != narrow3)
@@ -32,6 +35,9 @@ namespace lab1
             return true;
         }
 
+        /// <summary>
+        /// Shows narrowed matrix
+        /// </summary>
         public void showNarrowing(TextBox[,] resultMatrix, int narrow1, int narrow2, int narrow3)
         {
             List<int> newMatrix = new List<int>();
@@ -48,6 +54,8 @@ namespace lab1
                     }
                 }
             }
+
+            MessageBox.Show(String.Join("\n", newMatrix.ToArray()), "Narrowed matrix");
         }
 
 
