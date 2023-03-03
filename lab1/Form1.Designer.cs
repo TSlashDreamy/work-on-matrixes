@@ -164,12 +164,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 66);
+            this.label1.Location = new System.Drawing.Point(27, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 41);
             this.label1.TabIndex = 0;
@@ -217,7 +219,7 @@
             "bij(P\\Q) ",
             "bij(PΔQ) ",
             "bij(P°Q)"});
-            this.operations_list.Location = new System.Drawing.Point(356, 63);
+            this.operations_list.Location = new System.Drawing.Point(281, 62);
             this.operations_list.Name = "operations_list";
             this.operations_list.Size = new System.Drawing.Size(302, 49);
             this.operations_list.TabIndex = 4;
@@ -1389,7 +1391,7 @@
             this.sliceMode_box.Items.AddRange(new object[] {
             "Vertical",
             "Horizontal"});
-            this.sliceMode_box.Location = new System.Drawing.Point(961, 64);
+            this.sliceMode_box.Location = new System.Drawing.Point(886, 63);
             this.sliceMode_box.Name = "sliceMode_box";
             this.sliceMode_box.Size = new System.Drawing.Size(302, 49);
             this.sliceMode_box.TabIndex = 125;
@@ -1397,7 +1399,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(766, 67);
+            this.label7.Location = new System.Drawing.Point(691, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 41);
             this.label7.TabIndex = 124;
@@ -1406,7 +1408,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1405, 66);
+            this.label8.Location = new System.Drawing.Point(1330, 65);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 41);
             this.label8.TabIndex = 126;
@@ -1414,7 +1416,7 @@
             // 
             // narrowValue3
             // 
-            this.narrowValue3.Location = new System.Drawing.Point(1690, 66);
+            this.narrowValue3.Location = new System.Drawing.Point(1615, 65);
             this.narrowValue3.MaxLength = 1;
             this.narrowValue3.Name = "narrowValue3";
             this.narrowValue3.Size = new System.Drawing.Size(46, 47);
@@ -1424,7 +1426,7 @@
             // 
             // narrowValue2
             // 
-            this.narrowValue2.Location = new System.Drawing.Point(1638, 66);
+            this.narrowValue2.Location = new System.Drawing.Point(1563, 65);
             this.narrowValue2.MaxLength = 1;
             this.narrowValue2.Name = "narrowValue2";
             this.narrowValue2.Size = new System.Drawing.Size(46, 47);
@@ -1434,7 +1436,7 @@
             // 
             // narrowValue1
             // 
-            this.narrowValue1.Location = new System.Drawing.Point(1586, 66);
+            this.narrowValue1.Location = new System.Drawing.Point(1511, 65);
             this.narrowValue1.MaxLength = 1;
             this.narrowValue1.Name = "narrowValue1";
             this.narrowValue1.Size = new System.Drawing.Size(46, 47);
@@ -1496,23 +1498,35 @@
             this.label14.TabIndex = 135;
             this.label14.Text = "with.";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.operations_list);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.sliceMode_box);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.narrowValue1);
+            this.groupBox1.Controls.Add(this.narrowValue2);
+            this.groupBox1.Controls.Add(this.narrowValue3);
+            this.groupBox1.Location = new System.Drawing.Point(75, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1688, 156);
+            this.groupBox1.TabIndex = 136;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Functionality";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1851, 883);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.narrowValue3);
-            this.Controls.Add(this.narrowValue2);
-            this.Controls.Add(this.narrowValue1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.sliceMode_box);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.rights);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.showResult_btn);
@@ -1632,17 +1646,17 @@
             this.Controls.Add(this.matrixP_value4);
             this.Controls.Add(this.matrixP_value3);
             this.Controls.Add(this.matrixP_value2);
-            this.Controls.Add(this.operations_list);
             this.Controls.Add(this.matrixPCheck);
             this.Controls.Add(this.matrixP_value1);
             this.Controls.Add(this.matrixP_FullBtn);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Лабораторна №1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1786,5 +1800,6 @@
         private Label label12;
         private Label label13;
         private Label label14;
+        private GroupBox groupBox1;
     }
 }

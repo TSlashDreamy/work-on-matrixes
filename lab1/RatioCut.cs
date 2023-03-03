@@ -73,7 +73,7 @@ namespace lab1
                 
             } while (step != cutMatrix.GetLength(0));
 
-            result.Add($"{String.Join(", ", empty.ToArray())} = (Empty)\n{String.Join("\n", cuts.ToArray())}");
+            result.Add($"{String.Join(", ", empty.ToArray())} {(empty.Any() ? "= (Empty)\n" : null)}{String.Join("\n", cuts.ToArray())}");
             cutList = result;
             return result;
         }
