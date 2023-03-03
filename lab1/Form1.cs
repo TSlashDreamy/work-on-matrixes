@@ -97,10 +97,6 @@ namespace lab1
         {
             right.SafeExit();
 
-            int narrow1 = Convert.ToInt32(narrowValue1.Text);
-            int narrow2 = Convert.ToInt32(narrowValue2.Text);
-            int narrow3 = Convert.ToInt32(narrowValue3.Text);
-
             int selectedOperation = operations_list.SelectedIndex;
             int selectedCutMode = sliceMode_box.SelectedIndex;
 
@@ -121,12 +117,13 @@ namespace lab1
                 }
             }
 
+            // showing cuts
             string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
             string title = $"{(selectedCutMode == 0 ? "Vertical" : "Horizontal")} cuts";
-            
             MessageBox.Show(message, title);
 
-            narrowing.showNarrowing(resultMatrix.Matrix, narrow1, narrow2, narrow3);
+            // showing narrowing
+            narrowing.showNarrowing(resultMatrix.Matrix, narrowValue1, narrowValue2, narrowValue3);
         }
         
 
@@ -140,12 +137,12 @@ namespace lab1
 
         private void narrowRestriction(object sender, KeyPressEventArgs e)
         {
-            // 49 - 1, 50 - 2, 51 - 3, 52 - 4, 53 - 5
-            if (!(e.KeyChar == 49 || e.KeyChar == 50 || e.KeyChar == 51 || e.KeyChar == 51 || e.KeyChar == 53))
+            // 49 - 1, 50 - 2, 51 - 3, 52 - 4, 53 - 5, 8 - backspace,
+            if (!(e.KeyChar == 49 || e.KeyChar == 50 || e.KeyChar == 51 || e.KeyChar == 52 || e.KeyChar == 53 || e.KeyChar == 8))
             {
-                MessageBox.Show("Please enter only numbers from 0 to 5", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Please enter only numbers from 0 to 5\n{e.KeyChar}", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            e.Handled = !(e.KeyChar == 49 || e.KeyChar == 50 || e.KeyChar == 51 || e.KeyChar == 51 || e.KeyChar == 53);
+            e.Handled = !(e.KeyChar == 49 || e.KeyChar == 50 || e.KeyChar == 51 || e.KeyChar == 52 || e.KeyChar == 53 || e.KeyChar == 8);
         }
 
         // safe switch

@@ -1414,6 +1414,7 @@
             this.narrowValue3.Size = new System.Drawing.Size(46, 47);
             this.narrowValue3.TabIndex = 129;
             this.narrowValue3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.narrowValue3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
             // 
             // narrowValue2
             // 
@@ -1423,6 +1424,7 @@
             this.narrowValue2.Size = new System.Drawing.Size(46, 47);
             this.narrowValue2.TabIndex = 128;
             this.narrowValue2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.narrowValue2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
             // 
             // narrowValue1
             // 
@@ -1432,6 +1434,7 @@
             this.narrowValue1.Size = new System.Drawing.Size(46, 47);
             this.narrowValue1.TabIndex = 127;
             this.narrowValue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.narrowValue1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
             // 
             // Form1
             // 

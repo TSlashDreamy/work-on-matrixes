@@ -9,28 +9,44 @@ namespace lab1
 {
     internal class RatioNarrowing : Ratio
     {
-        private TextBox[,] narrowMatrix;
-        public TextBox[,] NarrowMatrix { get { return narrowMatrix; } set { narrowMatrix = value; } }
-
-        public RatioNarrowing(int sizeX, int sizeY) { narrowMatrix = new TextBox[sizeX, sizeY]; }
-
-        public RatioNarrowing(TextBox[,] elements)
-        {
-            narrowMatrix = elements;
-        }
+        public RatioNarrowing() { }
         
+        /// <summary>
+        /// Checks if user typed something into textBoxes
+        /// </summary>
+        public bool checkSelection(TextBox narrow1, TextBox narrow2, TextBox narrow3, ref int value1, ref int value2, ref int value3)
+        {
+            try
+            {
+                value1 = Convert.ToInt32(narrow1.Text);
+                value2 = Convert.ToInt32(narrow2.Text);
+                value3 = Convert.ToInt32(narrow3.Text);
+
+                return true;
+            } catch
+            {
+                return false;
+            }
+        }
+
         /// <summary>
         /// Checks if element from matrix is in narrow operation
         /// </summary>
         private bool checkNarrows(int narrow1, int narrow2, int narrow3, int i, int y)
         {
-            if (i != narrow1 && i != narrow2 && i != narrow3)
+            bool state = false;
+
+            if (i + 1 != narrow1 && i + 1 != narrow2 && i + 1 != narrow3)
             {
-                if (y != narrow1 && y != narrow2 && y != narrow3)
+                if (y + 1 != narrow1 && y + 1 != narrow2 && y + 1 != narrow3)
                 {
                     return false;
                 }
-                return true;
+                return false;
+            }
+            if (y + 1 != narrow1 && y + 1 != narrow2 && y + 1 != narrow3)
+            {
+                return false;
             }
             return true;
         }
@@ -38,24 +54,43 @@ namespace lab1
         /// <summary>
         /// Shows narrowed matrix
         /// </summary>
-        public void showNarrowing(TextBox[,] resultMatrix, int narrow1, int narrow2, int narrow3)
+        public void showNarrowing(TextBox[,] resultMatrix, TextBox narrow1, TextBox narrow2, TextBox narrow3)
         {
-            List<int> newMatrix = new List<int>();
+            string message = "";
+            int counter = 0;
+            int value1 = 0;
+            int value2 = 0;
+            int value3 = 0;
+
+            if(!checkSelection(narrow1, narrow2, narrow3, ref value1, ref value2, ref value3))
+            {
+                MessageBox.Show("Please, fill narrow fields", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } 
+               
 
             for (int i = 0; i < resultMatrix.GetLength(0); i++)
             {
                 for (int y = 0; y < resultMatrix.GetLength(1); y++)
                 {
-                    if (checkNarrows(narrow1, narrow2, narrow3, i, y))
+                    if (checkNarrows(value1, value2, value3, i, y))
                     {
-                        int num = Convert.ToInt32(resultMatrix[i, y].Text);
-
-                        newMatrix.Add(num);
+                        if (counter != 3)
+                        {
+                            message += resultMatrix[i, y].Text;
+                            counter++;
+                        }
+                        else
+                        {
+                            message += $"\n{resultMatrix[i, y].Text}";
+                            counter = 1;
+                        }
                     }
                 }
             }
 
-            MessageBox.Show(String.Join("\n", newMatrix.ToArray()), "Narrowed matrix");
+             
+            MessageBox.Show(message, "Narrowed matrix");
         }
 
 
