@@ -19,6 +19,9 @@ namespace lab1
         // cuts
         RatioCut cuts = new RatioCut();
 
+        // narrowing
+        RatioNarrowing narrowing = new RatioNarrowing(defaultISize - 2, defaultYSize - 2);
+
         public Form1()
         {
             InitializeComponent();
@@ -119,7 +122,7 @@ namespace lab1
             
             MessageBox.Show(message, title);
         }
-
+        
 
         // key interaction
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)

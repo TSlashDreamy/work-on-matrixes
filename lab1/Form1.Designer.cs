@@ -154,12 +154,16 @@
             this.rights = new System.Windows.Forms.Label();
             this.sliceMode_box = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.narrowValue3 = new System.Windows.Forms.TextBox();
+            this.narrowValue2 = new System.Windows.Forms.TextBox();
+            this.narrowValue1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(254, 63);
+            this.label1.Location = new System.Drawing.Point(102, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 41);
             this.label1.TabIndex = 0;
@@ -207,7 +211,7 @@
             "bij(P\\Q) ",
             "bij(PΔQ) ",
             "bij(P°Q)"});
-            this.operations_list.Location = new System.Drawing.Point(514, 63);
+            this.operations_list.Location = new System.Drawing.Point(356, 63);
             this.operations_list.Name = "operations_list";
             this.operations_list.Size = new System.Drawing.Size(302, 49);
             this.operations_list.TabIndex = 4;
@@ -1379,7 +1383,7 @@
             this.sliceMode_box.Items.AddRange(new object[] {
             "Vertical",
             "Horizontal"});
-            this.sliceMode_box.Location = new System.Drawing.Point(1256, 63);
+            this.sliceMode_box.Location = new System.Drawing.Point(961, 64);
             this.sliceMode_box.Name = "sliceMode_box";
             this.sliceMode_box.Size = new System.Drawing.Size(302, 49);
             this.sliceMode_box.TabIndex = 125;
@@ -1387,17 +1391,57 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1056, 63);
+            this.label7.Location = new System.Drawing.Point(766, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 41);
             this.label7.TabIndex = 124;
             this.label7.Text = "Slice mode:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1405, 66);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 41);
+            this.label8.TabIndex = 126;
+            this.label8.Text = "Narrowing:";
+            // 
+            // narrowValue3
+            // 
+            this.narrowValue3.Location = new System.Drawing.Point(1690, 66);
+            this.narrowValue3.MaxLength = 1;
+            this.narrowValue3.Name = "narrowValue3";
+            this.narrowValue3.Size = new System.Drawing.Size(46, 47);
+            this.narrowValue3.TabIndex = 129;
+            this.narrowValue3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // narrowValue2
+            // 
+            this.narrowValue2.Location = new System.Drawing.Point(1638, 66);
+            this.narrowValue2.MaxLength = 1;
+            this.narrowValue2.Name = "narrowValue2";
+            this.narrowValue2.Size = new System.Drawing.Size(46, 47);
+            this.narrowValue2.TabIndex = 128;
+            this.narrowValue2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // narrowValue1
+            // 
+            this.narrowValue1.Location = new System.Drawing.Point(1586, 66);
+            this.narrowValue1.MaxLength = 1;
+            this.narrowValue1.Name = "narrowValue1";
+            this.narrowValue1.Size = new System.Drawing.Size(46, 47);
+            this.narrowValue1.TabIndex = 127;
+            this.narrowValue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1851, 883);
+            this.Controls.Add(this.narrowValue3);
+            this.Controls.Add(this.narrowValue2);
+            this.Controls.Add(this.narrowValue1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.sliceMode_box);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rights);
@@ -1663,5 +1707,9 @@
         private Label rights;
         private ComboBox sliceMode_box;
         private Label label7;
+        private Label label8;
+        private TextBox narrowValue3;
+        private TextBox narrowValue2;
+        private TextBox narrowValue1;
     }
 }
