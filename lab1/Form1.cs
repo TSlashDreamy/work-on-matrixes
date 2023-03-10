@@ -22,6 +22,9 @@ namespace lab1
         // narrowing
         RatioNarrowing narrowing = new RatioNarrowing();
 
+        // attributes 
+        AttributesCheck attributes = new AttributesCheck();
+
         public Form1()
         {
             InitializeComponent();
@@ -66,6 +69,32 @@ namespace lab1
             resultMatrix.Matrix = result_init_elements; 
         }
 
+        // ------- Functions -------
+
+        private bool ProcessResult(int cutMode)
+        {
+            int selectedOperation = operations_list.SelectedIndex;
+
+            bool[] matrixesChecked = { matrixP.IsChecked, matrixQ.IsChecked, matrixR.IsChecked };
+            TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
+            List<int> selectedMatrixes = new List<int>();
+
+            // adding selected matrixes
+            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
+            if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes)) return false;
+
+            // calculate operation in cycle
+            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+            {
+                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                {
+                    if (!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return false;
+                }
+            }
+
+            return true;
+        }
+
         // ------- Buttons interaction -------
 
         // ---- Matrix P ----
@@ -97,25 +126,8 @@ namespace lab1
         {
             right.SafeExit();
 
-            int selectedOperation = operations_list.SelectedIndex;
             int selectedCutMode = sliceMode_box.SelectedIndex;
-
-            bool[] matrixesChecked = { matrixP.IsChecked, matrixQ.IsChecked, matrixR.IsChecked };
-            TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
-            List<int> selectedMatrixes = new List<int>();
-
-            // adding selected matrixes
-            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-            if(!resultMatrix.SafeCheck(selectedOperation, selectedCutMode, selectedMatrixes)) return;
-
-            // calculate operation in cycle
-            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
-            {
-                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
-                {
-                    if(!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return;
-                }
-            }
+            if(!ProcessResult(selectedCutMode)) return;
 
             // showing cuts
             string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
@@ -124,6 +136,9 @@ namespace lab1
 
             // showing narrowing
             narrowing.showNarrowing(resultMatrix.Matrix, narrowValue1, narrowValue2, narrowValue3);
+
+            // showing attributes
+            attributes.ShowAttributes(resultMatrix.Matrix);
         }
         
 

@@ -34,8 +34,6 @@ namespace lab1
         /// </summary>
         private bool checkNarrows(int narrow1, int narrow2, int narrow3, int i, int y)
         {
-            bool state = false;
-
             if (i + 1 != narrow1 && i + 1 != narrow2 && i + 1 != narrow3)
             {
                 if (y + 1 != narrow1 && y + 1 != narrow2 && y + 1 != narrow3)
