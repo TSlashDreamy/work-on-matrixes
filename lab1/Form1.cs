@@ -66,7 +66,7 @@ namespace lab1
             matrixP.Matrix = matrixP_init_elements;
             matrixQ.Matrix = matrixQ_init_elements;
             matrixR.Matrix = matrixR_init_elements;
-            resultMatrix.Matrix = result_init_elements; 
+            resultMatrix.Matrix = result_init_elements;
         }
 
         // ------- Functions -------
@@ -127,7 +127,7 @@ namespace lab1
             right.SafeExit();
 
             int selectedCutMode = sliceMode_box.SelectedIndex;
-            if(!ProcessResult(selectedCutMode)) return;
+            if (!ProcessResult(selectedCutMode)) return;
 
             // showing cuts
             string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
@@ -140,7 +140,7 @@ namespace lab1
             // showing attributes
             attributes.ShowAttributes(resultMatrix.Matrix);
         }
-        
+
 
         // key interaction
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,7 +163,15 @@ namespace lab1
         // safe switch
         private void Form1_Load(object sender, EventArgs e)
         {
-            right.SafeWarning(showResult_btn, rights);
+            try
+            {
+                right.SafeWarning(showResult_btn, rights);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
         }
     }
 }

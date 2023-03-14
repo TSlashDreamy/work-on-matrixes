@@ -28,1638 +28,1628 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.matrixP_FullBtn = new System.Windows.Forms.Button();
-            this.matrixP_value1 = new System.Windows.Forms.TextBox();
-            this.matrixPCheck = new System.Windows.Forms.CheckBox();
-            this.operations_list = new System.Windows.Forms.ComboBox();
-            this.matrixP_value2 = new System.Windows.Forms.TextBox();
-            this.matrixP_value3 = new System.Windows.Forms.TextBox();
-            this.matrixP_value4 = new System.Windows.Forms.TextBox();
-            this.matrixP_value5 = new System.Windows.Forms.TextBox();
-            this.matrixP_value10 = new System.Windows.Forms.TextBox();
-            this.matrixP_value9 = new System.Windows.Forms.TextBox();
-            this.matrixP_value8 = new System.Windows.Forms.TextBox();
-            this.matrixP_value7 = new System.Windows.Forms.TextBox();
-            this.matrixP_value6 = new System.Windows.Forms.TextBox();
-            this.matrixP_value15 = new System.Windows.Forms.TextBox();
-            this.matrixP_value14 = new System.Windows.Forms.TextBox();
-            this.matrixP_value13 = new System.Windows.Forms.TextBox();
-            this.matrixP_value12 = new System.Windows.Forms.TextBox();
-            this.matrixP_value11 = new System.Windows.Forms.TextBox();
-            this.matrixP_value20 = new System.Windows.Forms.TextBox();
-            this.matrixP_value19 = new System.Windows.Forms.TextBox();
-            this.matrixP_value18 = new System.Windows.Forms.TextBox();
-            this.matrixP_value17 = new System.Windows.Forms.TextBox();
-            this.matrixP_value16 = new System.Windows.Forms.TextBox();
-            this.matrixP_value25 = new System.Windows.Forms.TextBox();
-            this.matrixP_value24 = new System.Windows.Forms.TextBox();
-            this.matrixP_value23 = new System.Windows.Forms.TextBox();
-            this.matrixP_value22 = new System.Windows.Forms.TextBox();
-            this.matrixP_value21 = new System.Windows.Forms.TextBox();
-            this.matrixP_EmptyBtn = new System.Windows.Forms.Button();
-            this.matrixP_DiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixP_AntiDiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixQ_AntiDiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixQ_DiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixQ_EmptyBtn = new System.Windows.Forms.Button();
-            this.matrixQ_value25 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value24 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value23 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value22 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value21 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value20 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value19 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value18 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value17 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value16 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value15 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value14 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value13 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value12 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value11 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value10 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value9 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value8 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value7 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value6 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value5 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value4 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value3 = new System.Windows.Forms.TextBox();
-            this.matrixQ_value2 = new System.Windows.Forms.TextBox();
-            this.matrixQCheck = new System.Windows.Forms.CheckBox();
-            this.matrixQ_value1 = new System.Windows.Forms.TextBox();
-            this.matrixQ_FullBtn = new System.Windows.Forms.Button();
-            this.matrixR_AntiDiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixR_DiagonalBtn = new System.Windows.Forms.Button();
-            this.matrixR_EmptyBtn = new System.Windows.Forms.Button();
-            this.matrixR_value25 = new System.Windows.Forms.TextBox();
-            this.matrixR_value24 = new System.Windows.Forms.TextBox();
-            this.matrixR_value23 = new System.Windows.Forms.TextBox();
-            this.matrixR_value22 = new System.Windows.Forms.TextBox();
-            this.matrixR_value21 = new System.Windows.Forms.TextBox();
-            this.matrixR_value20 = new System.Windows.Forms.TextBox();
-            this.matrixR_value19 = new System.Windows.Forms.TextBox();
-            this.matrixR_value18 = new System.Windows.Forms.TextBox();
-            this.matrixR_value17 = new System.Windows.Forms.TextBox();
-            this.matrixR_value16 = new System.Windows.Forms.TextBox();
-            this.matrixR_value15 = new System.Windows.Forms.TextBox();
-            this.matrixR_value14 = new System.Windows.Forms.TextBox();
-            this.matrixR_value13 = new System.Windows.Forms.TextBox();
-            this.matrixR_value12 = new System.Windows.Forms.TextBox();
-            this.matrixR_value11 = new System.Windows.Forms.TextBox();
-            this.matrixR_value10 = new System.Windows.Forms.TextBox();
-            this.matrixR_value9 = new System.Windows.Forms.TextBox();
-            this.matrixR_value8 = new System.Windows.Forms.TextBox();
-            this.matrixR_value7 = new System.Windows.Forms.TextBox();
-            this.matrixR_value6 = new System.Windows.Forms.TextBox();
-            this.matrixR_value5 = new System.Windows.Forms.TextBox();
-            this.matrixR_value4 = new System.Windows.Forms.TextBox();
-            this.matrixR_value3 = new System.Windows.Forms.TextBox();
-            this.matrixR_value2 = new System.Windows.Forms.TextBox();
-            this.matrixRCheck = new System.Windows.Forms.CheckBox();
-            this.matrixR_value1 = new System.Windows.Forms.TextBox();
-            this.matrixR_FullBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.result_value25 = new System.Windows.Forms.TextBox();
-            this.result_value24 = new System.Windows.Forms.TextBox();
-            this.result_value23 = new System.Windows.Forms.TextBox();
-            this.result_value22 = new System.Windows.Forms.TextBox();
-            this.result_value21 = new System.Windows.Forms.TextBox();
-            this.result_value20 = new System.Windows.Forms.TextBox();
-            this.result_value19 = new System.Windows.Forms.TextBox();
-            this.result_value18 = new System.Windows.Forms.TextBox();
-            this.result_value17 = new System.Windows.Forms.TextBox();
-            this.result_value16 = new System.Windows.Forms.TextBox();
-            this.result_value15 = new System.Windows.Forms.TextBox();
-            this.result_value14 = new System.Windows.Forms.TextBox();
-            this.result_value13 = new System.Windows.Forms.TextBox();
-            this.result_value12 = new System.Windows.Forms.TextBox();
-            this.result_value11 = new System.Windows.Forms.TextBox();
-            this.result_value10 = new System.Windows.Forms.TextBox();
-            this.result_value9 = new System.Windows.Forms.TextBox();
-            this.result_value8 = new System.Windows.Forms.TextBox();
-            this.result_value7 = new System.Windows.Forms.TextBox();
-            this.result_value6 = new System.Windows.Forms.TextBox();
-            this.result_value5 = new System.Windows.Forms.TextBox();
-            this.result_value4 = new System.Windows.Forms.TextBox();
-            this.result_value3 = new System.Windows.Forms.TextBox();
-            this.result_value2 = new System.Windows.Forms.TextBox();
-            this.result_value1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.showResult_btn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rights = new System.Windows.Forms.Label();
-            this.sliceMode_box = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.narrowValue3 = new System.Windows.Forms.TextBox();
-            this.narrowValue2 = new System.Windows.Forms.TextBox();
-            this.narrowValue1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            matrixP_FullBtn = new Button();
+            matrixP_value1 = new TextBox();
+            matrixPCheck = new CheckBox();
+            operations_list = new ComboBox();
+            matrixP_value2 = new TextBox();
+            matrixP_value3 = new TextBox();
+            matrixP_value4 = new TextBox();
+            matrixP_value5 = new TextBox();
+            matrixP_value10 = new TextBox();
+            matrixP_value9 = new TextBox();
+            matrixP_value8 = new TextBox();
+            matrixP_value7 = new TextBox();
+            matrixP_value6 = new TextBox();
+            matrixP_value15 = new TextBox();
+            matrixP_value14 = new TextBox();
+            matrixP_value13 = new TextBox();
+            matrixP_value12 = new TextBox();
+            matrixP_value11 = new TextBox();
+            matrixP_value20 = new TextBox();
+            matrixP_value19 = new TextBox();
+            matrixP_value18 = new TextBox();
+            matrixP_value17 = new TextBox();
+            matrixP_value16 = new TextBox();
+            matrixP_value25 = new TextBox();
+            matrixP_value24 = new TextBox();
+            matrixP_value23 = new TextBox();
+            matrixP_value22 = new TextBox();
+            matrixP_value21 = new TextBox();
+            matrixP_EmptyBtn = new Button();
+            matrixP_DiagonalBtn = new Button();
+            matrixP_AntiDiagonalBtn = new Button();
+            matrixQ_AntiDiagonalBtn = new Button();
+            matrixQ_DiagonalBtn = new Button();
+            matrixQ_EmptyBtn = new Button();
+            matrixQ_value25 = new TextBox();
+            matrixQ_value24 = new TextBox();
+            matrixQ_value23 = new TextBox();
+            matrixQ_value22 = new TextBox();
+            matrixQ_value21 = new TextBox();
+            matrixQ_value20 = new TextBox();
+            matrixQ_value19 = new TextBox();
+            matrixQ_value18 = new TextBox();
+            matrixQ_value17 = new TextBox();
+            matrixQ_value16 = new TextBox();
+            matrixQ_value15 = new TextBox();
+            matrixQ_value14 = new TextBox();
+            matrixQ_value13 = new TextBox();
+            matrixQ_value12 = new TextBox();
+            matrixQ_value11 = new TextBox();
+            matrixQ_value10 = new TextBox();
+            matrixQ_value9 = new TextBox();
+            matrixQ_value8 = new TextBox();
+            matrixQ_value7 = new TextBox();
+            matrixQ_value6 = new TextBox();
+            matrixQ_value5 = new TextBox();
+            matrixQ_value4 = new TextBox();
+            matrixQ_value3 = new TextBox();
+            matrixQ_value2 = new TextBox();
+            matrixQCheck = new CheckBox();
+            matrixQ_value1 = new TextBox();
+            matrixQ_FullBtn = new Button();
+            matrixR_AntiDiagonalBtn = new Button();
+            matrixR_DiagonalBtn = new Button();
+            matrixR_EmptyBtn = new Button();
+            matrixR_value25 = new TextBox();
+            matrixR_value24 = new TextBox();
+            matrixR_value23 = new TextBox();
+            matrixR_value22 = new TextBox();
+            matrixR_value21 = new TextBox();
+            matrixR_value20 = new TextBox();
+            matrixR_value19 = new TextBox();
+            matrixR_value18 = new TextBox();
+            matrixR_value17 = new TextBox();
+            matrixR_value16 = new TextBox();
+            matrixR_value15 = new TextBox();
+            matrixR_value14 = new TextBox();
+            matrixR_value13 = new TextBox();
+            matrixR_value12 = new TextBox();
+            matrixR_value11 = new TextBox();
+            matrixR_value10 = new TextBox();
+            matrixR_value9 = new TextBox();
+            matrixR_value8 = new TextBox();
+            matrixR_value7 = new TextBox();
+            matrixR_value6 = new TextBox();
+            matrixR_value5 = new TextBox();
+            matrixR_value4 = new TextBox();
+            matrixR_value3 = new TextBox();
+            matrixR_value2 = new TextBox();
+            matrixRCheck = new CheckBox();
+            matrixR_value1 = new TextBox();
+            matrixR_FullBtn = new Button();
+            label2 = new Label();
+            result_value25 = new TextBox();
+            result_value24 = new TextBox();
+            result_value23 = new TextBox();
+            result_value22 = new TextBox();
+            result_value21 = new TextBox();
+            result_value20 = new TextBox();
+            result_value19 = new TextBox();
+            result_value18 = new TextBox();
+            result_value17 = new TextBox();
+            result_value16 = new TextBox();
+            result_value15 = new TextBox();
+            result_value14 = new TextBox();
+            result_value13 = new TextBox();
+            result_value12 = new TextBox();
+            result_value11 = new TextBox();
+            result_value10 = new TextBox();
+            result_value9 = new TextBox();
+            result_value8 = new TextBox();
+            result_value7 = new TextBox();
+            result_value6 = new TextBox();
+            result_value5 = new TextBox();
+            result_value4 = new TextBox();
+            result_value3 = new TextBox();
+            result_value2 = new TextBox();
+            result_value1 = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            showResult_btn = new Button();
+            label6 = new Label();
+            rights = new Label();
+            sliceMode_box = new ComboBox();
+            label7 = new Label();
+            label8 = new Label();
+            narrowValue3 = new TextBox();
+            narrowValue2 = new TextBox();
+            narrowValue1 = new TextBox();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Operation to do:";
+            label1.AutoSize = true;
+            label1.Location = new Point(27, 65);
+            label1.Name = "label1";
+            label1.Size = new Size(239, 41);
+            label1.TabIndex = 0;
+            label1.Text = "Operation to do:";
             // 
             // matrixP_FullBtn
             // 
-            this.matrixP_FullBtn.Location = new System.Drawing.Point(97, 548);
-            this.matrixP_FullBtn.Name = "matrixP_FullBtn";
-            this.matrixP_FullBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixP_FullBtn.TabIndex = 1;
-            this.matrixP_FullBtn.Text = "Full";
-            this.matrixP_FullBtn.UseVisualStyleBackColor = true;
-            this.matrixP_FullBtn.Click += new System.EventHandler(this.matrixP_FullBtn_Click);
+            matrixP_FullBtn.Location = new Point(97, 548);
+            matrixP_FullBtn.Name = "matrixP_FullBtn";
+            matrixP_FullBtn.Size = new Size(254, 58);
+            matrixP_FullBtn.TabIndex = 1;
+            matrixP_FullBtn.Text = "Full";
+            matrixP_FullBtn.UseVisualStyleBackColor = true;
+            matrixP_FullBtn.Click += matrixP_FullBtn_Click;
             // 
             // matrixP_value1
             // 
-            this.matrixP_value1.Location = new System.Drawing.Point(97, 263);
-            this.matrixP_value1.MaxLength = 1;
-            this.matrixP_value1.Name = "matrixP_value1";
-            this.matrixP_value1.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value1.TabIndex = 2;
-            this.matrixP_value1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value1.Location = new Point(97, 263);
+            matrixP_value1.MaxLength = 1;
+            matrixP_value1.Name = "matrixP_value1";
+            matrixP_value1.Size = new Size(46, 47);
+            matrixP_value1.TabIndex = 2;
+            matrixP_value1.TextAlign = HorizontalAlignment.Center;
+            matrixP_value1.KeyPress += Form1_KeyPress;
             // 
             // matrixPCheck
             // 
-            this.matrixPCheck.AutoSize = true;
-            this.matrixPCheck.Location = new System.Drawing.Point(102, 201);
-            this.matrixPCheck.Name = "matrixPCheck";
-            this.matrixPCheck.Size = new System.Drawing.Size(164, 45);
-            this.matrixPCheck.TabIndex = 3;
-            this.matrixPCheck.Text = "Matrix P";
-            this.matrixPCheck.UseVisualStyleBackColor = true;
-            this.matrixPCheck.CheckStateChanged += new System.EventHandler(this.matrixPCheck_CheckStateChanged);
+            matrixPCheck.AutoSize = true;
+            matrixPCheck.Location = new Point(102, 201);
+            matrixPCheck.Name = "matrixPCheck";
+            matrixPCheck.Size = new Size(164, 45);
+            matrixPCheck.TabIndex = 3;
+            matrixPCheck.Text = "Matrix P";
+            matrixPCheck.UseVisualStyleBackColor = true;
+            matrixPCheck.CheckStateChanged += matrixPCheck_CheckStateChanged;
             // 
             // operations_list
             // 
-            this.operations_list.FormattingEnabled = true;
-            this.operations_list.Items.AddRange(new object[] {
-            "bij(P∩Q) ",
-            "bij(P∪Q) ",
-            "bij(!P) ",
-            "bij(P-1) ",
-            "bij(P\\Q) ",
-            "bij(PΔQ) ",
-            "bij(P°Q)"});
-            this.operations_list.Location = new System.Drawing.Point(281, 62);
-            this.operations_list.Name = "operations_list";
-            this.operations_list.Size = new System.Drawing.Size(302, 49);
-            this.operations_list.TabIndex = 4;
+            operations_list.FormattingEnabled = true;
+            operations_list.Items.AddRange(new object[] { "bij(P∩Q) ", "bij(P∪Q) ", "bij(!P) ", "bij(P-1) ", "bij(P\\Q) ", "bij(PΔQ) ", "bij(P°Q)" });
+            operations_list.Location = new Point(281, 62);
+            operations_list.Name = "operations_list";
+            operations_list.Size = new Size(302, 49);
+            operations_list.TabIndex = 4;
             // 
             // matrixP_value2
             // 
-            this.matrixP_value2.Location = new System.Drawing.Point(149, 263);
-            this.matrixP_value2.MaxLength = 1;
-            this.matrixP_value2.Name = "matrixP_value2";
-            this.matrixP_value2.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value2.TabIndex = 5;
-            this.matrixP_value2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value2.Location = new Point(149, 263);
+            matrixP_value2.MaxLength = 1;
+            matrixP_value2.Name = "matrixP_value2";
+            matrixP_value2.Size = new Size(46, 47);
+            matrixP_value2.TabIndex = 5;
+            matrixP_value2.TextAlign = HorizontalAlignment.Center;
+            matrixP_value2.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value3
             // 
-            this.matrixP_value3.Location = new System.Drawing.Point(201, 263);
-            this.matrixP_value3.MaxLength = 1;
-            this.matrixP_value3.Name = "matrixP_value3";
-            this.matrixP_value3.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value3.TabIndex = 6;
-            this.matrixP_value3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value3.Location = new Point(201, 263);
+            matrixP_value3.MaxLength = 1;
+            matrixP_value3.Name = "matrixP_value3";
+            matrixP_value3.Size = new Size(46, 47);
+            matrixP_value3.TabIndex = 6;
+            matrixP_value3.TextAlign = HorizontalAlignment.Center;
+            matrixP_value3.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value4
             // 
-            this.matrixP_value4.Location = new System.Drawing.Point(253, 263);
-            this.matrixP_value4.MaxLength = 1;
-            this.matrixP_value4.Name = "matrixP_value4";
-            this.matrixP_value4.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value4.TabIndex = 7;
-            this.matrixP_value4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value4.Location = new Point(253, 263);
+            matrixP_value4.MaxLength = 1;
+            matrixP_value4.Name = "matrixP_value4";
+            matrixP_value4.Size = new Size(46, 47);
+            matrixP_value4.TabIndex = 7;
+            matrixP_value4.TextAlign = HorizontalAlignment.Center;
+            matrixP_value4.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value5
             // 
-            this.matrixP_value5.Location = new System.Drawing.Point(305, 263);
-            this.matrixP_value5.MaxLength = 1;
-            this.matrixP_value5.Name = "matrixP_value5";
-            this.matrixP_value5.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value5.TabIndex = 8;
-            this.matrixP_value5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value5.Location = new Point(305, 263);
+            matrixP_value5.MaxLength = 1;
+            matrixP_value5.Name = "matrixP_value5";
+            matrixP_value5.Size = new Size(46, 47);
+            matrixP_value5.TabIndex = 8;
+            matrixP_value5.TextAlign = HorizontalAlignment.Center;
+            matrixP_value5.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value10
             // 
-            this.matrixP_value10.Location = new System.Drawing.Point(305, 316);
-            this.matrixP_value10.MaxLength = 1;
-            this.matrixP_value10.Name = "matrixP_value10";
-            this.matrixP_value10.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value10.TabIndex = 13;
-            this.matrixP_value10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value10.Location = new Point(305, 316);
+            matrixP_value10.MaxLength = 1;
+            matrixP_value10.Name = "matrixP_value10";
+            matrixP_value10.Size = new Size(46, 47);
+            matrixP_value10.TabIndex = 13;
+            matrixP_value10.TextAlign = HorizontalAlignment.Center;
+            matrixP_value10.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value9
             // 
-            this.matrixP_value9.Location = new System.Drawing.Point(253, 316);
-            this.matrixP_value9.MaxLength = 1;
-            this.matrixP_value9.Name = "matrixP_value9";
-            this.matrixP_value9.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value9.TabIndex = 12;
-            this.matrixP_value9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value9.Location = new Point(253, 316);
+            matrixP_value9.MaxLength = 1;
+            matrixP_value9.Name = "matrixP_value9";
+            matrixP_value9.Size = new Size(46, 47);
+            matrixP_value9.TabIndex = 12;
+            matrixP_value9.TextAlign = HorizontalAlignment.Center;
+            matrixP_value9.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value8
             // 
-            this.matrixP_value8.Location = new System.Drawing.Point(201, 316);
-            this.matrixP_value8.MaxLength = 1;
-            this.matrixP_value8.Name = "matrixP_value8";
-            this.matrixP_value8.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value8.TabIndex = 11;
-            this.matrixP_value8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value8.Location = new Point(201, 316);
+            matrixP_value8.MaxLength = 1;
+            matrixP_value8.Name = "matrixP_value8";
+            matrixP_value8.Size = new Size(46, 47);
+            matrixP_value8.TabIndex = 11;
+            matrixP_value8.TextAlign = HorizontalAlignment.Center;
+            matrixP_value8.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value7
             // 
-            this.matrixP_value7.Location = new System.Drawing.Point(149, 316);
-            this.matrixP_value7.MaxLength = 1;
-            this.matrixP_value7.Name = "matrixP_value7";
-            this.matrixP_value7.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value7.TabIndex = 10;
-            this.matrixP_value7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value7.Location = new Point(149, 316);
+            matrixP_value7.MaxLength = 1;
+            matrixP_value7.Name = "matrixP_value7";
+            matrixP_value7.Size = new Size(46, 47);
+            matrixP_value7.TabIndex = 10;
+            matrixP_value7.TextAlign = HorizontalAlignment.Center;
+            matrixP_value7.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value6
             // 
-            this.matrixP_value6.Location = new System.Drawing.Point(97, 316);
-            this.matrixP_value6.MaxLength = 1;
-            this.matrixP_value6.Name = "matrixP_value6";
-            this.matrixP_value6.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value6.TabIndex = 9;
-            this.matrixP_value6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value6.Location = new Point(97, 316);
+            matrixP_value6.MaxLength = 1;
+            matrixP_value6.Name = "matrixP_value6";
+            matrixP_value6.Size = new Size(46, 47);
+            matrixP_value6.TabIndex = 9;
+            matrixP_value6.TextAlign = HorizontalAlignment.Center;
+            matrixP_value6.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value15
             // 
-            this.matrixP_value15.Location = new System.Drawing.Point(305, 369);
-            this.matrixP_value15.MaxLength = 1;
-            this.matrixP_value15.Name = "matrixP_value15";
-            this.matrixP_value15.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value15.TabIndex = 18;
-            this.matrixP_value15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value15.Location = new Point(305, 369);
+            matrixP_value15.MaxLength = 1;
+            matrixP_value15.Name = "matrixP_value15";
+            matrixP_value15.Size = new Size(46, 47);
+            matrixP_value15.TabIndex = 18;
+            matrixP_value15.TextAlign = HorizontalAlignment.Center;
+            matrixP_value15.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value14
             // 
-            this.matrixP_value14.Location = new System.Drawing.Point(253, 369);
-            this.matrixP_value14.MaxLength = 1;
-            this.matrixP_value14.Name = "matrixP_value14";
-            this.matrixP_value14.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value14.TabIndex = 17;
-            this.matrixP_value14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value14.Location = new Point(253, 369);
+            matrixP_value14.MaxLength = 1;
+            matrixP_value14.Name = "matrixP_value14";
+            matrixP_value14.Size = new Size(46, 47);
+            matrixP_value14.TabIndex = 17;
+            matrixP_value14.TextAlign = HorizontalAlignment.Center;
+            matrixP_value14.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value13
             // 
-            this.matrixP_value13.Location = new System.Drawing.Point(201, 369);
-            this.matrixP_value13.MaxLength = 1;
-            this.matrixP_value13.Name = "matrixP_value13";
-            this.matrixP_value13.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value13.TabIndex = 16;
-            this.matrixP_value13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value13.Location = new Point(201, 369);
+            matrixP_value13.MaxLength = 1;
+            matrixP_value13.Name = "matrixP_value13";
+            matrixP_value13.Size = new Size(46, 47);
+            matrixP_value13.TabIndex = 16;
+            matrixP_value13.TextAlign = HorizontalAlignment.Center;
+            matrixP_value13.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value12
             // 
-            this.matrixP_value12.Location = new System.Drawing.Point(149, 369);
-            this.matrixP_value12.MaxLength = 1;
-            this.matrixP_value12.Name = "matrixP_value12";
-            this.matrixP_value12.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value12.TabIndex = 15;
-            this.matrixP_value12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value12.Location = new Point(149, 369);
+            matrixP_value12.MaxLength = 1;
+            matrixP_value12.Name = "matrixP_value12";
+            matrixP_value12.Size = new Size(46, 47);
+            matrixP_value12.TabIndex = 15;
+            matrixP_value12.TextAlign = HorizontalAlignment.Center;
+            matrixP_value12.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value11
             // 
-            this.matrixP_value11.Location = new System.Drawing.Point(97, 369);
-            this.matrixP_value11.MaxLength = 1;
-            this.matrixP_value11.Name = "matrixP_value11";
-            this.matrixP_value11.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value11.TabIndex = 14;
-            this.matrixP_value11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value11.Location = new Point(97, 369);
+            matrixP_value11.MaxLength = 1;
+            matrixP_value11.Name = "matrixP_value11";
+            matrixP_value11.Size = new Size(46, 47);
+            matrixP_value11.TabIndex = 14;
+            matrixP_value11.TextAlign = HorizontalAlignment.Center;
+            matrixP_value11.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value20
             // 
-            this.matrixP_value20.Location = new System.Drawing.Point(305, 422);
-            this.matrixP_value20.MaxLength = 1;
-            this.matrixP_value20.Name = "matrixP_value20";
-            this.matrixP_value20.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value20.TabIndex = 23;
-            this.matrixP_value20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value20.Location = new Point(305, 422);
+            matrixP_value20.MaxLength = 1;
+            matrixP_value20.Name = "matrixP_value20";
+            matrixP_value20.Size = new Size(46, 47);
+            matrixP_value20.TabIndex = 23;
+            matrixP_value20.TextAlign = HorizontalAlignment.Center;
+            matrixP_value20.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value19
             // 
-            this.matrixP_value19.Location = new System.Drawing.Point(253, 422);
-            this.matrixP_value19.MaxLength = 1;
-            this.matrixP_value19.Name = "matrixP_value19";
-            this.matrixP_value19.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value19.TabIndex = 22;
-            this.matrixP_value19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value19.Location = new Point(253, 422);
+            matrixP_value19.MaxLength = 1;
+            matrixP_value19.Name = "matrixP_value19";
+            matrixP_value19.Size = new Size(46, 47);
+            matrixP_value19.TabIndex = 22;
+            matrixP_value19.TextAlign = HorizontalAlignment.Center;
+            matrixP_value19.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value18
             // 
-            this.matrixP_value18.Location = new System.Drawing.Point(201, 422);
-            this.matrixP_value18.MaxLength = 1;
-            this.matrixP_value18.Name = "matrixP_value18";
-            this.matrixP_value18.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value18.TabIndex = 21;
-            this.matrixP_value18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value18.Location = new Point(201, 422);
+            matrixP_value18.MaxLength = 1;
+            matrixP_value18.Name = "matrixP_value18";
+            matrixP_value18.Size = new Size(46, 47);
+            matrixP_value18.TabIndex = 21;
+            matrixP_value18.TextAlign = HorizontalAlignment.Center;
+            matrixP_value18.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value17
             // 
-            this.matrixP_value17.Location = new System.Drawing.Point(149, 422);
-            this.matrixP_value17.MaxLength = 1;
-            this.matrixP_value17.Name = "matrixP_value17";
-            this.matrixP_value17.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value17.TabIndex = 20;
-            this.matrixP_value17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value17.Location = new Point(149, 422);
+            matrixP_value17.MaxLength = 1;
+            matrixP_value17.Name = "matrixP_value17";
+            matrixP_value17.Size = new Size(46, 47);
+            matrixP_value17.TabIndex = 20;
+            matrixP_value17.TextAlign = HorizontalAlignment.Center;
+            matrixP_value17.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value16
             // 
-            this.matrixP_value16.Location = new System.Drawing.Point(97, 422);
-            this.matrixP_value16.MaxLength = 1;
-            this.matrixP_value16.Name = "matrixP_value16";
-            this.matrixP_value16.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value16.TabIndex = 19;
-            this.matrixP_value16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value16.Location = new Point(97, 422);
+            matrixP_value16.MaxLength = 1;
+            matrixP_value16.Name = "matrixP_value16";
+            matrixP_value16.Size = new Size(46, 47);
+            matrixP_value16.TabIndex = 19;
+            matrixP_value16.TextAlign = HorizontalAlignment.Center;
+            matrixP_value16.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value25
             // 
-            this.matrixP_value25.Location = new System.Drawing.Point(305, 475);
-            this.matrixP_value25.MaxLength = 1;
-            this.matrixP_value25.Name = "matrixP_value25";
-            this.matrixP_value25.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value25.TabIndex = 28;
-            this.matrixP_value25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value25.Location = new Point(305, 475);
+            matrixP_value25.MaxLength = 1;
+            matrixP_value25.Name = "matrixP_value25";
+            matrixP_value25.Size = new Size(46, 47);
+            matrixP_value25.TabIndex = 28;
+            matrixP_value25.TextAlign = HorizontalAlignment.Center;
+            matrixP_value25.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value24
             // 
-            this.matrixP_value24.Location = new System.Drawing.Point(253, 475);
-            this.matrixP_value24.MaxLength = 1;
-            this.matrixP_value24.Name = "matrixP_value24";
-            this.matrixP_value24.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value24.TabIndex = 27;
-            this.matrixP_value24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value24.Location = new Point(253, 475);
+            matrixP_value24.MaxLength = 1;
+            matrixP_value24.Name = "matrixP_value24";
+            matrixP_value24.Size = new Size(46, 47);
+            matrixP_value24.TabIndex = 27;
+            matrixP_value24.TextAlign = HorizontalAlignment.Center;
+            matrixP_value24.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value23
             // 
-            this.matrixP_value23.Location = new System.Drawing.Point(201, 475);
-            this.matrixP_value23.MaxLength = 1;
-            this.matrixP_value23.Name = "matrixP_value23";
-            this.matrixP_value23.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value23.TabIndex = 26;
-            this.matrixP_value23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value23.Location = new Point(201, 475);
+            matrixP_value23.MaxLength = 1;
+            matrixP_value23.Name = "matrixP_value23";
+            matrixP_value23.Size = new Size(46, 47);
+            matrixP_value23.TabIndex = 26;
+            matrixP_value23.TextAlign = HorizontalAlignment.Center;
+            matrixP_value23.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value22
             // 
-            this.matrixP_value22.Location = new System.Drawing.Point(149, 475);
-            this.matrixP_value22.MaxLength = 1;
-            this.matrixP_value22.Name = "matrixP_value22";
-            this.matrixP_value22.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value22.TabIndex = 25;
-            this.matrixP_value22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value22.Location = new Point(149, 475);
+            matrixP_value22.MaxLength = 1;
+            matrixP_value22.Name = "matrixP_value22";
+            matrixP_value22.Size = new Size(46, 47);
+            matrixP_value22.TabIndex = 25;
+            matrixP_value22.TextAlign = HorizontalAlignment.Center;
+            matrixP_value22.KeyPress += Form1_KeyPress;
             // 
             // matrixP_value21
             // 
-            this.matrixP_value21.Location = new System.Drawing.Point(97, 475);
-            this.matrixP_value21.MaxLength = 1;
-            this.matrixP_value21.Name = "matrixP_value21";
-            this.matrixP_value21.Size = new System.Drawing.Size(46, 47);
-            this.matrixP_value21.TabIndex = 24;
-            this.matrixP_value21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixP_value21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixP_value21.Location = new Point(97, 475);
+            matrixP_value21.MaxLength = 1;
+            matrixP_value21.Name = "matrixP_value21";
+            matrixP_value21.Size = new Size(46, 47);
+            matrixP_value21.TabIndex = 24;
+            matrixP_value21.TextAlign = HorizontalAlignment.Center;
+            matrixP_value21.KeyPress += Form1_KeyPress;
             // 
             // matrixP_EmptyBtn
             // 
-            this.matrixP_EmptyBtn.Location = new System.Drawing.Point(97, 612);
-            this.matrixP_EmptyBtn.Name = "matrixP_EmptyBtn";
-            this.matrixP_EmptyBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixP_EmptyBtn.TabIndex = 29;
-            this.matrixP_EmptyBtn.Text = "Empty";
-            this.matrixP_EmptyBtn.UseVisualStyleBackColor = true;
-            this.matrixP_EmptyBtn.Click += new System.EventHandler(this.matrixP_EmptyBtn_Click);
+            matrixP_EmptyBtn.Location = new Point(97, 612);
+            matrixP_EmptyBtn.Name = "matrixP_EmptyBtn";
+            matrixP_EmptyBtn.Size = new Size(254, 58);
+            matrixP_EmptyBtn.TabIndex = 29;
+            matrixP_EmptyBtn.Text = "Empty";
+            matrixP_EmptyBtn.UseVisualStyleBackColor = true;
+            matrixP_EmptyBtn.Click += matrixP_EmptyBtn_Click;
             // 
             // matrixP_DiagonalBtn
             // 
-            this.matrixP_DiagonalBtn.Location = new System.Drawing.Point(97, 676);
-            this.matrixP_DiagonalBtn.Name = "matrixP_DiagonalBtn";
-            this.matrixP_DiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixP_DiagonalBtn.TabIndex = 30;
-            this.matrixP_DiagonalBtn.Text = "Diagonal";
-            this.matrixP_DiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixP_DiagonalBtn.Click += new System.EventHandler(this.matrixP_DiagonalBtn_Click);
+            matrixP_DiagonalBtn.Location = new Point(97, 676);
+            matrixP_DiagonalBtn.Name = "matrixP_DiagonalBtn";
+            matrixP_DiagonalBtn.Size = new Size(254, 58);
+            matrixP_DiagonalBtn.TabIndex = 30;
+            matrixP_DiagonalBtn.Text = "Diagonal";
+            matrixP_DiagonalBtn.UseVisualStyleBackColor = true;
+            matrixP_DiagonalBtn.Click += matrixP_DiagonalBtn_Click;
             // 
             // matrixP_AntiDiagonalBtn
             // 
-            this.matrixP_AntiDiagonalBtn.Location = new System.Drawing.Point(97, 740);
-            this.matrixP_AntiDiagonalBtn.Name = "matrixP_AntiDiagonalBtn";
-            this.matrixP_AntiDiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixP_AntiDiagonalBtn.TabIndex = 31;
-            this.matrixP_AntiDiagonalBtn.Text = "Anti-Diagonal";
-            this.matrixP_AntiDiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixP_AntiDiagonalBtn.Click += new System.EventHandler(this.matrixP_AntiDiagonalBtn_Click);
+            matrixP_AntiDiagonalBtn.Location = new Point(97, 740);
+            matrixP_AntiDiagonalBtn.Name = "matrixP_AntiDiagonalBtn";
+            matrixP_AntiDiagonalBtn.Size = new Size(254, 58);
+            matrixP_AntiDiagonalBtn.TabIndex = 31;
+            matrixP_AntiDiagonalBtn.Text = "Anti-Diagonal";
+            matrixP_AntiDiagonalBtn.UseVisualStyleBackColor = true;
+            matrixP_AntiDiagonalBtn.Click += matrixP_AntiDiagonalBtn_Click;
             // 
             // matrixQ_AntiDiagonalBtn
             // 
-            this.matrixQ_AntiDiagonalBtn.Location = new System.Drawing.Point(447, 740);
-            this.matrixQ_AntiDiagonalBtn.Name = "matrixQ_AntiDiagonalBtn";
-            this.matrixQ_AntiDiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixQ_AntiDiagonalBtn.TabIndex = 61;
-            this.matrixQ_AntiDiagonalBtn.Text = "Anti-Diagonal";
-            this.matrixQ_AntiDiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixQ_AntiDiagonalBtn.Click += new System.EventHandler(this.matrixQ_AntiDiagonalBtn_Click);
+            matrixQ_AntiDiagonalBtn.Location = new Point(447, 740);
+            matrixQ_AntiDiagonalBtn.Name = "matrixQ_AntiDiagonalBtn";
+            matrixQ_AntiDiagonalBtn.Size = new Size(254, 58);
+            matrixQ_AntiDiagonalBtn.TabIndex = 61;
+            matrixQ_AntiDiagonalBtn.Text = "Anti-Diagonal";
+            matrixQ_AntiDiagonalBtn.UseVisualStyleBackColor = true;
+            matrixQ_AntiDiagonalBtn.Click += matrixQ_AntiDiagonalBtn_Click;
             // 
             // matrixQ_DiagonalBtn
             // 
-            this.matrixQ_DiagonalBtn.Location = new System.Drawing.Point(447, 676);
-            this.matrixQ_DiagonalBtn.Name = "matrixQ_DiagonalBtn";
-            this.matrixQ_DiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixQ_DiagonalBtn.TabIndex = 60;
-            this.matrixQ_DiagonalBtn.Text = "Diagonal";
-            this.matrixQ_DiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixQ_DiagonalBtn.Click += new System.EventHandler(this.matrixQ_DiagonalBtn_Click);
+            matrixQ_DiagonalBtn.Location = new Point(447, 676);
+            matrixQ_DiagonalBtn.Name = "matrixQ_DiagonalBtn";
+            matrixQ_DiagonalBtn.Size = new Size(254, 58);
+            matrixQ_DiagonalBtn.TabIndex = 60;
+            matrixQ_DiagonalBtn.Text = "Diagonal";
+            matrixQ_DiagonalBtn.UseVisualStyleBackColor = true;
+            matrixQ_DiagonalBtn.Click += matrixQ_DiagonalBtn_Click;
             // 
             // matrixQ_EmptyBtn
             // 
-            this.matrixQ_EmptyBtn.Location = new System.Drawing.Point(447, 612);
-            this.matrixQ_EmptyBtn.Name = "matrixQ_EmptyBtn";
-            this.matrixQ_EmptyBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixQ_EmptyBtn.TabIndex = 59;
-            this.matrixQ_EmptyBtn.Text = "Empty";
-            this.matrixQ_EmptyBtn.UseVisualStyleBackColor = true;
-            this.matrixQ_EmptyBtn.Click += new System.EventHandler(this.matrixQ_EmptyBtn_Click);
+            matrixQ_EmptyBtn.Location = new Point(447, 612);
+            matrixQ_EmptyBtn.Name = "matrixQ_EmptyBtn";
+            matrixQ_EmptyBtn.Size = new Size(254, 58);
+            matrixQ_EmptyBtn.TabIndex = 59;
+            matrixQ_EmptyBtn.Text = "Empty";
+            matrixQ_EmptyBtn.UseVisualStyleBackColor = true;
+            matrixQ_EmptyBtn.Click += matrixQ_EmptyBtn_Click;
             // 
             // matrixQ_value25
             // 
-            this.matrixQ_value25.Location = new System.Drawing.Point(655, 475);
-            this.matrixQ_value25.MaxLength = 1;
-            this.matrixQ_value25.Name = "matrixQ_value25";
-            this.matrixQ_value25.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value25.TabIndex = 58;
-            this.matrixQ_value25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value25.Location = new Point(655, 475);
+            matrixQ_value25.MaxLength = 1;
+            matrixQ_value25.Name = "matrixQ_value25";
+            matrixQ_value25.Size = new Size(46, 47);
+            matrixQ_value25.TabIndex = 58;
+            matrixQ_value25.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value25.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value24
             // 
-            this.matrixQ_value24.Location = new System.Drawing.Point(603, 475);
-            this.matrixQ_value24.MaxLength = 1;
-            this.matrixQ_value24.Name = "matrixQ_value24";
-            this.matrixQ_value24.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value24.TabIndex = 57;
-            this.matrixQ_value24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value24.Location = new Point(603, 475);
+            matrixQ_value24.MaxLength = 1;
+            matrixQ_value24.Name = "matrixQ_value24";
+            matrixQ_value24.Size = new Size(46, 47);
+            matrixQ_value24.TabIndex = 57;
+            matrixQ_value24.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value24.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value23
             // 
-            this.matrixQ_value23.Location = new System.Drawing.Point(551, 475);
-            this.matrixQ_value23.MaxLength = 1;
-            this.matrixQ_value23.Name = "matrixQ_value23";
-            this.matrixQ_value23.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value23.TabIndex = 56;
-            this.matrixQ_value23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value23.Location = new Point(551, 475);
+            matrixQ_value23.MaxLength = 1;
+            matrixQ_value23.Name = "matrixQ_value23";
+            matrixQ_value23.Size = new Size(46, 47);
+            matrixQ_value23.TabIndex = 56;
+            matrixQ_value23.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value23.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value22
             // 
-            this.matrixQ_value22.Location = new System.Drawing.Point(499, 475);
-            this.matrixQ_value22.MaxLength = 1;
-            this.matrixQ_value22.Name = "matrixQ_value22";
-            this.matrixQ_value22.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value22.TabIndex = 55;
-            this.matrixQ_value22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value22.Location = new Point(499, 475);
+            matrixQ_value22.MaxLength = 1;
+            matrixQ_value22.Name = "matrixQ_value22";
+            matrixQ_value22.Size = new Size(46, 47);
+            matrixQ_value22.TabIndex = 55;
+            matrixQ_value22.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value22.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value21
             // 
-            this.matrixQ_value21.Location = new System.Drawing.Point(447, 475);
-            this.matrixQ_value21.MaxLength = 1;
-            this.matrixQ_value21.Name = "matrixQ_value21";
-            this.matrixQ_value21.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value21.TabIndex = 54;
-            this.matrixQ_value21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value21.Location = new Point(447, 475);
+            matrixQ_value21.MaxLength = 1;
+            matrixQ_value21.Name = "matrixQ_value21";
+            matrixQ_value21.Size = new Size(46, 47);
+            matrixQ_value21.TabIndex = 54;
+            matrixQ_value21.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value21.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value20
             // 
-            this.matrixQ_value20.Location = new System.Drawing.Point(655, 422);
-            this.matrixQ_value20.MaxLength = 1;
-            this.matrixQ_value20.Name = "matrixQ_value20";
-            this.matrixQ_value20.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value20.TabIndex = 53;
-            this.matrixQ_value20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value20.Location = new Point(655, 422);
+            matrixQ_value20.MaxLength = 1;
+            matrixQ_value20.Name = "matrixQ_value20";
+            matrixQ_value20.Size = new Size(46, 47);
+            matrixQ_value20.TabIndex = 53;
+            matrixQ_value20.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value20.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value19
             // 
-            this.matrixQ_value19.Location = new System.Drawing.Point(603, 422);
-            this.matrixQ_value19.MaxLength = 1;
-            this.matrixQ_value19.Name = "matrixQ_value19";
-            this.matrixQ_value19.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value19.TabIndex = 52;
-            this.matrixQ_value19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value19.Location = new Point(603, 422);
+            matrixQ_value19.MaxLength = 1;
+            matrixQ_value19.Name = "matrixQ_value19";
+            matrixQ_value19.Size = new Size(46, 47);
+            matrixQ_value19.TabIndex = 52;
+            matrixQ_value19.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value19.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value18
             // 
-            this.matrixQ_value18.Location = new System.Drawing.Point(551, 422);
-            this.matrixQ_value18.MaxLength = 1;
-            this.matrixQ_value18.Name = "matrixQ_value18";
-            this.matrixQ_value18.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value18.TabIndex = 51;
-            this.matrixQ_value18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value18.Location = new Point(551, 422);
+            matrixQ_value18.MaxLength = 1;
+            matrixQ_value18.Name = "matrixQ_value18";
+            matrixQ_value18.Size = new Size(46, 47);
+            matrixQ_value18.TabIndex = 51;
+            matrixQ_value18.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value18.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value17
             // 
-            this.matrixQ_value17.Location = new System.Drawing.Point(499, 422);
-            this.matrixQ_value17.MaxLength = 1;
-            this.matrixQ_value17.Name = "matrixQ_value17";
-            this.matrixQ_value17.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value17.TabIndex = 50;
-            this.matrixQ_value17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value17.Location = new Point(499, 422);
+            matrixQ_value17.MaxLength = 1;
+            matrixQ_value17.Name = "matrixQ_value17";
+            matrixQ_value17.Size = new Size(46, 47);
+            matrixQ_value17.TabIndex = 50;
+            matrixQ_value17.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value17.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value16
             // 
-            this.matrixQ_value16.Location = new System.Drawing.Point(447, 422);
-            this.matrixQ_value16.MaxLength = 1;
-            this.matrixQ_value16.Name = "matrixQ_value16";
-            this.matrixQ_value16.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value16.TabIndex = 49;
-            this.matrixQ_value16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value16.Location = new Point(447, 422);
+            matrixQ_value16.MaxLength = 1;
+            matrixQ_value16.Name = "matrixQ_value16";
+            matrixQ_value16.Size = new Size(46, 47);
+            matrixQ_value16.TabIndex = 49;
+            matrixQ_value16.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value16.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value15
             // 
-            this.matrixQ_value15.Location = new System.Drawing.Point(655, 369);
-            this.matrixQ_value15.MaxLength = 1;
-            this.matrixQ_value15.Name = "matrixQ_value15";
-            this.matrixQ_value15.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value15.TabIndex = 48;
-            this.matrixQ_value15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value15.Location = new Point(655, 369);
+            matrixQ_value15.MaxLength = 1;
+            matrixQ_value15.Name = "matrixQ_value15";
+            matrixQ_value15.Size = new Size(46, 47);
+            matrixQ_value15.TabIndex = 48;
+            matrixQ_value15.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value15.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value14
             // 
-            this.matrixQ_value14.Location = new System.Drawing.Point(603, 369);
-            this.matrixQ_value14.MaxLength = 1;
-            this.matrixQ_value14.Name = "matrixQ_value14";
-            this.matrixQ_value14.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value14.TabIndex = 47;
-            this.matrixQ_value14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value14.Location = new Point(603, 369);
+            matrixQ_value14.MaxLength = 1;
+            matrixQ_value14.Name = "matrixQ_value14";
+            matrixQ_value14.Size = new Size(46, 47);
+            matrixQ_value14.TabIndex = 47;
+            matrixQ_value14.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value14.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value13
             // 
-            this.matrixQ_value13.Location = new System.Drawing.Point(551, 369);
-            this.matrixQ_value13.MaxLength = 1;
-            this.matrixQ_value13.Name = "matrixQ_value13";
-            this.matrixQ_value13.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value13.TabIndex = 46;
-            this.matrixQ_value13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value13.Location = new Point(551, 369);
+            matrixQ_value13.MaxLength = 1;
+            matrixQ_value13.Name = "matrixQ_value13";
+            matrixQ_value13.Size = new Size(46, 47);
+            matrixQ_value13.TabIndex = 46;
+            matrixQ_value13.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value13.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value12
             // 
-            this.matrixQ_value12.Location = new System.Drawing.Point(499, 369);
-            this.matrixQ_value12.MaxLength = 1;
-            this.matrixQ_value12.Name = "matrixQ_value12";
-            this.matrixQ_value12.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value12.TabIndex = 45;
-            this.matrixQ_value12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value12.Location = new Point(499, 369);
+            matrixQ_value12.MaxLength = 1;
+            matrixQ_value12.Name = "matrixQ_value12";
+            matrixQ_value12.Size = new Size(46, 47);
+            matrixQ_value12.TabIndex = 45;
+            matrixQ_value12.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value12.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value11
             // 
-            this.matrixQ_value11.Location = new System.Drawing.Point(447, 369);
-            this.matrixQ_value11.MaxLength = 1;
-            this.matrixQ_value11.Name = "matrixQ_value11";
-            this.matrixQ_value11.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value11.TabIndex = 44;
-            this.matrixQ_value11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value11.Location = new Point(447, 369);
+            matrixQ_value11.MaxLength = 1;
+            matrixQ_value11.Name = "matrixQ_value11";
+            matrixQ_value11.Size = new Size(46, 47);
+            matrixQ_value11.TabIndex = 44;
+            matrixQ_value11.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value11.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value10
             // 
-            this.matrixQ_value10.Location = new System.Drawing.Point(655, 316);
-            this.matrixQ_value10.MaxLength = 1;
-            this.matrixQ_value10.Name = "matrixQ_value10";
-            this.matrixQ_value10.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value10.TabIndex = 43;
-            this.matrixQ_value10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value10.Location = new Point(655, 316);
+            matrixQ_value10.MaxLength = 1;
+            matrixQ_value10.Name = "matrixQ_value10";
+            matrixQ_value10.Size = new Size(46, 47);
+            matrixQ_value10.TabIndex = 43;
+            matrixQ_value10.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value10.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value9
             // 
-            this.matrixQ_value9.Location = new System.Drawing.Point(603, 316);
-            this.matrixQ_value9.MaxLength = 1;
-            this.matrixQ_value9.Name = "matrixQ_value9";
-            this.matrixQ_value9.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value9.TabIndex = 42;
-            this.matrixQ_value9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value9.Location = new Point(603, 316);
+            matrixQ_value9.MaxLength = 1;
+            matrixQ_value9.Name = "matrixQ_value9";
+            matrixQ_value9.Size = new Size(46, 47);
+            matrixQ_value9.TabIndex = 42;
+            matrixQ_value9.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value9.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value8
             // 
-            this.matrixQ_value8.Location = new System.Drawing.Point(551, 316);
-            this.matrixQ_value8.MaxLength = 1;
-            this.matrixQ_value8.Name = "matrixQ_value8";
-            this.matrixQ_value8.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value8.TabIndex = 41;
-            this.matrixQ_value8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value8.Location = new Point(551, 316);
+            matrixQ_value8.MaxLength = 1;
+            matrixQ_value8.Name = "matrixQ_value8";
+            matrixQ_value8.Size = new Size(46, 47);
+            matrixQ_value8.TabIndex = 41;
+            matrixQ_value8.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value8.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value7
             // 
-            this.matrixQ_value7.Location = new System.Drawing.Point(499, 316);
-            this.matrixQ_value7.MaxLength = 1;
-            this.matrixQ_value7.Name = "matrixQ_value7";
-            this.matrixQ_value7.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value7.TabIndex = 40;
-            this.matrixQ_value7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value7.Location = new Point(499, 316);
+            matrixQ_value7.MaxLength = 1;
+            matrixQ_value7.Name = "matrixQ_value7";
+            matrixQ_value7.Size = new Size(46, 47);
+            matrixQ_value7.TabIndex = 40;
+            matrixQ_value7.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value7.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value6
             // 
-            this.matrixQ_value6.Location = new System.Drawing.Point(447, 316);
-            this.matrixQ_value6.MaxLength = 1;
-            this.matrixQ_value6.Name = "matrixQ_value6";
-            this.matrixQ_value6.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value6.TabIndex = 39;
-            this.matrixQ_value6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value6.Location = new Point(447, 316);
+            matrixQ_value6.MaxLength = 1;
+            matrixQ_value6.Name = "matrixQ_value6";
+            matrixQ_value6.Size = new Size(46, 47);
+            matrixQ_value6.TabIndex = 39;
+            matrixQ_value6.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value6.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value5
             // 
-            this.matrixQ_value5.Location = new System.Drawing.Point(655, 263);
-            this.matrixQ_value5.MaxLength = 1;
-            this.matrixQ_value5.Name = "matrixQ_value5";
-            this.matrixQ_value5.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value5.TabIndex = 38;
-            this.matrixQ_value5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value5.Location = new Point(655, 263);
+            matrixQ_value5.MaxLength = 1;
+            matrixQ_value5.Name = "matrixQ_value5";
+            matrixQ_value5.Size = new Size(46, 47);
+            matrixQ_value5.TabIndex = 38;
+            matrixQ_value5.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value5.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value4
             // 
-            this.matrixQ_value4.Location = new System.Drawing.Point(603, 263);
-            this.matrixQ_value4.MaxLength = 1;
-            this.matrixQ_value4.Name = "matrixQ_value4";
-            this.matrixQ_value4.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value4.TabIndex = 37;
-            this.matrixQ_value4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value4.Location = new Point(603, 263);
+            matrixQ_value4.MaxLength = 1;
+            matrixQ_value4.Name = "matrixQ_value4";
+            matrixQ_value4.Size = new Size(46, 47);
+            matrixQ_value4.TabIndex = 37;
+            matrixQ_value4.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value4.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value3
             // 
-            this.matrixQ_value3.Location = new System.Drawing.Point(551, 263);
-            this.matrixQ_value3.MaxLength = 1;
-            this.matrixQ_value3.Name = "matrixQ_value3";
-            this.matrixQ_value3.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value3.TabIndex = 36;
-            this.matrixQ_value3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value3.Location = new Point(551, 263);
+            matrixQ_value3.MaxLength = 1;
+            matrixQ_value3.Name = "matrixQ_value3";
+            matrixQ_value3.Size = new Size(46, 47);
+            matrixQ_value3.TabIndex = 36;
+            matrixQ_value3.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value3.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_value2
             // 
-            this.matrixQ_value2.Location = new System.Drawing.Point(499, 263);
-            this.matrixQ_value2.MaxLength = 1;
-            this.matrixQ_value2.Name = "matrixQ_value2";
-            this.matrixQ_value2.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value2.TabIndex = 35;
-            this.matrixQ_value2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value2.Location = new Point(499, 263);
+            matrixQ_value2.MaxLength = 1;
+            matrixQ_value2.Name = "matrixQ_value2";
+            matrixQ_value2.Size = new Size(46, 47);
+            matrixQ_value2.TabIndex = 35;
+            matrixQ_value2.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value2.KeyPress += Form1_KeyPress;
             // 
             // matrixQCheck
             // 
-            this.matrixQCheck.AutoSize = true;
-            this.matrixQCheck.Location = new System.Drawing.Point(452, 201);
-            this.matrixQCheck.Name = "matrixQCheck";
-            this.matrixQCheck.Size = new System.Drawing.Size(170, 45);
-            this.matrixQCheck.TabIndex = 34;
-            this.matrixQCheck.Text = "Matrix Q";
-            this.matrixQCheck.UseVisualStyleBackColor = true;
-            this.matrixQCheck.CheckStateChanged += new System.EventHandler(this.matrixQCheck_CheckStateChanged);
+            matrixQCheck.AutoSize = true;
+            matrixQCheck.Location = new Point(452, 201);
+            matrixQCheck.Name = "matrixQCheck";
+            matrixQCheck.Size = new Size(170, 45);
+            matrixQCheck.TabIndex = 34;
+            matrixQCheck.Text = "Matrix Q";
+            matrixQCheck.UseVisualStyleBackColor = true;
+            matrixQCheck.CheckStateChanged += matrixQCheck_CheckStateChanged;
             // 
             // matrixQ_value1
             // 
-            this.matrixQ_value1.Location = new System.Drawing.Point(447, 263);
-            this.matrixQ_value1.MaxLength = 1;
-            this.matrixQ_value1.Name = "matrixQ_value1";
-            this.matrixQ_value1.Size = new System.Drawing.Size(46, 47);
-            this.matrixQ_value1.TabIndex = 33;
-            this.matrixQ_value1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixQ_value1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixQ_value1.Location = new Point(447, 263);
+            matrixQ_value1.MaxLength = 1;
+            matrixQ_value1.Name = "matrixQ_value1";
+            matrixQ_value1.Size = new Size(46, 47);
+            matrixQ_value1.TabIndex = 33;
+            matrixQ_value1.TextAlign = HorizontalAlignment.Center;
+            matrixQ_value1.KeyPress += Form1_KeyPress;
             // 
             // matrixQ_FullBtn
             // 
-            this.matrixQ_FullBtn.Location = new System.Drawing.Point(447, 548);
-            this.matrixQ_FullBtn.Name = "matrixQ_FullBtn";
-            this.matrixQ_FullBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixQ_FullBtn.TabIndex = 32;
-            this.matrixQ_FullBtn.Text = "Full";
-            this.matrixQ_FullBtn.UseVisualStyleBackColor = true;
-            this.matrixQ_FullBtn.Click += new System.EventHandler(this.matrixQ_FullBtn_Click);
+            matrixQ_FullBtn.Location = new Point(447, 548);
+            matrixQ_FullBtn.Name = "matrixQ_FullBtn";
+            matrixQ_FullBtn.Size = new Size(254, 58);
+            matrixQ_FullBtn.TabIndex = 32;
+            matrixQ_FullBtn.Text = "Full";
+            matrixQ_FullBtn.UseVisualStyleBackColor = true;
+            matrixQ_FullBtn.Click += matrixQ_FullBtn_Click;
             // 
             // matrixR_AntiDiagonalBtn
             // 
-            this.matrixR_AntiDiagonalBtn.Location = new System.Drawing.Point(790, 740);
-            this.matrixR_AntiDiagonalBtn.Name = "matrixR_AntiDiagonalBtn";
-            this.matrixR_AntiDiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixR_AntiDiagonalBtn.TabIndex = 91;
-            this.matrixR_AntiDiagonalBtn.Text = "Anti-Diagonal";
-            this.matrixR_AntiDiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixR_AntiDiagonalBtn.Click += new System.EventHandler(this.matrixR_AntiDiagonalBtn_Click);
+            matrixR_AntiDiagonalBtn.Location = new Point(790, 740);
+            matrixR_AntiDiagonalBtn.Name = "matrixR_AntiDiagonalBtn";
+            matrixR_AntiDiagonalBtn.Size = new Size(254, 58);
+            matrixR_AntiDiagonalBtn.TabIndex = 91;
+            matrixR_AntiDiagonalBtn.Text = "Anti-Diagonal";
+            matrixR_AntiDiagonalBtn.UseVisualStyleBackColor = true;
+            matrixR_AntiDiagonalBtn.Click += matrixR_AntiDiagonalBtn_Click;
             // 
             // matrixR_DiagonalBtn
             // 
-            this.matrixR_DiagonalBtn.Location = new System.Drawing.Point(790, 676);
-            this.matrixR_DiagonalBtn.Name = "matrixR_DiagonalBtn";
-            this.matrixR_DiagonalBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixR_DiagonalBtn.TabIndex = 90;
-            this.matrixR_DiagonalBtn.Text = "Diagonal";
-            this.matrixR_DiagonalBtn.UseVisualStyleBackColor = true;
-            this.matrixR_DiagonalBtn.Click += new System.EventHandler(this.matrixR_DiagonalBtn_Click);
+            matrixR_DiagonalBtn.Location = new Point(790, 676);
+            matrixR_DiagonalBtn.Name = "matrixR_DiagonalBtn";
+            matrixR_DiagonalBtn.Size = new Size(254, 58);
+            matrixR_DiagonalBtn.TabIndex = 90;
+            matrixR_DiagonalBtn.Text = "Diagonal";
+            matrixR_DiagonalBtn.UseVisualStyleBackColor = true;
+            matrixR_DiagonalBtn.Click += matrixR_DiagonalBtn_Click;
             // 
             // matrixR_EmptyBtn
             // 
-            this.matrixR_EmptyBtn.Location = new System.Drawing.Point(790, 612);
-            this.matrixR_EmptyBtn.Name = "matrixR_EmptyBtn";
-            this.matrixR_EmptyBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixR_EmptyBtn.TabIndex = 89;
-            this.matrixR_EmptyBtn.Text = "Empty";
-            this.matrixR_EmptyBtn.UseVisualStyleBackColor = true;
-            this.matrixR_EmptyBtn.Click += new System.EventHandler(this.matrixR_EmptyBtn_Click);
+            matrixR_EmptyBtn.Location = new Point(790, 612);
+            matrixR_EmptyBtn.Name = "matrixR_EmptyBtn";
+            matrixR_EmptyBtn.Size = new Size(254, 58);
+            matrixR_EmptyBtn.TabIndex = 89;
+            matrixR_EmptyBtn.Text = "Empty";
+            matrixR_EmptyBtn.UseVisualStyleBackColor = true;
+            matrixR_EmptyBtn.Click += matrixR_EmptyBtn_Click;
             // 
             // matrixR_value25
             // 
-            this.matrixR_value25.Location = new System.Drawing.Point(998, 475);
-            this.matrixR_value25.MaxLength = 1;
-            this.matrixR_value25.Name = "matrixR_value25";
-            this.matrixR_value25.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value25.TabIndex = 88;
-            this.matrixR_value25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value25.Location = new Point(998, 475);
+            matrixR_value25.MaxLength = 1;
+            matrixR_value25.Name = "matrixR_value25";
+            matrixR_value25.Size = new Size(46, 47);
+            matrixR_value25.TabIndex = 88;
+            matrixR_value25.TextAlign = HorizontalAlignment.Center;
+            matrixR_value25.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value24
             // 
-            this.matrixR_value24.Location = new System.Drawing.Point(946, 475);
-            this.matrixR_value24.MaxLength = 1;
-            this.matrixR_value24.Name = "matrixR_value24";
-            this.matrixR_value24.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value24.TabIndex = 87;
-            this.matrixR_value24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value24.Location = new Point(946, 475);
+            matrixR_value24.MaxLength = 1;
+            matrixR_value24.Name = "matrixR_value24";
+            matrixR_value24.Size = new Size(46, 47);
+            matrixR_value24.TabIndex = 87;
+            matrixR_value24.TextAlign = HorizontalAlignment.Center;
+            matrixR_value24.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value23
             // 
-            this.matrixR_value23.Location = new System.Drawing.Point(894, 475);
-            this.matrixR_value23.MaxLength = 1;
-            this.matrixR_value23.Name = "matrixR_value23";
-            this.matrixR_value23.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value23.TabIndex = 86;
-            this.matrixR_value23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value23.Location = new Point(894, 475);
+            matrixR_value23.MaxLength = 1;
+            matrixR_value23.Name = "matrixR_value23";
+            matrixR_value23.Size = new Size(46, 47);
+            matrixR_value23.TabIndex = 86;
+            matrixR_value23.TextAlign = HorizontalAlignment.Center;
+            matrixR_value23.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value22
             // 
-            this.matrixR_value22.Location = new System.Drawing.Point(842, 475);
-            this.matrixR_value22.MaxLength = 1;
-            this.matrixR_value22.Name = "matrixR_value22";
-            this.matrixR_value22.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value22.TabIndex = 85;
-            this.matrixR_value22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value22.Location = new Point(842, 475);
+            matrixR_value22.MaxLength = 1;
+            matrixR_value22.Name = "matrixR_value22";
+            matrixR_value22.Size = new Size(46, 47);
+            matrixR_value22.TabIndex = 85;
+            matrixR_value22.TextAlign = HorizontalAlignment.Center;
+            matrixR_value22.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value21
             // 
-            this.matrixR_value21.Location = new System.Drawing.Point(790, 475);
-            this.matrixR_value21.MaxLength = 1;
-            this.matrixR_value21.Name = "matrixR_value21";
-            this.matrixR_value21.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value21.TabIndex = 84;
-            this.matrixR_value21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value21.Location = new Point(790, 475);
+            matrixR_value21.MaxLength = 1;
+            matrixR_value21.Name = "matrixR_value21";
+            matrixR_value21.Size = new Size(46, 47);
+            matrixR_value21.TabIndex = 84;
+            matrixR_value21.TextAlign = HorizontalAlignment.Center;
+            matrixR_value21.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value20
             // 
-            this.matrixR_value20.Location = new System.Drawing.Point(998, 422);
-            this.matrixR_value20.MaxLength = 1;
-            this.matrixR_value20.Name = "matrixR_value20";
-            this.matrixR_value20.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value20.TabIndex = 83;
-            this.matrixR_value20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value20.Location = new Point(998, 422);
+            matrixR_value20.MaxLength = 1;
+            matrixR_value20.Name = "matrixR_value20";
+            matrixR_value20.Size = new Size(46, 47);
+            matrixR_value20.TabIndex = 83;
+            matrixR_value20.TextAlign = HorizontalAlignment.Center;
+            matrixR_value20.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value19
             // 
-            this.matrixR_value19.Location = new System.Drawing.Point(946, 422);
-            this.matrixR_value19.MaxLength = 1;
-            this.matrixR_value19.Name = "matrixR_value19";
-            this.matrixR_value19.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value19.TabIndex = 82;
-            this.matrixR_value19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value19.Location = new Point(946, 422);
+            matrixR_value19.MaxLength = 1;
+            matrixR_value19.Name = "matrixR_value19";
+            matrixR_value19.Size = new Size(46, 47);
+            matrixR_value19.TabIndex = 82;
+            matrixR_value19.TextAlign = HorizontalAlignment.Center;
+            matrixR_value19.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value18
             // 
-            this.matrixR_value18.Location = new System.Drawing.Point(894, 422);
-            this.matrixR_value18.MaxLength = 1;
-            this.matrixR_value18.Name = "matrixR_value18";
-            this.matrixR_value18.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value18.TabIndex = 81;
-            this.matrixR_value18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value18.Location = new Point(894, 422);
+            matrixR_value18.MaxLength = 1;
+            matrixR_value18.Name = "matrixR_value18";
+            matrixR_value18.Size = new Size(46, 47);
+            matrixR_value18.TabIndex = 81;
+            matrixR_value18.TextAlign = HorizontalAlignment.Center;
+            matrixR_value18.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value17
             // 
-            this.matrixR_value17.Location = new System.Drawing.Point(842, 422);
-            this.matrixR_value17.MaxLength = 1;
-            this.matrixR_value17.Name = "matrixR_value17";
-            this.matrixR_value17.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value17.TabIndex = 80;
-            this.matrixR_value17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value17.Location = new Point(842, 422);
+            matrixR_value17.MaxLength = 1;
+            matrixR_value17.Name = "matrixR_value17";
+            matrixR_value17.Size = new Size(46, 47);
+            matrixR_value17.TabIndex = 80;
+            matrixR_value17.TextAlign = HorizontalAlignment.Center;
+            matrixR_value17.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value16
             // 
-            this.matrixR_value16.Location = new System.Drawing.Point(790, 422);
-            this.matrixR_value16.MaxLength = 1;
-            this.matrixR_value16.Name = "matrixR_value16";
-            this.matrixR_value16.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value16.TabIndex = 79;
-            this.matrixR_value16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value16.Location = new Point(790, 422);
+            matrixR_value16.MaxLength = 1;
+            matrixR_value16.Name = "matrixR_value16";
+            matrixR_value16.Size = new Size(46, 47);
+            matrixR_value16.TabIndex = 79;
+            matrixR_value16.TextAlign = HorizontalAlignment.Center;
+            matrixR_value16.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value15
             // 
-            this.matrixR_value15.Location = new System.Drawing.Point(998, 369);
-            this.matrixR_value15.MaxLength = 1;
-            this.matrixR_value15.Name = "matrixR_value15";
-            this.matrixR_value15.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value15.TabIndex = 78;
-            this.matrixR_value15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value15.Location = new Point(998, 369);
+            matrixR_value15.MaxLength = 1;
+            matrixR_value15.Name = "matrixR_value15";
+            matrixR_value15.Size = new Size(46, 47);
+            matrixR_value15.TabIndex = 78;
+            matrixR_value15.TextAlign = HorizontalAlignment.Center;
+            matrixR_value15.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value14
             // 
-            this.matrixR_value14.Location = new System.Drawing.Point(946, 369);
-            this.matrixR_value14.MaxLength = 1;
-            this.matrixR_value14.Name = "matrixR_value14";
-            this.matrixR_value14.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value14.TabIndex = 77;
-            this.matrixR_value14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value14.Location = new Point(946, 369);
+            matrixR_value14.MaxLength = 1;
+            matrixR_value14.Name = "matrixR_value14";
+            matrixR_value14.Size = new Size(46, 47);
+            matrixR_value14.TabIndex = 77;
+            matrixR_value14.TextAlign = HorizontalAlignment.Center;
+            matrixR_value14.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value13
             // 
-            this.matrixR_value13.Location = new System.Drawing.Point(894, 369);
-            this.matrixR_value13.MaxLength = 1;
-            this.matrixR_value13.Name = "matrixR_value13";
-            this.matrixR_value13.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value13.TabIndex = 76;
-            this.matrixR_value13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value13.Location = new Point(894, 369);
+            matrixR_value13.MaxLength = 1;
+            matrixR_value13.Name = "matrixR_value13";
+            matrixR_value13.Size = new Size(46, 47);
+            matrixR_value13.TabIndex = 76;
+            matrixR_value13.TextAlign = HorizontalAlignment.Center;
+            matrixR_value13.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value12
             // 
-            this.matrixR_value12.Location = new System.Drawing.Point(842, 369);
-            this.matrixR_value12.MaxLength = 1;
-            this.matrixR_value12.Name = "matrixR_value12";
-            this.matrixR_value12.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value12.TabIndex = 75;
-            this.matrixR_value12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value12.Location = new Point(842, 369);
+            matrixR_value12.MaxLength = 1;
+            matrixR_value12.Name = "matrixR_value12";
+            matrixR_value12.Size = new Size(46, 47);
+            matrixR_value12.TabIndex = 75;
+            matrixR_value12.TextAlign = HorizontalAlignment.Center;
+            matrixR_value12.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value11
             // 
-            this.matrixR_value11.Location = new System.Drawing.Point(790, 369);
-            this.matrixR_value11.MaxLength = 1;
-            this.matrixR_value11.Name = "matrixR_value11";
-            this.matrixR_value11.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value11.TabIndex = 74;
-            this.matrixR_value11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value11.Location = new Point(790, 369);
+            matrixR_value11.MaxLength = 1;
+            matrixR_value11.Name = "matrixR_value11";
+            matrixR_value11.Size = new Size(46, 47);
+            matrixR_value11.TabIndex = 74;
+            matrixR_value11.TextAlign = HorizontalAlignment.Center;
+            matrixR_value11.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value10
             // 
-            this.matrixR_value10.Location = new System.Drawing.Point(998, 316);
-            this.matrixR_value10.MaxLength = 1;
-            this.matrixR_value10.Name = "matrixR_value10";
-            this.matrixR_value10.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value10.TabIndex = 73;
-            this.matrixR_value10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value10.Location = new Point(998, 316);
+            matrixR_value10.MaxLength = 1;
+            matrixR_value10.Name = "matrixR_value10";
+            matrixR_value10.Size = new Size(46, 47);
+            matrixR_value10.TabIndex = 73;
+            matrixR_value10.TextAlign = HorizontalAlignment.Center;
+            matrixR_value10.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value9
             // 
-            this.matrixR_value9.Location = new System.Drawing.Point(946, 316);
-            this.matrixR_value9.MaxLength = 1;
-            this.matrixR_value9.Name = "matrixR_value9";
-            this.matrixR_value9.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value9.TabIndex = 72;
-            this.matrixR_value9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value9.Location = new Point(946, 316);
+            matrixR_value9.MaxLength = 1;
+            matrixR_value9.Name = "matrixR_value9";
+            matrixR_value9.Size = new Size(46, 47);
+            matrixR_value9.TabIndex = 72;
+            matrixR_value9.TextAlign = HorizontalAlignment.Center;
+            matrixR_value9.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value8
             // 
-            this.matrixR_value8.Location = new System.Drawing.Point(894, 316);
-            this.matrixR_value8.MaxLength = 1;
-            this.matrixR_value8.Name = "matrixR_value8";
-            this.matrixR_value8.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value8.TabIndex = 71;
-            this.matrixR_value8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value8.Location = new Point(894, 316);
+            matrixR_value8.MaxLength = 1;
+            matrixR_value8.Name = "matrixR_value8";
+            matrixR_value8.Size = new Size(46, 47);
+            matrixR_value8.TabIndex = 71;
+            matrixR_value8.TextAlign = HorizontalAlignment.Center;
+            matrixR_value8.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value7
             // 
-            this.matrixR_value7.Location = new System.Drawing.Point(842, 316);
-            this.matrixR_value7.MaxLength = 1;
-            this.matrixR_value7.Name = "matrixR_value7";
-            this.matrixR_value7.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value7.TabIndex = 70;
-            this.matrixR_value7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value7.Location = new Point(842, 316);
+            matrixR_value7.MaxLength = 1;
+            matrixR_value7.Name = "matrixR_value7";
+            matrixR_value7.Size = new Size(46, 47);
+            matrixR_value7.TabIndex = 70;
+            matrixR_value7.TextAlign = HorizontalAlignment.Center;
+            matrixR_value7.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value6
             // 
-            this.matrixR_value6.Location = new System.Drawing.Point(790, 316);
-            this.matrixR_value6.MaxLength = 1;
-            this.matrixR_value6.Name = "matrixR_value6";
-            this.matrixR_value6.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value6.TabIndex = 69;
-            this.matrixR_value6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value6.Location = new Point(790, 316);
+            matrixR_value6.MaxLength = 1;
+            matrixR_value6.Name = "matrixR_value6";
+            matrixR_value6.Size = new Size(46, 47);
+            matrixR_value6.TabIndex = 69;
+            matrixR_value6.TextAlign = HorizontalAlignment.Center;
+            matrixR_value6.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value5
             // 
-            this.matrixR_value5.Location = new System.Drawing.Point(998, 263);
-            this.matrixR_value5.MaxLength = 1;
-            this.matrixR_value5.Name = "matrixR_value5";
-            this.matrixR_value5.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value5.TabIndex = 68;
-            this.matrixR_value5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value5.Location = new Point(998, 263);
+            matrixR_value5.MaxLength = 1;
+            matrixR_value5.Name = "matrixR_value5";
+            matrixR_value5.Size = new Size(46, 47);
+            matrixR_value5.TabIndex = 68;
+            matrixR_value5.TextAlign = HorizontalAlignment.Center;
+            matrixR_value5.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value4
             // 
-            this.matrixR_value4.Location = new System.Drawing.Point(946, 263);
-            this.matrixR_value4.MaxLength = 1;
-            this.matrixR_value4.Name = "matrixR_value4";
-            this.matrixR_value4.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value4.TabIndex = 67;
-            this.matrixR_value4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value4.Location = new Point(946, 263);
+            matrixR_value4.MaxLength = 1;
+            matrixR_value4.Name = "matrixR_value4";
+            matrixR_value4.Size = new Size(46, 47);
+            matrixR_value4.TabIndex = 67;
+            matrixR_value4.TextAlign = HorizontalAlignment.Center;
+            matrixR_value4.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value3
             // 
-            this.matrixR_value3.Location = new System.Drawing.Point(894, 263);
-            this.matrixR_value3.MaxLength = 1;
-            this.matrixR_value3.Name = "matrixR_value3";
-            this.matrixR_value3.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value3.TabIndex = 66;
-            this.matrixR_value3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value3.Location = new Point(894, 263);
+            matrixR_value3.MaxLength = 1;
+            matrixR_value3.Name = "matrixR_value3";
+            matrixR_value3.Size = new Size(46, 47);
+            matrixR_value3.TabIndex = 66;
+            matrixR_value3.TextAlign = HorizontalAlignment.Center;
+            matrixR_value3.KeyPress += Form1_KeyPress;
             // 
             // matrixR_value2
             // 
-            this.matrixR_value2.Location = new System.Drawing.Point(842, 263);
-            this.matrixR_value2.MaxLength = 1;
-            this.matrixR_value2.Name = "matrixR_value2";
-            this.matrixR_value2.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value2.TabIndex = 65;
-            this.matrixR_value2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value2.Location = new Point(842, 263);
+            matrixR_value2.MaxLength = 1;
+            matrixR_value2.Name = "matrixR_value2";
+            matrixR_value2.Size = new Size(46, 47);
+            matrixR_value2.TabIndex = 65;
+            matrixR_value2.TextAlign = HorizontalAlignment.Center;
+            matrixR_value2.KeyPress += Form1_KeyPress;
             // 
             // matrixRCheck
             // 
-            this.matrixRCheck.AutoSize = true;
-            this.matrixRCheck.Location = new System.Drawing.Point(795, 201);
-            this.matrixRCheck.Name = "matrixRCheck";
-            this.matrixRCheck.Size = new System.Drawing.Size(165, 45);
-            this.matrixRCheck.TabIndex = 64;
-            this.matrixRCheck.Text = "Matrix R";
-            this.matrixRCheck.UseVisualStyleBackColor = true;
-            this.matrixRCheck.CheckStateChanged += new System.EventHandler(this.matrixRCheck_CheckStateChanged);
+            matrixRCheck.AutoSize = true;
+            matrixRCheck.Location = new Point(795, 201);
+            matrixRCheck.Name = "matrixRCheck";
+            matrixRCheck.Size = new Size(165, 45);
+            matrixRCheck.TabIndex = 64;
+            matrixRCheck.Text = "Matrix R";
+            matrixRCheck.UseVisualStyleBackColor = true;
+            matrixRCheck.CheckStateChanged += matrixRCheck_CheckStateChanged;
             // 
             // matrixR_value1
             // 
-            this.matrixR_value1.Location = new System.Drawing.Point(790, 263);
-            this.matrixR_value1.MaxLength = 1;
-            this.matrixR_value1.Name = "matrixR_value1";
-            this.matrixR_value1.Size = new System.Drawing.Size(46, 47);
-            this.matrixR_value1.TabIndex = 63;
-            this.matrixR_value1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.matrixR_value1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            matrixR_value1.Location = new Point(790, 263);
+            matrixR_value1.MaxLength = 1;
+            matrixR_value1.Name = "matrixR_value1";
+            matrixR_value1.Size = new Size(46, 47);
+            matrixR_value1.TabIndex = 63;
+            matrixR_value1.TextAlign = HorizontalAlignment.Center;
+            matrixR_value1.KeyPress += Form1_KeyPress;
             // 
             // matrixR_FullBtn
             // 
-            this.matrixR_FullBtn.Location = new System.Drawing.Point(790, 548);
-            this.matrixR_FullBtn.Name = "matrixR_FullBtn";
-            this.matrixR_FullBtn.Size = new System.Drawing.Size(254, 58);
-            this.matrixR_FullBtn.TabIndex = 62;
-            this.matrixR_FullBtn.Text = "Full";
-            this.matrixR_FullBtn.UseVisualStyleBackColor = true;
-            this.matrixR_FullBtn.Click += new System.EventHandler(this.matrixR_FullBtn_Click);
+            matrixR_FullBtn.Location = new Point(790, 548);
+            matrixR_FullBtn.Name = "matrixR_FullBtn";
+            matrixR_FullBtn.Size = new Size(254, 58);
+            matrixR_FullBtn.TabIndex = 62;
+            matrixR_FullBtn.Text = "Full";
+            matrixR_FullBtn.UseVisualStyleBackColor = true;
+            matrixR_FullBtn.Click += matrixR_FullBtn_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1080, 372);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 41);
-            this.label2.TabIndex = 92;
-            this.label2.Text = "=";
+            label2.AutoSize = true;
+            label2.Location = new Point(1080, 372);
+            label2.Name = "label2";
+            label2.Size = new Size(39, 41);
+            label2.TabIndex = 92;
+            label2.Text = "=";
             // 
             // result_value25
             // 
-            this.result_value25.Location = new System.Drawing.Point(1360, 475);
-            this.result_value25.Name = "result_value25";
-            this.result_value25.ReadOnly = true;
-            this.result_value25.Size = new System.Drawing.Size(46, 47);
-            this.result_value25.TabIndex = 117;
-            this.result_value25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value25.Location = new Point(1360, 475);
+            result_value25.Name = "result_value25";
+            result_value25.ReadOnly = true;
+            result_value25.Size = new Size(46, 47);
+            result_value25.TabIndex = 117;
+            result_value25.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value24
             // 
-            this.result_value24.Location = new System.Drawing.Point(1308, 475);
-            this.result_value24.Name = "result_value24";
-            this.result_value24.ReadOnly = true;
-            this.result_value24.Size = new System.Drawing.Size(46, 47);
-            this.result_value24.TabIndex = 116;
-            this.result_value24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value24.Location = new Point(1308, 475);
+            result_value24.Name = "result_value24";
+            result_value24.ReadOnly = true;
+            result_value24.Size = new Size(46, 47);
+            result_value24.TabIndex = 116;
+            result_value24.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value23
             // 
-            this.result_value23.Location = new System.Drawing.Point(1256, 475);
-            this.result_value23.Name = "result_value23";
-            this.result_value23.ReadOnly = true;
-            this.result_value23.Size = new System.Drawing.Size(46, 47);
-            this.result_value23.TabIndex = 115;
-            this.result_value23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value23.Location = new Point(1256, 475);
+            result_value23.Name = "result_value23";
+            result_value23.ReadOnly = true;
+            result_value23.Size = new Size(46, 47);
+            result_value23.TabIndex = 115;
+            result_value23.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value22
             // 
-            this.result_value22.Location = new System.Drawing.Point(1204, 475);
-            this.result_value22.Name = "result_value22";
-            this.result_value22.ReadOnly = true;
-            this.result_value22.Size = new System.Drawing.Size(46, 47);
-            this.result_value22.TabIndex = 114;
-            this.result_value22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value22.Location = new Point(1204, 475);
+            result_value22.Name = "result_value22";
+            result_value22.ReadOnly = true;
+            result_value22.Size = new Size(46, 47);
+            result_value22.TabIndex = 114;
+            result_value22.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value21
             // 
-            this.result_value21.Location = new System.Drawing.Point(1152, 475);
-            this.result_value21.Name = "result_value21";
-            this.result_value21.ReadOnly = true;
-            this.result_value21.Size = new System.Drawing.Size(46, 47);
-            this.result_value21.TabIndex = 113;
-            this.result_value21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value21.Location = new Point(1152, 475);
+            result_value21.Name = "result_value21";
+            result_value21.ReadOnly = true;
+            result_value21.Size = new Size(46, 47);
+            result_value21.TabIndex = 113;
+            result_value21.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value20
             // 
-            this.result_value20.Location = new System.Drawing.Point(1360, 422);
-            this.result_value20.Name = "result_value20";
-            this.result_value20.ReadOnly = true;
-            this.result_value20.Size = new System.Drawing.Size(46, 47);
-            this.result_value20.TabIndex = 112;
-            this.result_value20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value20.Location = new Point(1360, 422);
+            result_value20.Name = "result_value20";
+            result_value20.ReadOnly = true;
+            result_value20.Size = new Size(46, 47);
+            result_value20.TabIndex = 112;
+            result_value20.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value19
             // 
-            this.result_value19.Location = new System.Drawing.Point(1308, 422);
-            this.result_value19.Name = "result_value19";
-            this.result_value19.ReadOnly = true;
-            this.result_value19.Size = new System.Drawing.Size(46, 47);
-            this.result_value19.TabIndex = 111;
-            this.result_value19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value19.Location = new Point(1308, 422);
+            result_value19.Name = "result_value19";
+            result_value19.ReadOnly = true;
+            result_value19.Size = new Size(46, 47);
+            result_value19.TabIndex = 111;
+            result_value19.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value18
             // 
-            this.result_value18.Location = new System.Drawing.Point(1256, 422);
-            this.result_value18.Name = "result_value18";
-            this.result_value18.ReadOnly = true;
-            this.result_value18.Size = new System.Drawing.Size(46, 47);
-            this.result_value18.TabIndex = 110;
-            this.result_value18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value18.Location = new Point(1256, 422);
+            result_value18.Name = "result_value18";
+            result_value18.ReadOnly = true;
+            result_value18.Size = new Size(46, 47);
+            result_value18.TabIndex = 110;
+            result_value18.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value17
             // 
-            this.result_value17.Location = new System.Drawing.Point(1204, 422);
-            this.result_value17.Name = "result_value17";
-            this.result_value17.ReadOnly = true;
-            this.result_value17.Size = new System.Drawing.Size(46, 47);
-            this.result_value17.TabIndex = 109;
-            this.result_value17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value17.Location = new Point(1204, 422);
+            result_value17.Name = "result_value17";
+            result_value17.ReadOnly = true;
+            result_value17.Size = new Size(46, 47);
+            result_value17.TabIndex = 109;
+            result_value17.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value16
             // 
-            this.result_value16.Location = new System.Drawing.Point(1152, 422);
-            this.result_value16.Name = "result_value16";
-            this.result_value16.ReadOnly = true;
-            this.result_value16.Size = new System.Drawing.Size(46, 47);
-            this.result_value16.TabIndex = 108;
-            this.result_value16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value16.Location = new Point(1152, 422);
+            result_value16.Name = "result_value16";
+            result_value16.ReadOnly = true;
+            result_value16.Size = new Size(46, 47);
+            result_value16.TabIndex = 108;
+            result_value16.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value15
             // 
-            this.result_value15.Location = new System.Drawing.Point(1360, 369);
-            this.result_value15.Name = "result_value15";
-            this.result_value15.ReadOnly = true;
-            this.result_value15.Size = new System.Drawing.Size(46, 47);
-            this.result_value15.TabIndex = 107;
-            this.result_value15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value15.Location = new Point(1360, 369);
+            result_value15.Name = "result_value15";
+            result_value15.ReadOnly = true;
+            result_value15.Size = new Size(46, 47);
+            result_value15.TabIndex = 107;
+            result_value15.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value14
             // 
-            this.result_value14.Location = new System.Drawing.Point(1308, 369);
-            this.result_value14.Name = "result_value14";
-            this.result_value14.ReadOnly = true;
-            this.result_value14.Size = new System.Drawing.Size(46, 47);
-            this.result_value14.TabIndex = 106;
-            this.result_value14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value14.Location = new Point(1308, 369);
+            result_value14.Name = "result_value14";
+            result_value14.ReadOnly = true;
+            result_value14.Size = new Size(46, 47);
+            result_value14.TabIndex = 106;
+            result_value14.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value13
             // 
-            this.result_value13.Location = new System.Drawing.Point(1256, 369);
-            this.result_value13.Name = "result_value13";
-            this.result_value13.ReadOnly = true;
-            this.result_value13.Size = new System.Drawing.Size(46, 47);
-            this.result_value13.TabIndex = 105;
-            this.result_value13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value13.Location = new Point(1256, 369);
+            result_value13.Name = "result_value13";
+            result_value13.ReadOnly = true;
+            result_value13.Size = new Size(46, 47);
+            result_value13.TabIndex = 105;
+            result_value13.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value12
             // 
-            this.result_value12.Location = new System.Drawing.Point(1204, 369);
-            this.result_value12.Name = "result_value12";
-            this.result_value12.ReadOnly = true;
-            this.result_value12.Size = new System.Drawing.Size(46, 47);
-            this.result_value12.TabIndex = 104;
-            this.result_value12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value12.Location = new Point(1204, 369);
+            result_value12.Name = "result_value12";
+            result_value12.ReadOnly = true;
+            result_value12.Size = new Size(46, 47);
+            result_value12.TabIndex = 104;
+            result_value12.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value11
             // 
-            this.result_value11.Location = new System.Drawing.Point(1152, 369);
-            this.result_value11.Name = "result_value11";
-            this.result_value11.ReadOnly = true;
-            this.result_value11.Size = new System.Drawing.Size(46, 47);
-            this.result_value11.TabIndex = 103;
-            this.result_value11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value11.Location = new Point(1152, 369);
+            result_value11.Name = "result_value11";
+            result_value11.ReadOnly = true;
+            result_value11.Size = new Size(46, 47);
+            result_value11.TabIndex = 103;
+            result_value11.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value10
             // 
-            this.result_value10.Location = new System.Drawing.Point(1360, 316);
-            this.result_value10.Name = "result_value10";
-            this.result_value10.ReadOnly = true;
-            this.result_value10.Size = new System.Drawing.Size(46, 47);
-            this.result_value10.TabIndex = 102;
-            this.result_value10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value10.Location = new Point(1360, 316);
+            result_value10.Name = "result_value10";
+            result_value10.ReadOnly = true;
+            result_value10.Size = new Size(46, 47);
+            result_value10.TabIndex = 102;
+            result_value10.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value9
             // 
-            this.result_value9.Location = new System.Drawing.Point(1308, 316);
-            this.result_value9.Name = "result_value9";
-            this.result_value9.ReadOnly = true;
-            this.result_value9.Size = new System.Drawing.Size(46, 47);
-            this.result_value9.TabIndex = 101;
-            this.result_value9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value9.Location = new Point(1308, 316);
+            result_value9.Name = "result_value9";
+            result_value9.ReadOnly = true;
+            result_value9.Size = new Size(46, 47);
+            result_value9.TabIndex = 101;
+            result_value9.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value8
             // 
-            this.result_value8.Location = new System.Drawing.Point(1256, 316);
-            this.result_value8.Name = "result_value8";
-            this.result_value8.ReadOnly = true;
-            this.result_value8.Size = new System.Drawing.Size(46, 47);
-            this.result_value8.TabIndex = 100;
-            this.result_value8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value8.Location = new Point(1256, 316);
+            result_value8.Name = "result_value8";
+            result_value8.ReadOnly = true;
+            result_value8.Size = new Size(46, 47);
+            result_value8.TabIndex = 100;
+            result_value8.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value7
             // 
-            this.result_value7.Location = new System.Drawing.Point(1204, 316);
-            this.result_value7.Name = "result_value7";
-            this.result_value7.ReadOnly = true;
-            this.result_value7.Size = new System.Drawing.Size(46, 47);
-            this.result_value7.TabIndex = 99;
-            this.result_value7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value7.Location = new Point(1204, 316);
+            result_value7.Name = "result_value7";
+            result_value7.ReadOnly = true;
+            result_value7.Size = new Size(46, 47);
+            result_value7.TabIndex = 99;
+            result_value7.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value6
             // 
-            this.result_value6.Location = new System.Drawing.Point(1152, 316);
-            this.result_value6.Name = "result_value6";
-            this.result_value6.ReadOnly = true;
-            this.result_value6.Size = new System.Drawing.Size(46, 47);
-            this.result_value6.TabIndex = 98;
-            this.result_value6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value6.Location = new Point(1152, 316);
+            result_value6.Name = "result_value6";
+            result_value6.ReadOnly = true;
+            result_value6.Size = new Size(46, 47);
+            result_value6.TabIndex = 98;
+            result_value6.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value5
             // 
-            this.result_value5.Location = new System.Drawing.Point(1360, 263);
-            this.result_value5.Name = "result_value5";
-            this.result_value5.ReadOnly = true;
-            this.result_value5.Size = new System.Drawing.Size(46, 47);
-            this.result_value5.TabIndex = 97;
-            this.result_value5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value5.Location = new Point(1360, 263);
+            result_value5.Name = "result_value5";
+            result_value5.ReadOnly = true;
+            result_value5.Size = new Size(46, 47);
+            result_value5.TabIndex = 97;
+            result_value5.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value4
             // 
-            this.result_value4.Location = new System.Drawing.Point(1308, 263);
-            this.result_value4.Name = "result_value4";
-            this.result_value4.ReadOnly = true;
-            this.result_value4.Size = new System.Drawing.Size(46, 47);
-            this.result_value4.TabIndex = 96;
-            this.result_value4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value4.Location = new Point(1308, 263);
+            result_value4.Name = "result_value4";
+            result_value4.ReadOnly = true;
+            result_value4.Size = new Size(46, 47);
+            result_value4.TabIndex = 96;
+            result_value4.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value3
             // 
-            this.result_value3.Location = new System.Drawing.Point(1256, 263);
-            this.result_value3.Name = "result_value3";
-            this.result_value3.ReadOnly = true;
-            this.result_value3.Size = new System.Drawing.Size(46, 47);
-            this.result_value3.TabIndex = 95;
-            this.result_value3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value3.Location = new Point(1256, 263);
+            result_value3.Name = "result_value3";
+            result_value3.ReadOnly = true;
+            result_value3.Size = new Size(46, 47);
+            result_value3.TabIndex = 95;
+            result_value3.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value2
             // 
-            this.result_value2.Location = new System.Drawing.Point(1204, 263);
-            this.result_value2.Name = "result_value2";
-            this.result_value2.ReadOnly = true;
-            this.result_value2.Size = new System.Drawing.Size(46, 47);
-            this.result_value2.TabIndex = 94;
-            this.result_value2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value2.Location = new Point(1204, 263);
+            result_value2.Name = "result_value2";
+            result_value2.ReadOnly = true;
+            result_value2.Size = new Size(46, 47);
+            result_value2.TabIndex = 94;
+            result_value2.TextAlign = HorizontalAlignment.Center;
             // 
             // result_value1
             // 
-            this.result_value1.Location = new System.Drawing.Point(1152, 263);
-            this.result_value1.Name = "result_value1";
-            this.result_value1.ReadOnly = true;
-            this.result_value1.Size = new System.Drawing.Size(46, 47);
-            this.result_value1.TabIndex = 93;
-            this.result_value1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            result_value1.Location = new Point(1152, 263);
+            result_value1.Name = "result_value1";
+            result_value1.ReadOnly = true;
+            result_value1.Size = new Size(46, 47);
+            result_value1.TabIndex = 93;
+            result_value1.TextAlign = HorizontalAlignment.Center;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1152, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 41);
-            this.label3.TabIndex = 118;
-            this.label3.Text = "Matrix B - Result";
+            label3.AutoSize = true;
+            label3.Location = new Point(1152, 205);
+            label3.Name = "label3";
+            label3.Size = new Size(234, 41);
+            label3.TabIndex = 118;
+            label3.Text = "Matrix B - Result";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1462, 266);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 41);
-            this.label4.TabIndex = 119;
-            this.label4.Text = "ℹ️ Info:";
+            label4.AutoSize = true;
+            label4.Location = new Point(1462, 266);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 41);
+            label4.TabIndex = 119;
+            label4.Text = "ℹ️ Info:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1462, 565);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(355, 41);
-            this.label5.TabIndex = 120;
-            this.label5.Text = "⚠️You can choose only 1";
+            label5.AutoSize = true;
+            label5.Location = new Point(1462, 565);
+            label5.Name = "label5";
+            label5.Size = new Size(355, 41);
+            label5.TabIndex = 120;
+            label5.Text = "⚠️You can choose only 1";
             // 
             // showResult_btn
             // 
-            this.showResult_btn.Location = new System.Drawing.Point(1152, 548);
-            this.showResult_btn.Name = "showResult_btn";
-            this.showResult_btn.Size = new System.Drawing.Size(254, 58);
-            this.showResult_btn.TabIndex = 121;
-            this.showResult_btn.Text = "Show result";
-            this.showResult_btn.UseVisualStyleBackColor = true;
-            this.showResult_btn.Click += new System.EventHandler(this.showResult_btn_Click);
+            showResult_btn.Location = new Point(1152, 548);
+            showResult_btn.Name = "showResult_btn";
+            showResult_btn.Size = new Size(254, 58);
+            showResult_btn.TabIndex = 121;
+            showResult_btn.Text = "Show result";
+            showResult_btn.UseVisualStyleBackColor = true;
+            showResult_btn.Click += showResult_btn_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1462, 606);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(336, 41);
-            this.label6.TabIndex = 122;
-            this.label6.Text = "or 2 matrixes to operate";
+            label6.AutoSize = true;
+            label6.Location = new Point(1462, 606);
+            label6.Name = "label6";
+            label6.Size = new Size(336, 41);
+            label6.TabIndex = 122;
+            label6.Text = "or 2 matrixes to operate";
             // 
             // rights
             // 
-            this.rights.AutoSize = true;
-            this.rights.Location = new System.Drawing.Point(1462, 824);
-            this.rights.Name = "rights";
-            this.rights.Size = new System.Drawing.Size(337, 41);
-            this.rights.TabIndex = 123;
-            this.rights.Text = "©️ Chaika Taras | KNS-11";
+            rights.AutoSize = true;
+            rights.Location = new Point(1462, 824);
+            rights.Name = "rights";
+            rights.Size = new Size(337, 41);
+            rights.TabIndex = 123;
+            rights.Text = "©️ Chaika Taras | KNS-11";
             // 
             // sliceMode_box
             // 
-            this.sliceMode_box.FormattingEnabled = true;
-            this.sliceMode_box.Items.AddRange(new object[] {
-            "Vertical",
-            "Horizontal"});
-            this.sliceMode_box.Location = new System.Drawing.Point(886, 63);
-            this.sliceMode_box.Name = "sliceMode_box";
-            this.sliceMode_box.Size = new System.Drawing.Size(302, 49);
-            this.sliceMode_box.TabIndex = 125;
+            sliceMode_box.FormattingEnabled = true;
+            sliceMode_box.Items.AddRange(new object[] { "Vertical", "Horizontal" });
+            sliceMode_box.Location = new Point(886, 63);
+            sliceMode_box.Name = "sliceMode_box";
+            sliceMode_box.Size = new Size(302, 49);
+            sliceMode_box.TabIndex = 125;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(691, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 41);
-            this.label7.TabIndex = 124;
-            this.label7.Text = "Slice mode:";
+            label7.AutoSize = true;
+            label7.Location = new Point(691, 66);
+            label7.Name = "label7";
+            label7.Size = new Size(171, 41);
+            label7.TabIndex = 124;
+            label7.Text = "Slice mode:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1330, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 41);
-            this.label8.TabIndex = 126;
-            this.label8.Text = "Narrowing:";
+            label8.AutoSize = true;
+            label8.Location = new Point(1330, 65);
+            label8.Name = "label8";
+            label8.Size = new Size(164, 41);
+            label8.TabIndex = 126;
+            label8.Text = "Narrowing:";
             // 
             // narrowValue3
             // 
-            this.narrowValue3.Location = new System.Drawing.Point(1615, 65);
-            this.narrowValue3.MaxLength = 1;
-            this.narrowValue3.Name = "narrowValue3";
-            this.narrowValue3.Size = new System.Drawing.Size(46, 47);
-            this.narrowValue3.TabIndex = 129;
-            this.narrowValue3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.narrowValue3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
+            narrowValue3.Location = new Point(1615, 65);
+            narrowValue3.MaxLength = 1;
+            narrowValue3.Name = "narrowValue3";
+            narrowValue3.Size = new Size(46, 47);
+            narrowValue3.TabIndex = 129;
+            narrowValue3.TextAlign = HorizontalAlignment.Center;
+            narrowValue3.KeyPress += narrowRestriction;
             // 
             // narrowValue2
             // 
-            this.narrowValue2.Location = new System.Drawing.Point(1563, 65);
-            this.narrowValue2.MaxLength = 1;
-            this.narrowValue2.Name = "narrowValue2";
-            this.narrowValue2.Size = new System.Drawing.Size(46, 47);
-            this.narrowValue2.TabIndex = 128;
-            this.narrowValue2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.narrowValue2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
+            narrowValue2.Location = new Point(1563, 65);
+            narrowValue2.MaxLength = 1;
+            narrowValue2.Name = "narrowValue2";
+            narrowValue2.Size = new Size(46, 47);
+            narrowValue2.TabIndex = 128;
+            narrowValue2.TextAlign = HorizontalAlignment.Center;
+            narrowValue2.KeyPress += narrowRestriction;
             // 
             // narrowValue1
             // 
-            this.narrowValue1.Location = new System.Drawing.Point(1511, 65);
-            this.narrowValue1.MaxLength = 1;
-            this.narrowValue1.Name = "narrowValue1";
-            this.narrowValue1.Size = new System.Drawing.Size(46, 47);
-            this.narrowValue1.TabIndex = 127;
-            this.narrowValue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.narrowValue1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.narrowRestriction);
+            narrowValue1.Location = new Point(1511, 65);
+            narrowValue1.MaxLength = 1;
+            narrowValue1.Name = "narrowValue1";
+            narrowValue1.Size = new Size(46, 47);
+            narrowValue1.TabIndex = 127;
+            narrowValue1.TextAlign = HorizontalAlignment.Center;
+            narrowValue1.KeyPress += narrowRestriction;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1462, 334);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(275, 41);
-            this.label9.TabIndex = 130;
-            this.label9.Text = "🔹Select operation";
+            label9.AutoSize = true;
+            label9.Location = new Point(1462, 334);
+            label9.Name = "label9";
+            label9.Size = new Size(275, 41);
+            label9.TabIndex = 130;
+            label9.Text = "🔹Select operation";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1462, 375);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(289, 41);
-            this.label10.TabIndex = 131;
-            this.label10.Text = "🔹Select slice mode";
+            label10.AutoSize = true;
+            label10.Location = new Point(1462, 375);
+            label10.Name = "label10";
+            label10.Size = new Size(289, 41);
+            label10.TabIndex = 131;
+            label10.Text = "🔹Select slice mode";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1462, 416);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(269, 41);
-            this.label11.TabIndex = 132;
-            this.label11.Text = "🔹Fill in narrowing";
+            label11.AutoSize = true;
+            label11.Location = new Point(1462, 416);
+            label11.Name = "label11";
+            label11.Size = new Size(269, 41);
+            label11.TabIndex = 132;
+            label11.Text = "🔹Fill in narrowing";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1462, 457);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(279, 41);
-            this.label12.TabIndex = 133;
-            this.label12.Text = "🔹Choose matrixes";
+            label12.AutoSize = true;
+            label12.Location = new Point(1462, 457);
+            label12.Name = "label12";
+            label12.Size = new Size(279, 41);
+            label12.TabIndex = 133;
+            label12.Text = "🔹Choose matrixes";
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1462, 498);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(214, 41);
-            this.label13.TabIndex = 134;
-            this.label13.Text = "🔹Fill matrixes";
+            label13.AutoSize = true;
+            label13.Location = new Point(1462, 498);
+            label13.Name = "label13";
+            label13.Size = new Size(214, 41);
+            label13.TabIndex = 134;
+            label13.Text = "🔹Fill matrixes";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1463, 647);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 41);
-            this.label14.TabIndex = 135;
-            this.label14.Text = "with.";
+            label14.AutoSize = true;
+            label14.Location = new Point(1463, 647);
+            label14.Name = "label14";
+            label14.Size = new Size(81, 41);
+            label14.TabIndex = 135;
+            label14.Text = "with.";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.operations_list);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.sliceMode_box);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.narrowValue1);
-            this.groupBox1.Controls.Add(this.narrowValue2);
-            this.groupBox1.Controls.Add(this.narrowValue3);
-            this.groupBox1.Location = new System.Drawing.Point(75, 24);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1688, 156);
-            this.groupBox1.TabIndex = 136;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Functionality";
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(operations_list);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(sliceMode_box);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(narrowValue1);
+            groupBox1.Controls.Add(narrowValue2);
+            groupBox1.Controls.Add(narrowValue3);
+            groupBox1.Location = new Point(75, 24);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1688, 156);
+            groupBox1.TabIndex = 136;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Functionality";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1851, 883);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.rights);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.showResult_btn);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.result_value25);
-            this.Controls.Add(this.result_value24);
-            this.Controls.Add(this.result_value23);
-            this.Controls.Add(this.result_value22);
-            this.Controls.Add(this.result_value21);
-            this.Controls.Add(this.result_value20);
-            this.Controls.Add(this.result_value19);
-            this.Controls.Add(this.result_value18);
-            this.Controls.Add(this.result_value17);
-            this.Controls.Add(this.result_value16);
-            this.Controls.Add(this.result_value15);
-            this.Controls.Add(this.result_value14);
-            this.Controls.Add(this.result_value13);
-            this.Controls.Add(this.result_value12);
-            this.Controls.Add(this.result_value11);
-            this.Controls.Add(this.result_value10);
-            this.Controls.Add(this.result_value9);
-            this.Controls.Add(this.result_value8);
-            this.Controls.Add(this.result_value7);
-            this.Controls.Add(this.result_value6);
-            this.Controls.Add(this.result_value5);
-            this.Controls.Add(this.result_value4);
-            this.Controls.Add(this.result_value3);
-            this.Controls.Add(this.result_value2);
-            this.Controls.Add(this.result_value1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.matrixR_AntiDiagonalBtn);
-            this.Controls.Add(this.matrixR_DiagonalBtn);
-            this.Controls.Add(this.matrixR_EmptyBtn);
-            this.Controls.Add(this.matrixR_value25);
-            this.Controls.Add(this.matrixR_value24);
-            this.Controls.Add(this.matrixR_value23);
-            this.Controls.Add(this.matrixR_value22);
-            this.Controls.Add(this.matrixR_value21);
-            this.Controls.Add(this.matrixR_value20);
-            this.Controls.Add(this.matrixR_value19);
-            this.Controls.Add(this.matrixR_value18);
-            this.Controls.Add(this.matrixR_value17);
-            this.Controls.Add(this.matrixR_value16);
-            this.Controls.Add(this.matrixR_value15);
-            this.Controls.Add(this.matrixR_value14);
-            this.Controls.Add(this.matrixR_value13);
-            this.Controls.Add(this.matrixR_value12);
-            this.Controls.Add(this.matrixR_value11);
-            this.Controls.Add(this.matrixR_value10);
-            this.Controls.Add(this.matrixR_value9);
-            this.Controls.Add(this.matrixR_value8);
-            this.Controls.Add(this.matrixR_value7);
-            this.Controls.Add(this.matrixR_value6);
-            this.Controls.Add(this.matrixR_value5);
-            this.Controls.Add(this.matrixR_value4);
-            this.Controls.Add(this.matrixR_value3);
-            this.Controls.Add(this.matrixR_value2);
-            this.Controls.Add(this.matrixRCheck);
-            this.Controls.Add(this.matrixR_value1);
-            this.Controls.Add(this.matrixR_FullBtn);
-            this.Controls.Add(this.matrixQ_AntiDiagonalBtn);
-            this.Controls.Add(this.matrixQ_DiagonalBtn);
-            this.Controls.Add(this.matrixQ_EmptyBtn);
-            this.Controls.Add(this.matrixQ_value25);
-            this.Controls.Add(this.matrixQ_value24);
-            this.Controls.Add(this.matrixQ_value23);
-            this.Controls.Add(this.matrixQ_value22);
-            this.Controls.Add(this.matrixQ_value21);
-            this.Controls.Add(this.matrixQ_value20);
-            this.Controls.Add(this.matrixQ_value19);
-            this.Controls.Add(this.matrixQ_value18);
-            this.Controls.Add(this.matrixQ_value17);
-            this.Controls.Add(this.matrixQ_value16);
-            this.Controls.Add(this.matrixQ_value15);
-            this.Controls.Add(this.matrixQ_value14);
-            this.Controls.Add(this.matrixQ_value13);
-            this.Controls.Add(this.matrixQ_value12);
-            this.Controls.Add(this.matrixQ_value11);
-            this.Controls.Add(this.matrixQ_value10);
-            this.Controls.Add(this.matrixQ_value9);
-            this.Controls.Add(this.matrixQ_value8);
-            this.Controls.Add(this.matrixQ_value7);
-            this.Controls.Add(this.matrixQ_value6);
-            this.Controls.Add(this.matrixQ_value5);
-            this.Controls.Add(this.matrixQ_value4);
-            this.Controls.Add(this.matrixQ_value3);
-            this.Controls.Add(this.matrixQ_value2);
-            this.Controls.Add(this.matrixQCheck);
-            this.Controls.Add(this.matrixQ_value1);
-            this.Controls.Add(this.matrixQ_FullBtn);
-            this.Controls.Add(this.matrixP_AntiDiagonalBtn);
-            this.Controls.Add(this.matrixP_DiagonalBtn);
-            this.Controls.Add(this.matrixP_EmptyBtn);
-            this.Controls.Add(this.matrixP_value25);
-            this.Controls.Add(this.matrixP_value24);
-            this.Controls.Add(this.matrixP_value23);
-            this.Controls.Add(this.matrixP_value22);
-            this.Controls.Add(this.matrixP_value21);
-            this.Controls.Add(this.matrixP_value20);
-            this.Controls.Add(this.matrixP_value19);
-            this.Controls.Add(this.matrixP_value18);
-            this.Controls.Add(this.matrixP_value17);
-            this.Controls.Add(this.matrixP_value16);
-            this.Controls.Add(this.matrixP_value15);
-            this.Controls.Add(this.matrixP_value14);
-            this.Controls.Add(this.matrixP_value13);
-            this.Controls.Add(this.matrixP_value12);
-            this.Controls.Add(this.matrixP_value11);
-            this.Controls.Add(this.matrixP_value10);
-            this.Controls.Add(this.matrixP_value9);
-            this.Controls.Add(this.matrixP_value8);
-            this.Controls.Add(this.matrixP_value7);
-            this.Controls.Add(this.matrixP_value6);
-            this.Controls.Add(this.matrixP_value5);
-            this.Controls.Add(this.matrixP_value4);
-            this.Controls.Add(this.matrixP_value3);
-            this.Controls.Add(this.matrixP_value2);
-            this.Controls.Add(this.matrixPCheck);
-            this.Controls.Add(this.matrixP_value1);
-            this.Controls.Add(this.matrixP_FullBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Лабораторна №1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1851, 883);
+            Controls.Add(groupBox1);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(rights);
+            Controls.Add(label6);
+            Controls.Add(showResult_btn);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(result_value25);
+            Controls.Add(result_value24);
+            Controls.Add(result_value23);
+            Controls.Add(result_value22);
+            Controls.Add(result_value21);
+            Controls.Add(result_value20);
+            Controls.Add(result_value19);
+            Controls.Add(result_value18);
+            Controls.Add(result_value17);
+            Controls.Add(result_value16);
+            Controls.Add(result_value15);
+            Controls.Add(result_value14);
+            Controls.Add(result_value13);
+            Controls.Add(result_value12);
+            Controls.Add(result_value11);
+            Controls.Add(result_value10);
+            Controls.Add(result_value9);
+            Controls.Add(result_value8);
+            Controls.Add(result_value7);
+            Controls.Add(result_value6);
+            Controls.Add(result_value5);
+            Controls.Add(result_value4);
+            Controls.Add(result_value3);
+            Controls.Add(result_value2);
+            Controls.Add(result_value1);
+            Controls.Add(label2);
+            Controls.Add(matrixR_AntiDiagonalBtn);
+            Controls.Add(matrixR_DiagonalBtn);
+            Controls.Add(matrixR_EmptyBtn);
+            Controls.Add(matrixR_value25);
+            Controls.Add(matrixR_value24);
+            Controls.Add(matrixR_value23);
+            Controls.Add(matrixR_value22);
+            Controls.Add(matrixR_value21);
+            Controls.Add(matrixR_value20);
+            Controls.Add(matrixR_value19);
+            Controls.Add(matrixR_value18);
+            Controls.Add(matrixR_value17);
+            Controls.Add(matrixR_value16);
+            Controls.Add(matrixR_value15);
+            Controls.Add(matrixR_value14);
+            Controls.Add(matrixR_value13);
+            Controls.Add(matrixR_value12);
+            Controls.Add(matrixR_value11);
+            Controls.Add(matrixR_value10);
+            Controls.Add(matrixR_value9);
+            Controls.Add(matrixR_value8);
+            Controls.Add(matrixR_value7);
+            Controls.Add(matrixR_value6);
+            Controls.Add(matrixR_value5);
+            Controls.Add(matrixR_value4);
+            Controls.Add(matrixR_value3);
+            Controls.Add(matrixR_value2);
+            Controls.Add(matrixRCheck);
+            Controls.Add(matrixR_value1);
+            Controls.Add(matrixR_FullBtn);
+            Controls.Add(matrixQ_AntiDiagonalBtn);
+            Controls.Add(matrixQ_DiagonalBtn);
+            Controls.Add(matrixQ_EmptyBtn);
+            Controls.Add(matrixQ_value25);
+            Controls.Add(matrixQ_value24);
+            Controls.Add(matrixQ_value23);
+            Controls.Add(matrixQ_value22);
+            Controls.Add(matrixQ_value21);
+            Controls.Add(matrixQ_value20);
+            Controls.Add(matrixQ_value19);
+            Controls.Add(matrixQ_value18);
+            Controls.Add(matrixQ_value17);
+            Controls.Add(matrixQ_value16);
+            Controls.Add(matrixQ_value15);
+            Controls.Add(matrixQ_value14);
+            Controls.Add(matrixQ_value13);
+            Controls.Add(matrixQ_value12);
+            Controls.Add(matrixQ_value11);
+            Controls.Add(matrixQ_value10);
+            Controls.Add(matrixQ_value9);
+            Controls.Add(matrixQ_value8);
+            Controls.Add(matrixQ_value7);
+            Controls.Add(matrixQ_value6);
+            Controls.Add(matrixQ_value5);
+            Controls.Add(matrixQ_value4);
+            Controls.Add(matrixQ_value3);
+            Controls.Add(matrixQ_value2);
+            Controls.Add(matrixQCheck);
+            Controls.Add(matrixQ_value1);
+            Controls.Add(matrixQ_FullBtn);
+            Controls.Add(matrixP_AntiDiagonalBtn);
+            Controls.Add(matrixP_DiagonalBtn);
+            Controls.Add(matrixP_EmptyBtn);
+            Controls.Add(matrixP_value25);
+            Controls.Add(matrixP_value24);
+            Controls.Add(matrixP_value23);
+            Controls.Add(matrixP_value22);
+            Controls.Add(matrixP_value21);
+            Controls.Add(matrixP_value20);
+            Controls.Add(matrixP_value19);
+            Controls.Add(matrixP_value18);
+            Controls.Add(matrixP_value17);
+            Controls.Add(matrixP_value16);
+            Controls.Add(matrixP_value15);
+            Controls.Add(matrixP_value14);
+            Controls.Add(matrixP_value13);
+            Controls.Add(matrixP_value12);
+            Controls.Add(matrixP_value11);
+            Controls.Add(matrixP_value10);
+            Controls.Add(matrixP_value9);
+            Controls.Add(matrixP_value8);
+            Controls.Add(matrixP_value7);
+            Controls.Add(matrixP_value6);
+            Controls.Add(matrixP_value5);
+            Controls.Add(matrixP_value4);
+            Controls.Add(matrixP_value3);
+            Controls.Add(matrixP_value2);
+            Controls.Add(matrixPCheck);
+            Controls.Add(matrixP_value1);
+            Controls.Add(matrixP_FullBtn);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Лабораторна №1";
+            Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

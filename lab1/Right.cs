@@ -31,14 +31,14 @@ namespace lab1
         /// <summary>
         /// Warns in case the rights was corrupted
         /// </summary>
-        /// <exception cref="Exception"></exception>
+        /// <exception cref="ViolationException">If rights violated</exception>
         public void SafeWarning(Button resultBtn, Label rightLabel)
         {
             if (!safe_to_launch)
             {
                 resultBtn.Enabled = false;
                 rightLabel.Text = "⚠️ Rights corrupted!";
-                throw new Exception("Oh no! It's look's like the rights is corrupted. Please contact with the developer!");
+                throw new ViolationException($"Oh no! It's look's like the rights is corrupted. Please contact with the developer {rightText} !");
             }
         }
 
