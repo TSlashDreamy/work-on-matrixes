@@ -11,14 +11,30 @@ namespace lab1
     {
         private Ratio converts = new Ratio();
 
+        // ----- Variables -----
         private bool isReflexive;
+        public bool IsReflexive { get { return isReflexive; } }
+
         private bool isAntiReflexive;
+        public bool IsAntiReflexive { get { return isAntiReflexive; } }
+
         private bool isSymmetric;
+        public bool IsSymmetric { get { return isSymmetric; } }
+
         private bool isAsymmetric;
+        public bool IsAsymmetric { get { return isAsymmetric; } }
+
         private bool isAntiSymmetric;
+        public bool IsAntiSymmetric { get { return isAntiSymmetric; } }
+
         private bool isTransitive;
+        public bool IsTransitive { get { return isTransitive; } }
+
         private bool isAcyclic;
+        public bool IsAcyclic { get { return isAcyclic; } }
+
         private bool isCoherent;
+        public bool IsCoherent { get { return isCoherent; } }
 
         public AttributesCheck()
         {
@@ -32,6 +48,7 @@ namespace lab1
             isCoherent = false;
         }
 
+        // ----- Basic matrixes -----
         private int[,] diagonal = { 
             { 1, 0, 0, 0, 0 },
             { 0, 1, 0, 0, 0 },
