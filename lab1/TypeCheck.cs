@@ -75,7 +75,7 @@ namespace lab1
             equivalentType = equivalentCheck(attributes);
             quasiOrdinalType = quasiOrdinalCheck(attributes);
             ordinalType = ordinalCheck(attributes);
-            strictOrderType = strictLinearOrderCheck(attributes);
+            strictOrderType = strictOrderCheck(attributes);
             linearOrderType = linearOrderCheck(attributes);
             strictLinearOrderType = strictLinearOrderCheck(attributes);
         }
