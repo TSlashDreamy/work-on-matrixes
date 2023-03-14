@@ -25,6 +25,9 @@ namespace lab1
         // attributes 
         AttributesCheck attributes = new AttributesCheck();
 
+        // type
+        TypeCheck type = new TypeCheck();
+
         public Form1()
         {
             InitializeComponent();
@@ -139,6 +142,9 @@ namespace lab1
 
             // showing attributes
             attributes.ShowAttributes(resultMatrix.Matrix);
+
+            // showing matrix type
+            type.ShowType(attributes);
         }
 
 
