@@ -28,6 +28,9 @@ namespace lab1
         // type
         TypeCheck type = new TypeCheck();
 
+        // find methods
+        Find find = new Find();
+
         public Form1()
         {
             InitializeComponent();
@@ -145,6 +148,12 @@ namespace lab1
 
             // showing matrix type
             type.ShowType(attributes);
+
+            // using methods
+            find.TransitiveClosure(resultMatrix.Matrix);
+            find.FindPA(resultMatrix.Matrix);
+            find.Reach(resultMatrix.Matrix);
+            find.MutualRich(resultMatrix.Matrix);
         }
 
 
