@@ -31,7 +31,7 @@ namespace lab1
         public Form1()
         {
             InitializeComponent();
-            right.Safe_to_launch = rights.Text == right.RightText;
+            right.SafeCheck(rights.Text);
 
             // all matrixes
             TextBox[,] matrixP_init_elements = new TextBox[5, 5] {
@@ -176,8 +176,9 @@ namespace lab1
             catch (Exception exc)
             {
                 MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            
+            }    
         }
+
+
     }
 }

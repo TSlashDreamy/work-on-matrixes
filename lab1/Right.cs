@@ -13,9 +13,17 @@ namespace lab1
         public string RightText { get { return rightText; } }
 
         private bool safe_to_launch = false;
-        public bool Safe_to_launch { set { safe_to_launch = value; } }
 
         // ---- Functions ----
+
+        /// <summary>
+        /// Compairing if rights are the same
+        /// </summary>
+        /// <param name="compareText"></param>
+        public void SafeCheck(string compareText)
+        {
+            safe_to_launch = rightText == compareText;
+        }
 
         /// <summary>
         /// Safely exits app in case the rights was corrupted
