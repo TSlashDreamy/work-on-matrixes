@@ -107,34 +107,27 @@ namespace lab1
 
         private bool transitiveCheck(TextBox[,] checkMatrix)
         {
-            int[,] newCheckMatrix = new int[5, 5];
-            int[,] newMatrix = new int[5, 5];
+            bool isTransitive = true;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < checkMatrix.GetLength(0); i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < checkMatrix.GetLength(1); j++)
                 {
-                    int sum = 0;
-                    for (int k = 0; k < 5; k++)
+                    if (checkMatrix[i, j].Text == "1")
                     {
-                        sum ^= Convert.ToInt32(checkMatrix[i, k].Text) & Convert.ToInt32(checkMatrix[k, j].Text); // bite XOR and bit offset
+                        for (int k = 0; k < checkMatrix.GetLength(1); k++)
+                        {
+                            if (checkMatrix[j, k].Text == "1" && checkMatrix[i, k].Text != "1")
+                            {
+                                isTransitive = false;
+                                break;
+                            }
+                        }
                     }
-
-                    newMatrix[i, j] = Convert.ToInt32(checkMatrix[i, j].Text);
-                    newCheckMatrix[i, j] = sum;
                 }
             }
 
-            for (int i = 0; i < newMatrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < newMatrix.GetLength(1); j++)
-                {
-                    if (newMatrix[i, j] == newCheckMatrix[i, j]) continue;
-                    else return false;
-                }
-            }
-
-            return true;
+            return isTransitive;
         }
 
         private bool acyclicCheck(TextBox[,] checkMatrix)
