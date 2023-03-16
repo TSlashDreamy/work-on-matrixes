@@ -31,6 +31,9 @@ namespace lab1
         // find methods
         Find find = new Find();
 
+        // factorisation
+        Factorization factorization = new Factorization();
+
         public Form1()
         {
             InitializeComponent();
@@ -150,10 +153,9 @@ namespace lab1
             type.ShowType(attributes);
 
             // using methods
-            find.TransitiveClosure(resultMatrix.Matrix);
+            find.FindPS(resultMatrix.Matrix);
             find.FindPA(resultMatrix.Matrix);
-            find.Reach(resultMatrix.Matrix);
-            find.MutualRich(resultMatrix.Matrix);
+            factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix));
         }
 
 

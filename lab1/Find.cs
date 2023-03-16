@@ -104,11 +104,12 @@ namespace lab1
 
         public void Reach(TextBox[,] checkMatrix)
         {
-            for (int i = 0; i < checkMatrix.GetLength(0); i++)
+            for (int i = 0; i < transitiveMatrix.GetLength(0); i++)
             {
-                for (int j = 0; j < checkMatrix.GetLength(1); j++)
+                for (int j = 0; j < transitiveMatrix.GetLength(1); j++)
                 {
-                    bool state = Convert.ToBoolean(Convert.ToInt32(diagonalMatrix[i, j])) || Convert.ToBoolean(Convert.ToInt32(checkMatrix[i, j].Text));
+                    if (transitiveMatrix[i, j] == null) TransitiveClosure(checkMatrix);
+                    bool state = Convert.ToBoolean(Convert.ToInt32(diagonalMatrix[i, j])) || Convert.ToBoolean(Convert.ToInt32(transitiveMatrix[i, j]));
                     reachMatrix[i, j] = Convert.ToString(Convert.ToInt32(state));
                 }
             }
@@ -120,11 +121,11 @@ namespace lab1
 
         public void MutualRich(TextBox[,] checkMatrix)
         {
-            for (int i = 0; i < checkMatrix.GetLength(0); i++)
+            for (int i = 0; i < reachMatrix.GetLength(0); i++)
             {
-                for (int j = 0; j < checkMatrix.GetLength(1); j++)
+                for (int j = 0; j < reachMatrix.GetLength(1); j++)
                 {
-                    if (transitiveMatrix[i, j] == null) TransitiveClosure(checkMatrix);
+                    if (reachMatrix[i, j] == null) Reach(checkMatrix);
                     bool state = Convert.ToBoolean(Convert.ToInt32(reachMatrix[i, j])) && Convert.ToBoolean(Convert.ToInt32(reachMatrix[j, i]));
                     mutualReachMatrix[i, j] = Convert.ToString(Convert.ToInt32(state));
                 }
@@ -135,6 +136,20 @@ namespace lab1
             matrixForm.Show();
         }
 
+        private void checkEmpty(TextBox[,] checkMatrix)
+        {
+            if (transitiveMatrix[0, 0] == null) TransitiveClosure(checkMatrix);
+            if (reachMatrix[0, 0] == null) Reach(checkMatrix);
+            if (mutualReachMatrix[0, 0] == null) MutualRich(checkMatrix);
+        }
+
+        public string[,] GetEquivalentRatio(TextBox[,] checkMatrix)
+        {
+            // transitive -> reach -> mutual reach
+            checkEmpty(checkMatrix);
+
+            return mutualReachMatrix;
+        }
 
     }
 }
