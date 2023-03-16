@@ -36,7 +36,7 @@ namespace lab1
         /// Converts boolean to string
         /// </summary>
         /// <param name="value"></param>
-        /// <returns><b>string</b></returns>
+        /// <returns><b>boolean</b></returns>
         public bool StringToBool(string value)
         {
             return Convert.ToBoolean(Convert.ToInt32(value));

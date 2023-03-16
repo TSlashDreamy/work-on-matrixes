@@ -22,10 +22,22 @@ namespace lab1
         // narrowing
         RatioNarrowing narrowing = new RatioNarrowing();
 
+        // attributes 
+        AttributesCheck attributes = new AttributesCheck();
+
+        // type
+        TypeCheck type = new TypeCheck();
+
+        // find methods
+        Find find = new Find();
+
+        // factorisation
+        Factorization factorization = new Factorization();
+
         public Form1()
         {
             InitializeComponent();
-            right.Safe_to_launch = rights.Text == right.RightText;
+            right.SafeCheck(rights.Text);
 
             // all matrixes
             TextBox[,] matrixP_init_elements = new TextBox[5, 5] {
@@ -63,7 +75,33 @@ namespace lab1
             matrixP.Matrix = matrixP_init_elements;
             matrixQ.Matrix = matrixQ_init_elements;
             matrixR.Matrix = matrixR_init_elements;
-            resultMatrix.Matrix = result_init_elements; 
+            resultMatrix.Matrix = result_init_elements;
+        }
+
+        // ------- Functions -------
+
+        private bool ProcessResult(int cutMode)
+        {
+            int selectedOperation = operations_list.SelectedIndex;
+
+            bool[] matrixesChecked = { matrixP.IsChecked, matrixQ.IsChecked, matrixR.IsChecked };
+            TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
+            List<int> selectedMatrixes = new List<int>();
+
+            // adding selected matrixes
+            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
+            if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes)) return false;
+
+            // calculate operation in cycle
+            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+            {
+                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                {
+                    if (!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return false;
+                }
+            }
+
+            return true;
         }
 
         // ------- Buttons interaction -------
@@ -97,25 +135,8 @@ namespace lab1
         {
             right.SafeExit();
 
-            int selectedOperation = operations_list.SelectedIndex;
             int selectedCutMode = sliceMode_box.SelectedIndex;
-
-            bool[] matrixesChecked = { matrixP.IsChecked, matrixQ.IsChecked, matrixR.IsChecked };
-            TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
-            List<int> selectedMatrixes = new List<int>();
-
-            // adding selected matrixes
-            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-            if(!resultMatrix.SafeCheck(selectedOperation, selectedCutMode, selectedMatrixes)) return;
-
-            // calculate operation in cycle
-            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
-            {
-                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
-                {
-                    if(!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return;
-                }
-            }
+            if (!ProcessResult(selectedCutMode)) return;
 
             // showing cuts
             string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
@@ -124,8 +145,19 @@ namespace lab1
 
             // showing narrowing
             narrowing.showNarrowing(resultMatrix.Matrix, narrowValue1, narrowValue2, narrowValue3);
+
+            // showing attributes
+            attributes.ShowAttributes(resultMatrix.Matrix);
+
+            // showing matrix type
+            type.ShowType(attributes);
+
+            // using methods
+            find.FindPS(resultMatrix.Matrix);
+            find.FindPA(resultMatrix.Matrix);
+            factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix));
         }
-        
+
 
         // key interaction
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -148,7 +180,16 @@ namespace lab1
         // safe switch
         private void Form1_Load(object sender, EventArgs e)
         {
-            right.SafeWarning(showResult_btn, rights);
+            try
+            {
+                right.SafeWarning(showResult_btn, rights);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }    
         }
+
+
     }
 }

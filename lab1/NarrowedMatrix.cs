@@ -25,9 +25,9 @@ namespace lab1
 
             for (int i = 0; i < narrowed.GetLength(0); i++)
             {
-                for (int y = 0; y < narrowed.GetLength(1); y++)
+                for (int j = 0; j < narrowed.GetLength(1); j++)
                 {
-                    narrowed[i, y].Text = data[counter];
+                    narrowed[i, j].Text = data[counter];
                     counter++;
                 }
             }

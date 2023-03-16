@@ -13,9 +13,17 @@ namespace lab1
         public string RightText { get { return rightText; } }
 
         private bool safe_to_launch = false;
-        public bool Safe_to_launch { set { safe_to_launch = value; } }
 
         // ---- Functions ----
+
+        /// <summary>
+        /// Compairing if rights are the same
+        /// </summary>
+        /// <param name="compareText"></param>
+        public void SafeCheck(string compareText)
+        {
+            safe_to_launch = rightText == compareText;
+        }
 
         /// <summary>
         /// Safely exits app in case the rights was corrupted
@@ -31,14 +39,14 @@ namespace lab1
         /// <summary>
         /// Warns in case the rights was corrupted
         /// </summary>
-        /// <exception cref="Exception"></exception>
+        /// <exception cref="ViolationException">If rights violated</exception>
         public void SafeWarning(Button resultBtn, Label rightLabel)
         {
             if (!safe_to_launch)
             {
                 resultBtn.Enabled = false;
                 rightLabel.Text = "⚠️ Rights corrupted!";
-                throw new Exception("Oh no! It's look's like the rights is corrupted. Please contact with the developer!");
+                throw new ViolationException($"Oh no! It's look's like the rights is corrupted. Please contact with the developer {rightText} !");
             }
         }
 
