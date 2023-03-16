@@ -187,7 +187,7 @@ namespace lab1
             catch (Exception exc)
             {
                 MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }    
+            }
         }
 
 
