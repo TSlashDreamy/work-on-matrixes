@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 
 namespace lab1
 {
@@ -71,7 +72,7 @@ namespace lab1
                 { result_value16, result_value17, result_value18, result_value19, result_value20 },
                 { result_value21, result_value22, result_value23, result_value24, result_value25 }
             };
-
+            // matrixes
             matrixP.Matrix = matrixP_init_elements;
             matrixQ.Matrix = matrixQ_init_elements;
             matrixR.Matrix = matrixR_init_elements;
@@ -80,28 +81,61 @@ namespace lab1
 
         // ------- Functions -------
 
-        private bool ProcessResult(int cutMode)
+        private void fillMatrix(RatioMatrix matrixToFill)
         {
-            int selectedOperation = operations_list.SelectedIndex;
+            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < resultMatrix.Matrix.GetLength(1); j++)
+                {
+                    matrixToFill.Matrix[i, j].Text = resultMatrix.Matrix[i, j].Text;
+                }
+            }
+        }
 
+        private bool processResult(int cutMode)
+        {
             bool[] matrixesChecked = { matrixP.IsChecked, matrixQ.IsChecked, matrixR.IsChecked };
             TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
             List<int> selectedMatrixes = new List<int>();
 
-            // adding selected matrixes
-            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-            if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes)) return false;
-
-            // calculate operation in cycle
-            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+            if (operation_check.Checked)
             {
-                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
-                {
-                    if (!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return false;
-                }
-            }
+                int selectedOperation = operations_list.SelectedIndex;
 
-            return true;
+                // adding selected matrixes
+                for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
+                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked)) return false;
+
+                // calculate operation in cycle
+                for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+                {
+                    for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                    {
+                        if (!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return false;
+                    }
+                }
+
+                return true;
+            }
+            else
+            {
+                int selectedOperation = 7;
+
+                // adding selected matrixes
+                for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
+                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked)) return false;
+
+                // just type matrix in result
+                for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+                {
+                    for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                    {
+                        if (!resultMatrix.DoOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix)) return false;
+                    }
+                }
+
+                return true;
+            }
         }
 
         // ------- Buttons interaction -------
@@ -136,26 +170,33 @@ namespace lab1
             right.SafeExit();
 
             int selectedCutMode = sliceMode_box.SelectedIndex;
-            if (!ProcessResult(selectedCutMode)) return;
+            if (!processResult(selectedCutMode)) return;
 
             // showing cuts
-            string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
-            string title = $"{(selectedCutMode == 0 ? "Vertical" : "Horizontal")} cuts";
-            MessageBox.Show(message, title);
+            if (slice_check.Checked)
+            {
+                string message = cuts.GetCuts(resultMatrix.Matrix, selectedCutMode);
+                string title = $"{(selectedCutMode == 0 ? "Vertical" : "Horizontal")} cuts";
+                MessageBox.Show(message, title);
+
+            }
 
             // showing narrowing
-            narrowing.showNarrowing(resultMatrix.Matrix, narrowValue1, narrowValue2, narrowValue3);
+            if (narrowing_check.Checked) narrowing.showNarrowing(resultMatrix.Matrix, narrowValue1, narrowValue2, narrowValue3);
 
             // showing attributes
-            attributes.ShowAttributes(resultMatrix.Matrix);
+            if (attributes_check.Checked) attributes.ShowAttributes(resultMatrix.Matrix);
 
             // showing matrix type
-            type.ShowType(attributes);
+            if (type_check.Checked) type.ShowType(attributes, resultMatrix.Matrix);
 
             // using methods
-            find.FindPS(resultMatrix.Matrix);
-            find.FindPA(resultMatrix.Matrix);
-            factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix));
+            if (symmetrial_check.Checked) find.FindPS(resultMatrix.Matrix);
+            if (assymetrical_check.Checked) find.FindPA(resultMatrix.Matrix);
+            if (transitiveClosure_check.Checked) find.TransitiveClosure(resultMatrix.Matrix);
+            if (reach_check.Checked) find.Reach(resultMatrix.Matrix);
+            if (mutualReach_check.Checked) find.MutualRich(resultMatrix.Matrix);
+            if (factorize_check.Checked) factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix, attributes));
         }
 
 
@@ -190,6 +231,19 @@ namespace lab1
             }
         }
 
+        private void fillP_button_Click(object sender, EventArgs e)
+        {
+            fillMatrix(matrixP);
+        }
 
+        private void fillQ_button_Click(object sender, EventArgs e)
+        {
+            fillMatrix(matrixQ);
+        }
+
+        private void fillR_button_Click(object sender, EventArgs e)
+        {
+            fillMatrix(matrixR);
+        }
     }
 }

@@ -62,12 +62,19 @@ namespace lab1
         /// <summary>
         /// Checks if all required data is filled
         /// </summary>
-        public bool SafeCheck(int operation, int cutMode, List<int> selectedMatrixes)
+        public bool SafeCheck(int operation, int cutMode, List<int> selectedMatrixes, bool slice_isActive)
         {
-            // checking if operation and cut mode selected
-            if (operation == -1 || cutMode == -1)
+            // checking if operation selected
+            if (operation == -1 && operation != 7)
             {
-                MessageBox.Show("Please, select operation and cut mode to continue", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please, select operation to continue", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // check if cut mode selected
+            if (cutMode == -1 && operation != 7 && slice_isActive)
+            {
+                MessageBox.Show("Please, select cut mode to continue", "Wait!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

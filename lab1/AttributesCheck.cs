@@ -197,7 +197,7 @@ namespace lab1
             return true;
         }
 
-        private void checkAll(TextBox[,] checkMatrix)
+        public void CheckAll(TextBox[,] checkMatrix)
         {
             isReflexive = reflexiveCheck(checkMatrix, diagonal);
             isAntiReflexive = antiReflexiveCheck(checkMatrix, diagonal);
@@ -211,7 +211,7 @@ namespace lab1
 
         public void ShowAttributes(TextBox[,] checkMatrix)
         {
-            checkAll(checkMatrix);
+            CheckAll(checkMatrix);
 
             string reflexiveMsg = $"{(isReflexive ? "✔️" : "❌")} - Reflexive\n";
             string antiReflexiveMsg = $"{(isAntiReflexive ? "✔️" : "❌")} - Antireflexive\n";
