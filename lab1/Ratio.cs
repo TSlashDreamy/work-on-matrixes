@@ -17,7 +17,7 @@ namespace lab1
         public bool DiagonalOperation { get { return diagonalOperation; } set { diagonalOperation = value; } }
 
         // matrix per operation
-        private static int[] matrixesPerOperation = { 2, 2, 1, 1, 2, 2, 2 };
+        private static int[] matrixesPerOperation = { 2, 2, 1, 1, 2, 2, 2, 1 };
         public int[] MatrixesPerOperation { get { return matrixesPerOperation; } }
 
         // ---- Functions ----
@@ -126,6 +126,9 @@ namespace lab1
                     }
 
                     resultMatrix[i, y].Text = founded ? "1" : "0";
+                    break;
+                case 7:
+                    resultMatrix[i, y].Text = BoolToString(firstMatrixValue);
                     break;
             }
             return true;

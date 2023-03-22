@@ -25,7 +25,7 @@ namespace lab1
             { "0", "0", "0", "0", "1" }
         };
 
-        public void FindPS(TextBox[,] checkMatrix)
+        public void FindPS(TextBox[,] checkMatrix, bool isCalledOutside = true)
         {
             for (int i = 0; i < checkMatrix.GetLength(0); i++)
             {
@@ -37,8 +37,11 @@ namespace lab1
             }
 
             // show matrix
-            MatrixUI matrixForm = new MatrixUI(Ps, "symmetrical component");
-            matrixForm.Show();
+            if (isCalledOutside)
+            {
+                MatrixUI matrixForm = new MatrixUI(Ps, "symmetrical component");
+                matrixForm.Show();
+            }   
         }
 
         public void FindPA(TextBox[,] checkMatrix)
@@ -47,7 +50,7 @@ namespace lab1
             {
                 for (int j = 0; j < checkMatrix.GetLength(1); j++)
                 {
-                    if (Ps[i, j] == null) FindPS(checkMatrix);
+                    if (Ps[i, j] == null) FindPS(checkMatrix, false);
                     Pa[i, j] = checkMatrix[i, j].Text == Ps[i, j] && Ps[i, j] == "1" ? "0" : checkMatrix[i, j].Text;
                 }
             }
@@ -58,7 +61,7 @@ namespace lab1
         }
 
         // using Floyd Warshall method
-        public void TransitiveClosure(TextBox[,] checkMatrix)
+        public void TransitiveClosure(TextBox[,] checkMatrix, bool isCalledOutside = true)
         {
             // Create a copy of the matrix for transitive closure
             string[,] closure = cloneMatrix(checkMatrix);
@@ -83,8 +86,12 @@ namespace lab1
             transitiveMatrix = closure;
 
             // show matrix
-            MatrixUI matrixForm = new MatrixUI(closure, "transitive closure");
-            matrixForm.Show();
+            if (isCalledOutside)
+            {
+                MatrixUI matrixForm = new MatrixUI(closure, "transitive closure");
+                matrixForm.Show();
+            }
+            
         }
 
         private string[,] cloneMatrix(TextBox[,] matrixToClone)
@@ -102,53 +109,89 @@ namespace lab1
             return matrixToReturn;
         }
 
-        public void Reach(TextBox[,] checkMatrix)
+        public void Reach(TextBox[,] checkMatrix, bool isCalledOutside = true)
         {
             for (int i = 0; i < transitiveMatrix.GetLength(0); i++)
             {
                 for (int j = 0; j < transitiveMatrix.GetLength(1); j++)
                 {
-                    if (transitiveMatrix[i, j] == null) TransitiveClosure(checkMatrix);
+                    if (transitiveMatrix[i, j] == null) TransitiveClosure(checkMatrix, false);
                     bool state = Convert.ToBoolean(Convert.ToInt32(diagonalMatrix[i, j])) || Convert.ToBoolean(Convert.ToInt32(transitiveMatrix[i, j]));
                     reachMatrix[i, j] = Convert.ToString(Convert.ToInt32(state));
                 }
             }
 
             // show matrix
-            MatrixUI matrixForm = new MatrixUI(reachMatrix, "reach");
-            matrixForm.Show();
+            if (isCalledOutside)
+            {
+                MatrixUI matrixForm = new MatrixUI(reachMatrix, "reach");
+                matrixForm.Show();
+            }
+            
         }
 
-        public void MutualRich(TextBox[,] checkMatrix)
+        public void MutualRich(TextBox[,] checkMatrix, bool isCalledOutside = true)
         {
             for (int i = 0; i < reachMatrix.GetLength(0); i++)
             {
                 for (int j = 0; j < reachMatrix.GetLength(1); j++)
                 {
-                    if (reachMatrix[i, j] == null) Reach(checkMatrix);
+                    if (reachMatrix[i, j] == null) Reach(checkMatrix, false);
                     bool state = Convert.ToBoolean(Convert.ToInt32(reachMatrix[i, j])) && Convert.ToBoolean(Convert.ToInt32(reachMatrix[j, i]));
                     mutualReachMatrix[i, j] = Convert.ToString(Convert.ToInt32(state));
                 }
             }
 
             // show matrix
-            MatrixUI matrixForm = new MatrixUI(mutualReachMatrix, "mutual reach");
-            matrixForm.Show();
+            if (isCalledOutside)
+            {
+                MatrixUI matrixForm = new MatrixUI(mutualReachMatrix, "mutual reach");
+                matrixForm.Show();
+            }
+            
         }
 
-        private void checkEmpty(TextBox[,] checkMatrix)
+        private string[,] checkAttributes(TextBox[,] checkMatrix, AttributesCheck attributes)
         {
-            if (transitiveMatrix[0, 0] == null) TransitiveClosure(checkMatrix);
-            if (reachMatrix[0, 0] == null) Reach(checkMatrix);
-            if (mutualReachMatrix[0, 0] == null) MutualRich(checkMatrix);
+            // reflexive, symmetric, transitive
+            if (attributes.IsReflexive && attributes.IsSymmetric && attributes.IsTransitive)
+            {
+                string[,] newMatrix = new string[5, 5];
+
+                for (int i = 0; i < newMatrix.GetLength(0); i++)
+                {
+                    for (int j = 0; j < newMatrix.GetLength(1); j++)
+                    {
+                        newMatrix[i, j] = checkMatrix[i, j].Text;
+                    }
+                }
+
+                return newMatrix;
+
+            } else
+            {
+                clearMatrixes();
+                TransitiveClosure(checkMatrix, false);
+                Reach(checkMatrix, false);
+                MutualRich(checkMatrix, false);
+
+                return mutualReachMatrix;
+            }
         }
 
-        public string[,] GetEquivalentRatio(TextBox[,] checkMatrix)
+        private void clearMatrixes()
+        {
+            Array.Clear(transitiveMatrix);
+            Array.Clear(reachMatrix);
+            Array.Clear(mutualReachMatrix);
+        }
+
+        public string[,] GetEquivalentRatio(TextBox[,] checkMatrix, AttributesCheck attributes)
         {
             // transitive -> reach -> mutual reach
-            checkEmpty(checkMatrix);
+            string[,] matrixToReturn = checkAttributes(checkMatrix, attributes);
 
-            return mutualReachMatrix;
+            return matrixToReturn;
         }
 
     }

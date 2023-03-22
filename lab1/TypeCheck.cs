@@ -69,8 +69,9 @@ namespace lab1
             return false;
         }
 
-        private void checkAll(AttributesCheck attributes)
+        private void checkAll(AttributesCheck attributes, TextBox[,] checkMatrix)
         {
+            attributes.CheckAll(checkMatrix);
             tolerantType = tolerantCheck(attributes);
             equivalentType = equivalentCheck(attributes);
             quasiOrdinalType = quasiOrdinalCheck(attributes);
@@ -80,9 +81,9 @@ namespace lab1
             strictLinearOrderType = strictLinearOrderCheck(attributes);
         }
 
-        public void ShowType(AttributesCheck attributes)
+        public void ShowType(AttributesCheck attributes, TextBox[,] checkMatrix)
         {
-            checkAll(attributes);
+            checkAll(attributes, checkMatrix);
 
             string tolerantMsg = $"{(tolerantType ? "✔️" : "❌")} - Tolerant\n";
             string equivalentMsg = $"{(equivalentType ? "✔️" : "❌")} - Equivalent\n";
