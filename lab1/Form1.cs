@@ -196,7 +196,7 @@ namespace lab1
             if (transitiveClosure_check.Checked) find.TransitiveClosure(resultMatrix.Matrix);
             if (reach_check.Checked) find.Reach(resultMatrix.Matrix);
             if (mutualReach_check.Checked) find.MutualRich(resultMatrix.Matrix);
-            if (factorize_check.Checked) factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix, attributes));
+            if (factorize_check.Checked) factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix, attributes), resultMatrix.Matrix);
         }
 
 

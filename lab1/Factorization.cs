@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection;
@@ -11,7 +12,7 @@ namespace lab1
 {
     internal class Factorization
     {
-        public void Factorize(string[,] equivalentMatrix, TextBox[,] derivativeMatrix = null)
+        public void Factorize(string[,] equivalentMatrix, TextBox[,] derivativeMatrix)
         {
             // Dividing classes 
             List<List<int>> classes = new List<List<int>>();
@@ -64,7 +65,7 @@ namespace lab1
 
             // ----- Forming Pd matrix ----- 
             int[][] classesArr1 = classes.Select(a => a.ToArray()).ToArray();
-           // int[][] classesArr2 = classes.Select(a => a.ToArray()).ToArray();
+            List<int> arrIndexes = new List<int>();
             string newMatrixResult = "";
 
             // classes 1
@@ -73,14 +74,15 @@ namespace lab1
                 // classes 2
                 for (int j = 0; j < classesArr1.GetLength(0); j++)
                 {
-                    getNumbers(classesArr1[i], classesArr1[j]);
+                   newMatrixResult += getNumbers(classesArr1[i], classesArr1[j], derivativeMatrix);
                 }
+                newMatrixResult += "\n";
             }
 
-
+            MessageBox.Show(newMatrixResult, "Matrix");
         }
 
-        private void getNumbers(int[] firstClass, int[] secondClass)
+        private string getNumbers(int[] firstClass, int[] secondClass, TextBox[,] derivativeMatrix)
         {
             // num 1 
             for (int i = 0; i < firstClass.GetLength(0); i++)
@@ -88,9 +90,10 @@ namespace lab1
                 // num 2
                 for (int j = 0; j < secondClass.GetLength(0); j++)
                 {
-                    MessageBox.Show($"{firstClass[i]} - {secondClass[j]}");
+                    if(derivativeMatrix[firstClass[i], secondClass[j]].Text == "1") return "1\t";
                 }
             }
+            return "0\t";
         }
     }
 
