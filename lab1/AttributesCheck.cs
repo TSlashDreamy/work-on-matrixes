@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace lab1
 {
@@ -12,6 +13,7 @@ namespace lab1
         private Ratio converts = new Ratio();
 
         // ----- Variables -----
+        // Binaries
         private bool isReflexive;
         public bool IsReflexive { get { return isReflexive; } }
 
@@ -36,6 +38,14 @@ namespace lab1
         private bool isCoherent;
         public bool IsCoherent { get { return isCoherent; } }
 
+        // Decimals
+        private bool isAdditive;
+        public bool IsAdditive { get { return isAdditive; } }
+
+        private bool isMultiplicative;
+        public bool IsMultiplicative { get { return isMultiplicative; } }
+
+
         public AttributesCheck()
         {
             isReflexive = false;
@@ -46,6 +56,8 @@ namespace lab1
             isTransitive = false;
             isAcyclic = false;
             isCoherent = false;
+            isAdditive = false;
+            isMultiplicative = false;
         }
 
         // ----- Basic matrixes -----
@@ -226,6 +238,77 @@ namespace lab1
             MessageBox.Show(message, "Attribute check");
         }
 
+        private bool cycleThrought(TextBox[,] checkMatrix, string operation)
+        {
+            for (int i = 0; i < checkMatrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < checkMatrix.GetLength(1); j++)
+                {
+                    if (Convert.ToInt32(checkMatrix[i, j].Text) > 0)
+                    {
+                        for (int k = 0; k < checkMatrix.GetLength(1); k++)
+                        {
+                            int Pi = Convert.ToInt32(checkMatrix[i, k].Text);
+                            int Pj = Convert.ToInt32(checkMatrix[k, j].Text);
+
+                            if (k == i || k == j) continue;
+                            if (!(Pi > 0 && Pj > 0)) continue;
+                            switch (operation)
+                            {
+                                case "Add":
+                                    if (!(Pj + Pi == Convert.ToInt32(checkMatrix[i, j].Text))) return false;
+                                    break;
+                                case "Multiply":
+                                    if (!(Pj * Pi == Convert.ToInt32(checkMatrix[i, j].Text))) return false;
+                                    break;
+                                default:
+                                    throw new Exception($"Operation '{operation}' does not exist!");
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        private bool checkAdditive(TextBox[,] checkMatrix)
+        {
+            bool state = false;
+
+            try { state = cycleThrought(checkMatrix, "Add"); } 
+            catch (Exception e) { MessageBox.Show("Something went wrong! " + e); }
+            
+            return state;
+        }
+
+        private bool checkMultiplicative(TextBox[,] checkMatrix) {
+            bool state = false;
+
+            try { state = cycleThrought(checkMatrix, "Multiply"); }
+            catch (Exception e) { MessageBox.Show("Something went wrong! " + e); }
+
+            return state;
+        }
+
+        private void checkAllDecimals(TextBox[,] checkMatrix)
+        {
+            isAdditive = checkAdditive(checkMatrix);
+            isMultiplicative = checkMultiplicative(checkMatrix);
+        }
+
+        public void ShowDecimalAttributes(TextBox[,] checkMatrix)
+        {
+            checkAllDecimals(checkMatrix);
+
+            string additiveMsg = $"{(isAdditive ? "✔️" : "❌")} - Additive\n";
+            string multiplicativeMsg = $"{(isMultiplicative ? "✔️" : "❌")} - Multiplicative\n";
+
+            string message = additiveMsg + multiplicativeMsg;
+
+            MessageBox.Show(message, "Attribute check");
+        }
 
     }
 }
