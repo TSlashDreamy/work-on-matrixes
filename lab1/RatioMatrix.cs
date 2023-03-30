@@ -79,9 +79,9 @@ namespace lab1
             }
 
             // check if needed amount of matrixes selected
-            if (selectedMatrixes.Count != this.MatrixesPerOperation[operation])
+            if (selectedMatrixes.Count != this.DecimalMatrixesPerOperation[operation])
             {
-                MessageBox.Show($"For this operation select {this.MatrixesPerOperation[operation]} matrixes.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"For this operation select {this.DecimalMatrixesPerOperation[operation]} matrixes.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 

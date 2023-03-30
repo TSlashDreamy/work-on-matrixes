@@ -147,6 +147,7 @@ namespace lab1
         private void matrixP_EmptyBtn_Click(object sender, EventArgs e) { matrixP.FillMatrix("empty"); }
         private void matrixP_DiagonalBtn_Click(object sender, EventArgs e) { matrixP.FillMatrix("diagonal"); }
         private void matrixP_AntiDiagonalBtn_Click(object sender, EventArgs e) { matrixP.FillMatrix("anti-diagonal"); }
+        private void fillP_button_Click(object sender, EventArgs e) { fillMatrix(matrixP); }
 
         // ---- Matrix Q ----
         private void matrixQCheck_CheckStateChanged(object sender, EventArgs e) { matrixQ.IsChecked = matrixQ.StringToBool(sender.ToString()[^1..]); }
@@ -155,6 +156,7 @@ namespace lab1
         private void matrixQ_EmptyBtn_Click(object sender, EventArgs e) { matrixQ.FillMatrix("empty"); }
         private void matrixQ_DiagonalBtn_Click(object sender, EventArgs e) { matrixQ.FillMatrix("diagonal"); }
         private void matrixQ_AntiDiagonalBtn_Click(object sender, EventArgs e) { matrixQ.FillMatrix("anti-diagonal"); }
+        private void fillQ_button_Click(object sender, EventArgs e) { fillMatrix(matrixQ); }
 
         // ---- Matrix R ----
         private void matrixRCheck_CheckStateChanged(object sender, EventArgs e) { matrixR.IsChecked = matrixR.StringToBool(sender.ToString()[^1..]); }
@@ -163,6 +165,7 @@ namespace lab1
         private void matrixR_EmptyBtn_Click(object sender, EventArgs e) { matrixR.FillMatrix("empty"); }
         private void matrixR_DiagonalBtn_Click(object sender, EventArgs e) { matrixR.FillMatrix("diagonal"); }
         private void matrixR_AntiDiagonalBtn_Click(object sender, EventArgs e) { matrixR.FillMatrix("anti-diagonal"); }
+        private void fillR_button_Click(object sender, EventArgs e) { fillMatrix(matrixR); }
 
         // ---- Matrix B (Result matrix) ---- 
         private void showResult_btn_Click(object sender, EventArgs e)
@@ -203,9 +206,50 @@ namespace lab1
         // key interaction
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            bool isValid = true;
+
             // 8 - backspace, 48 - 0, 49 - 1
-            if (!(e.KeyChar == 48 || e.KeyChar == 49 || e.KeyChar == 8)) MessageBox.Show("Please enter only '0' or '1'.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (!(e.KeyChar == 48 || e.KeyChar == 49 || e.KeyChar == 8))
+            {
+                isValid = false;
+                MessageBox.Show("Please enter only '0' or '1'.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             e.Handled = !(e.KeyChar == 48 || e.KeyChar == 49 || e.KeyChar == 8);
+
+            if (!isValid) return;
+            switchToNext(sender);
+        }
+
+        private void switchToNext(object sender)
+        {
+            TextBox[][,] matrixesArray = new TextBox[3][,] { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix };
+
+            for (int arrI = 0; arrI < matrixesArray.Length; arrI++)
+            {
+                for (int i = 0; i < matrixesArray[arrI].GetLength(0); i++)
+                {
+                    for (int j = 0; j < matrixesArray[arrI].GetLength(1); j++)
+                    {
+                        if (sender == matrixesArray[arrI][i, j])
+                        {
+                            if (j < matrixP.Matrix.GetLength(1) - 1)
+                            {
+                                matrixesArray[arrI][i, j + 1].Select();
+                            }
+                            else if (i < matrixesArray[arrI].GetLength(0) - 1)
+                            {
+                                matrixesArray[arrI][i + 1, 0].Select();
+                            }
+                            else
+                            {
+                                matrixesArray[arrI][0, 0].Select();
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         private void narrowRestriction(object sender, KeyPressEventArgs e)
@@ -231,19 +275,13 @@ namespace lab1
             }
         }
 
-        private void fillP_button_Click(object sender, EventArgs e)
+        private void modeSwitch_btn_Click(object sender, EventArgs e)
         {
-            fillMatrix(matrixP);
+            DecimalMode newMode = new DecimalMode();
+            this.Hide();
+            newMode.ShowDialog();
+            if (newMode.ModeChange) this.Show();
         }
 
-        private void fillQ_button_Click(object sender, EventArgs e)
-        {
-            fillMatrix(matrixQ);
-        }
-
-        private void fillR_button_Click(object sender, EventArgs e)
-        {
-            fillMatrix(matrixR);
-        }
     }
 }
