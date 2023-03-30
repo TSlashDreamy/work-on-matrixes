@@ -180,6 +180,7 @@
             fillP_button = new Button();
             fillQ_button = new Button();
             fillR_button = new Button();
+            modeSwitch_btn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -1511,7 +1512,7 @@
             // rights
             // 
             rights.AutoSize = true;
-            rights.Location = new Point(1908, 824);
+            rights.Location = new Point(1930, 825);
             rights.Margin = new Padding(2, 0, 2, 0);
             rights.Name = "rights";
             rights.Size = new Size(337, 41);
@@ -1836,11 +1837,23 @@
             fillR_button.UseVisualStyleBackColor = true;
             fillR_button.Click += fillR_button_Click;
             // 
+            // modeSwitch_btn
+            // 
+            modeSwitch_btn.Location = new Point(1791, 700);
+            modeSwitch_btn.Margin = new Padding(2);
+            modeSwitch_btn.Name = "modeSwitch_btn";
+            modeSwitch_btn.Size = new Size(476, 57);
+            modeSwitch_btn.TabIndex = 141;
+            modeSwitch_btn.Text = "Decimal mode";
+            modeSwitch_btn.UseVisualStyleBackColor = true;
+            modeSwitch_btn.Click += modeSwitch_btn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2306, 884);
+            Controls.Add(modeSwitch_btn);
             Controls.Add(fillR_button);
             Controls.Add(fillQ_button);
             Controls.Add(fillP_button);
@@ -1979,7 +1992,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Лабораторна №2";
+            Text = "Лабораторна №3 | Binary mode";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -2143,5 +2156,6 @@
         private Button fillP_button;
         private Button fillQ_button;
         private Button fillR_button;
+        private Button modeSwitch_btn;
     }
 }
