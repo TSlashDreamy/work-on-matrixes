@@ -111,7 +111,7 @@ namespace lab1
 
             // adding selected matrixes
             for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-            if (!resultMatrix.SafeCheck(selectedOperation, 1, selectedMatrixes, true)) return false;
+            if (!resultMatrix.DecimalSafeCheck(selectedMatrixes, selectedOperation)) return false;
 
             // calculate operation in cycle
             for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
