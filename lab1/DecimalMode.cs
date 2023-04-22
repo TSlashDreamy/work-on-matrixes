@@ -32,6 +32,9 @@ namespace lab1
         RatioMatrix matrixQ1 = new RatioMatrix(defaultISize, defaultYSize);
         RatioMatrix resultMatrix = new RatioMatrix(defaultISize, defaultYSize);
 
+        // searching distance
+        Distance distance = new Distance();
+
 
         public DecimalMode()
         {
@@ -111,14 +114,19 @@ namespace lab1
 
             // adding selected matrixes
             for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-            if (!resultMatrix.DecimalSafeCheck(selectedMatrixes, selectedOperation)) return false;
+            if (!resultMatrix.DecimalSafeCheck(selectedMatrixes, selectedOperation, operation_checkBox.Checked)) return false;
 
-            // calculate operation in cycle
-            for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
+            if (distance_checkbox.Checked) distance.ShowDecimalResult(matrixes, selectedMatrixes);
+
+            if (operation_checkBox.Checked)
             {
-                for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                // calculate operation in cycle
+                for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
                 {
-                    if (!resultMatrix.DoDecimalOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix, attributes)) return false;
+                    for (int y = 0; y < resultMatrix.Matrix.GetLength(1); y++)
+                    {
+                        if (!resultMatrix.DoDecimalOperation(matrixes, selectedMatrixes, selectedOperation, i, y, resultMatrix.Matrix, attributes)) return false;
+                    }
                 }
             }
 
@@ -148,13 +156,13 @@ namespace lab1
         {
             bool isValid = true;
 
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !(e.KeyChar == '-'))
             {
                 isValid = false;
                 MessageBox.Show($"Please, enter only positive integer numbers!", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !(e.KeyChar == '-');
 
             if (!isValid) return;
             switchToNext(sender);
@@ -182,7 +190,8 @@ namespace lab1
                             }
                             else
                             {
-                                matrixesArray[arrI][0, 0].Select();
+                                if (matrixesArray.Length > arrI + 1) matrixesArray[arrI + 1][0, 0].Select();
+                                else matrixesArray[0][0, 0].Select();
                             }
                         }
                     }
@@ -194,7 +203,7 @@ namespace lab1
         private void showResult_btn_Click(object sender, EventArgs e)
         {
             right.SafeExit();
-            
+
             if (showAttributesCheck.Checked) attributes.ShowDecimalAttributes(matrixP.Matrix);
             if (!processResult()) return;
         }

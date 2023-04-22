@@ -166,6 +166,7 @@
             label14 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            distance_checkBox = new CheckBox();
             factorize_check = new CheckBox();
             transitiveClosure_check = new CheckBox();
             mutualReach_check = new CheckBox();
@@ -181,6 +182,7 @@
             fillQ_button = new Button();
             fillR_button = new Button();
             modeSwitch_btn = new Button();
+            similarity_checkbox = new CheckBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -1663,6 +1665,8 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(similarity_checkbox);
+            groupBox2.Controls.Add(distance_checkBox);
             groupBox2.Controls.Add(factorize_check);
             groupBox2.Controls.Add(transitiveClosure_check);
             groupBox2.Controls.Add(mutualReach_check);
@@ -1678,10 +1682,21 @@
             groupBox2.Margin = new Padding(6);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(6);
-            groupBox2.Size = new Size(476, 654);
+            groupBox2.Size = new Size(476, 733);
             groupBox2.TabIndex = 137;
             groupBox2.TabStop = false;
             groupBox2.Text = "Operations";
+            // 
+            // distance_checkBox
+            // 
+            distance_checkBox.AutoSize = true;
+            distance_checkBox.Location = new Point(32, 631);
+            distance_checkBox.Margin = new Padding(2);
+            distance_checkBox.Name = "distance_checkBox";
+            distance_checkBox.Size = new Size(231, 45);
+            distance_checkBox.TabIndex = 149;
+            distance_checkBox.Text = "Find distance";
+            distance_checkBox.UseVisualStyleBackColor = true;
             // 
             // factorize_check
             // 
@@ -1839,14 +1854,25 @@
             // 
             // modeSwitch_btn
             // 
-            modeSwitch_btn.Location = new Point(1791, 700);
+            modeSwitch_btn.Location = new Point(1445, 740);
             modeSwitch_btn.Margin = new Padding(2);
             modeSwitch_btn.Name = "modeSwitch_btn";
-            modeSwitch_btn.Size = new Size(476, 57);
+            modeSwitch_btn.Size = new Size(316, 57);
             modeSwitch_btn.TabIndex = 141;
             modeSwitch_btn.Text = "Decimal mode";
             modeSwitch_btn.UseVisualStyleBackColor = true;
             modeSwitch_btn.Click += modeSwitch_btn_Click;
+            // 
+            // similarity_checkbox
+            // 
+            similarity_checkbox.AutoSize = true;
+            similarity_checkbox.Location = new Point(32, 680);
+            similarity_checkbox.Margin = new Padding(2);
+            similarity_checkbox.Name = "similarity_checkbox";
+            similarity_checkbox.Size = new Size(238, 45);
+            similarity_checkbox.TabIndex = 150;
+            similarity_checkbox.Text = "Find similarity";
+            similarity_checkbox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1992,7 +2018,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Лабораторна №3 | Binary mode";
+            Text = "Лабораторна №4 | Binary mode";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -2157,5 +2183,7 @@
         private Button fillQ_button;
         private Button fillR_button;
         private Button modeSwitch_btn;
+        private CheckBox distance_checkBox;
+        private CheckBox similarity_checkbox;
     }
 }

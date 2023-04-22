@@ -35,6 +35,12 @@ namespace lab1
         // factorisation
         Factorization factorization = new Factorization();
 
+        // distance between matrixes
+        Distance distance = new Distance();
+
+        // simmilarity between matrixes
+        Simmilarity simmilarity = new Simmilarity();
+
         public Form1()
         {
             InitializeComponent();
@@ -98,13 +104,20 @@ namespace lab1
             TextBox[][,] matrixes = { matrixP.Matrix, matrixQ.Matrix, matrixR.Matrix, };
             List<int> selectedMatrixes = new List<int>();
 
+            // adding selected matrixes
+            for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
+
+            // calculating distance between matrixes
+            if (distance_checkBox.Checked) if (!distance.ShowResult(matrixes, selectedMatrixes)) return false;
+
+            // simmilarity calculation
+            if (similarity_checkbox.Checked) if (!simmilarity.ShowResult(matrixes, selectedMatrixes)) return false;
+
             if (operation_check.Checked)
             {
                 int selectedOperation = operations_list.SelectedIndex;
 
-                // adding selected matrixes
-                for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
-                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked)) return false;
+                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked, similarity_checkbox.Checked)) return false;
 
                 // calculate operation in cycle
                 for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
@@ -117,12 +130,10 @@ namespace lab1
 
                 return true;
             }
-            else
+            else if (!distance_checkBox.Checked)
             {
                 int selectedOperation = 7;
 
-                // adding selected matrixes
-                for (int i = 0; i < matrixesChecked.Length; i++) if (matrixesChecked[i] == true) selectedMatrixes.Add(i);
                 if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked)) return false;
 
                 // just type matrix in result
@@ -136,6 +147,8 @@ namespace lab1
 
                 return true;
             }
+
+            return true;
         }
 
         // ------- Buttons interaction -------
@@ -243,7 +256,8 @@ namespace lab1
                             }
                             else
                             {
-                                matrixesArray[arrI][0, 0].Select();
+                                if (matrixesArray.Length > arrI + 1) matrixesArray[arrI + 1][0, 0].Select();
+                                else matrixesArray[0][0, 0].Select();
                             }
                         }
                     }

@@ -62,7 +62,7 @@ namespace lab1
         /// <summary>
         /// Checks if all required data is filled
         /// </summary>
-        public bool SafeCheck(int operation, int cutMode, List<int> selectedMatrixes, bool slice_isActive)
+        public bool SafeCheck(int operation, int cutMode, List<int> selectedMatrixes, bool slice_isActive, bool simmilarity_checked)
         {
             // checking if operation selected
             if (operation == -1 && operation != 7)
@@ -78,6 +78,8 @@ namespace lab1
                 return false;
             }
 
+            if (simmilarity_checked) return true;
+
             // check if needed amount of matrixes selected
             if (selectedMatrixes.Count != this.MatrixesPerOperation[operation])
             {
@@ -88,9 +90,15 @@ namespace lab1
             return true;
         }
 
-        public bool DecimalSafeCheck(List<int> selectedMatrixes, int operation)
+        public bool DecimalSafeCheck(List<int> selectedMatrixes, int operation, bool operationOn)
         {
             // check if needed amount of matrixes selected
+            if (operation == -1 && operationOn)
+            {
+                MessageBox.Show($"Please, select operation to do!", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (operation == -1 && !operationOn) return true;
             if (selectedMatrixes.Count != this.DecimalMatrixesPerOperation[operation])
             {
                 MessageBox.Show($"For this operation select {this.DecimalMatrixesPerOperation[operation]} matrixes.", "Hey", MessageBoxButtons.OK, MessageBoxIcon.Warning);
