@@ -1848,7 +1848,7 @@
             MaximizeBox = false;
             Name = "DecimalMode";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Лабораторна №4 | DecimalMode";
+            Text = "Лабораторна №5 | DecimalMode";
             FormClosed += DecimalMode_FormClosed;
             Load += DecimalMode_Load;
             KeyPress += matrixR_value25_KeyPress;

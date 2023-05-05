@@ -98,7 +98,7 @@ namespace lab1
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(exc.ToString().Split('\n')[1], exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
