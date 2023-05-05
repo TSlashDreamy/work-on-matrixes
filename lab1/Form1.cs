@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace lab1
 {
@@ -41,9 +43,24 @@ namespace lab1
         // simmilarity between matrixes
         Simmilarity simmilarity = new Simmilarity();
 
+        // min/max search
+        MinMaxFind minMax = new MinMaxFind();
+
         public Form1()
         {
             InitializeComponent();
+
+            // check screen resolution
+            Screen myScreen = Screen.FromControl(this);
+            Rectangle area = myScreen.WorkingArea;
+            if (area.Width < 3840 || area.Height < 2040) // 2040 - because work space = screen size - windows navbar
+            {
+                MessageBox.Show($"This program was developed for displays with a resolution of 3840x2160 (Developer is lazy to rework this).\nThe resolution of your work space is {area.Width}x{area.Height}, which can cause visual bugs inside the application, such as: cropped elements or elements overlapping each other."
+                    , "Wait!"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
+            }
+
             right.SafeCheck(rights.Text);
 
             // all matrixes
@@ -134,7 +151,7 @@ namespace lab1
             {
                 int selectedOperation = 7;
 
-                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked)) return false;
+                if (!resultMatrix.SafeCheck(selectedOperation, cutMode, selectedMatrixes, slice_check.Checked, similarity_checkbox.Checked)) return false;
 
                 // just type matrix in result
                 for (int i = 0; i < resultMatrix.Matrix.GetLength(0); i++)
@@ -213,6 +230,14 @@ namespace lab1
             if (reach_check.Checked) find.Reach(resultMatrix.Matrix);
             if (mutualReach_check.Checked) find.MutualRich(resultMatrix.Matrix);
             if (factorize_check.Checked) factorization.Factorize(find.GetEquivalentRatio(resultMatrix.Matrix, attributes), resultMatrix.Matrix);
+
+            // searching min/max
+            if (minmax_CheckBox.Checked)
+            {
+                int minMaxOperation = minmax_box.SelectedIndex;
+                minMax.ShowResult(resultMatrix.Matrix, minMaxOperation);
+            }
+
         }
 
 
@@ -285,7 +310,7 @@ namespace lab1
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(exc.ToString().Split('\n')[1], exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -297,5 +322,47 @@ namespace lab1
             if (newMode.ModeChange) this.Show();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo("https://github.com/TSlashDreamy/work-on-matrixes/issues/new") { UseShellExecute = true });
+        }
+
+        private void decisionButton_Click(object sender, EventArgs e)
+        {
+            DecisionUI decisionUI = new DecisionUI();
+            this.Enabled = false;
+            decisionUI.ShowDialog();
+            this.Enabled = true;
+        }
+
+        private void operation_check_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label1.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            operations_list.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+        }
+
+        private void slice_check_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label7.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            sliceMode_box.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+        }
+
+        private void narrowing_check_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label8.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            narrowValue1.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            narrowValue2.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            narrowValue3.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+        }
+
+        private void minmax_CheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label22.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+            minmax_box.Enabled = matrixP.StringToBool(sender.ToString()[^1..]);
+        }
     }
 }
