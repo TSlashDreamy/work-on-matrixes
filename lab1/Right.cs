@@ -46,6 +46,7 @@ namespace lab1
             {
                 resultBtn.Enabled = false;
                 rightLabel.Text = "⚠️ Rights corrupted!";
+                rightLabel.ForeColor = Color.Red;
                 throw new ViolationException($"Oh no! It's look's like the rights is corrupted. Please contact with the developer {rightText} !");
             }
         }
