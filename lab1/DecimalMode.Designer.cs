@@ -175,6 +175,7 @@
             // 
             // modeSwitch_btn
             // 
+            modeSwitch_btn.Cursor = Cursors.Hand;
             modeSwitch_btn.Location = new Point(782, 320);
             modeSwitch_btn.Margin = new Padding(2);
             modeSwitch_btn.Name = "modeSwitch_btn";
@@ -200,6 +201,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Enabled = false;
             label1.Location = new Point(49, 62);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
@@ -209,6 +211,9 @@
             // 
             // operations_list
             // 
+            operations_list.Cursor = Cursors.Hand;
+            operations_list.DropDownStyle = ComboBoxStyle.DropDownList;
+            operations_list.Enabled = false;
             operations_list.FormattingEnabled = true;
             operations_list.Items.AddRange(new object[] { "wij(P∩Q) ", "wij(P∪Q) ", "wij(P-Q)", "wij(!P)", "wij(P-1) ", "wij(P°Q)" });
             operations_list.Location = new Point(302, 59);
@@ -229,6 +234,7 @@
             // 
             // showResult_btn
             // 
+            showResult_btn.Cursor = Cursors.Hand;
             showResult_btn.Location = new Point(838, 747);
             showResult_btn.Margin = new Padding(2);
             showResult_btn.Name = "showResult_btn";
@@ -765,12 +771,16 @@
             // matrixP1Check
             // 
             matrixP1Check.AutoSize = true;
+            matrixP1Check.Cursor = Cursors.Hand;
             matrixP1Check.Location = new Point(442, 229);
             matrixP1Check.Margin = new Padding(2);
+            matrixP1Check.MinimumSize = new Size(240, 0);
             matrixP1Check.Name = "matrixP1Check";
-            matrixP1Check.Size = new Size(180, 45);
+            matrixP1Check.RightToLeft = RightToLeft.Yes;
+            matrixP1Check.Size = new Size(240, 45);
             matrixP1Check.TabIndex = 204;
             matrixP1Check.Text = "Matrix P1";
+            matrixP1Check.TextAlign = ContentAlignment.MiddleRight;
             matrixP1Check.UseVisualStyleBackColor = true;
             matrixP1Check.CheckStateChanged += matrixP1Check_CheckStateChanged;
             // 
@@ -1052,12 +1062,16 @@
             // matrixQCheck
             // 
             matrixQCheck.AutoSize = true;
+            matrixQCheck.Cursor = Cursors.Hand;
             matrixQCheck.Location = new Point(87, 585);
             matrixQCheck.Margin = new Padding(2);
+            matrixQCheck.MinimumSize = new Size(240, 0);
             matrixQCheck.Name = "matrixQCheck";
-            matrixQCheck.Size = new Size(170, 45);
+            matrixQCheck.RightToLeft = RightToLeft.Yes;
+            matrixQCheck.Size = new Size(240, 45);
             matrixQCheck.TabIndex = 174;
             matrixQCheck.Text = "Matrix Q";
+            matrixQCheck.TextAlign = ContentAlignment.MiddleRight;
             matrixQCheck.UseVisualStyleBackColor = true;
             matrixQCheck.CheckStateChanged += matrixQCheck_CheckStateChanged;
             // 
@@ -1339,12 +1353,16 @@
             // matrixPCheck
             // 
             matrixPCheck.AutoSize = true;
+            matrixPCheck.Cursor = Cursors.Hand;
             matrixPCheck.Location = new Point(93, 226);
             matrixPCheck.Margin = new Padding(2);
+            matrixPCheck.MinimumSize = new Size(240, 0);
             matrixPCheck.Name = "matrixPCheck";
-            matrixPCheck.Size = new Size(164, 45);
+            matrixPCheck.RightToLeft = RightToLeft.Yes;
+            matrixPCheck.Size = new Size(240, 45);
             matrixPCheck.TabIndex = 144;
             matrixPCheck.Text = "Matrix P";
+            matrixPCheck.TextAlign = ContentAlignment.MiddleRight;
             matrixPCheck.UseVisualStyleBackColor = true;
             matrixPCheck.CheckStateChanged += matrixPCheck_CheckStateChanged;
             // 
@@ -1626,12 +1644,16 @@
             // matrixQ1Check
             // 
             matrixQ1Check.AutoSize = true;
+            matrixQ1Check.Cursor = Cursors.Hand;
             matrixQ1Check.Location = new Point(442, 585);
             matrixQ1Check.Margin = new Padding(2);
+            matrixQ1Check.MinimumSize = new Size(240, 0);
             matrixQ1Check.Name = "matrixQ1Check";
-            matrixQ1Check.Size = new Size(186, 45);
+            matrixQ1Check.RightToLeft = RightToLeft.Yes;
+            matrixQ1Check.Size = new Size(240, 45);
             matrixQ1Check.TabIndex = 278;
             matrixQ1Check.Text = "Matrix Q1";
+            matrixQ1Check.TextAlign = ContentAlignment.MiddleRight;
             matrixQ1Check.UseVisualStyleBackColor = true;
             matrixQ1Check.CheckStateChanged += matrixQ1Check_CheckStateChanged;
             // 
@@ -1672,41 +1694,52 @@
             // 
             // operation_checkBox
             // 
-            operation_checkBox.AutoSize = true;
-            operation_checkBox.Location = new Point(56, 63);
+            operation_checkBox.Cursor = Cursors.Hand;
+            operation_checkBox.Location = new Point(44, 61);
             operation_checkBox.Margin = new Padding(2);
+            operation_checkBox.MinimumSize = new Size(275, 0);
             operation_checkBox.Name = "operation_checkBox";
-            operation_checkBox.Size = new Size(270, 45);
+            operation_checkBox.RightToLeft = RightToLeft.Yes;
+            operation_checkBox.Size = new Size(275, 45);
             operation_checkBox.TabIndex = 143;
             operation_checkBox.Text = "Operation to do";
+            operation_checkBox.TextAlign = ContentAlignment.MiddleRight;
             operation_checkBox.UseVisualStyleBackColor = true;
+            operation_checkBox.CheckStateChanged += operation_checkBox_CheckStateChanged;
             // 
             // distance_checkbox
             // 
-            distance_checkbox.AutoSize = true;
-            distance_checkbox.Location = new Point(56, 173);
+            distance_checkbox.Cursor = Cursors.Hand;
+            distance_checkbox.Location = new Point(44, 171);
             distance_checkbox.Margin = new Padding(2);
+            distance_checkbox.MinimumSize = new Size(275, 0);
             distance_checkbox.Name = "distance_checkbox";
-            distance_checkbox.Size = new Size(231, 45);
+            distance_checkbox.RightToLeft = RightToLeft.Yes;
+            distance_checkbox.Size = new Size(275, 45);
             distance_checkbox.TabIndex = 142;
             distance_checkbox.Text = "Find distance";
+            distance_checkbox.TextAlign = ContentAlignment.MiddleRight;
             distance_checkbox.UseVisualStyleBackColor = true;
             // 
             // showAttributesCheck
             // 
-            showAttributesCheck.AutoSize = true;
-            showAttributesCheck.Location = new Point(56, 118);
+            showAttributesCheck.Cursor = Cursors.Hand;
+            showAttributesCheck.Location = new Point(44, 116);
             showAttributesCheck.Margin = new Padding(2);
+            showAttributesCheck.MinimumSize = new Size(275, 0);
             showAttributesCheck.Name = "showAttributesCheck";
-            showAttributesCheck.Size = new Size(263, 45);
+            showAttributesCheck.RightToLeft = RightToLeft.Yes;
+            showAttributesCheck.Size = new Size(275, 45);
             showAttributesCheck.TabIndex = 141;
             showAttributesCheck.Text = "Show attributes";
+            showAttributesCheck.TextAlign = ContentAlignment.MiddleRight;
             showAttributesCheck.UseVisualStyleBackColor = true;
             // 
             // DecimalMode
             // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(240F, 240F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
             ClientSize = new Size(1208, 988);
             Controls.Add(groupBox2);
             Controls.Add(matrixQ1_value25);
@@ -1855,7 +1888,6 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

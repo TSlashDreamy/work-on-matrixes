@@ -597,7 +597,6 @@
             // 
             // minmax_CheckBox
             // 
-            minmax_CheckBox.AutoSize = true;
             minmax_CheckBox.Cursor = Cursors.Hand;
             minmax_CheckBox.Location = new Point(41, 49);
             minmax_CheckBox.Margin = new Padding(2);
@@ -686,7 +685,6 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

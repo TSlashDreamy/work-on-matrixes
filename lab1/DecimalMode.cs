@@ -208,5 +208,11 @@ namespace lab1
             if (!processResult()) return;
         }
 
+        private void operation_checkBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label1.Enabled = matrixP.StringToBool(sender.ToString()[^1..]); ;
+            operations_list.Enabled = matrixP.StringToBool(sender.ToString()[^1..]); ;
+        }
     }
 }
