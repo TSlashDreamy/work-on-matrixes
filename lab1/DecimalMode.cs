@@ -98,7 +98,7 @@ namespace lab1
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.ToString().Split('\n')[1], exc.ToString().Split('\n')[0], MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show(exc.ToString().Split('\n')[1], exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -208,5 +208,11 @@ namespace lab1
             if (!processResult()) return;
         }
 
+        private void operation_checkBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            // oh my god, what have i done ⚆_⚆
+            label1.Enabled = matrixP.StringToBool(sender.ToString()[^1..]); ;
+            operations_list.Enabled = matrixP.StringToBool(sender.ToString()[^1..]); ;
+        }
     }
 }
